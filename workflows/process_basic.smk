@@ -1,7 +1,10 @@
+# Basic outputs for initial detection of core, and extraction of
+# accessions for various purposes.
+
 rule do_core:
     input:
         'outputs.core/lowest-detection.metags.txt',
-        #'outputs.core/names.list',
+        'outputs.core/core-names.list',
 
 rule lowest_detection:
     input:
@@ -14,3 +17,16 @@ rule lowest_detection:
             --names {input.names} -o {output.csv} --save-accs {output.txt}
     """
 
+rule get_core:
+    input:
+        dir="inputs.pangenome-gather",
+        metadata="inputs.metadata/SRA_meta.3216.csv"
+    output:
+        csv='outputs.core/core-names.csv',
+        acc_txt='outputs.core/core-names.acc.list',
+        txt='outputs.core/core-names.list',
+    shell: """
+        scripts/get-core-names.py -o {output.csv} \
+           --save-only-names {output.txt} --save-acc-names {output.acc_txt} \
+           {input.dir}/*.parquet -m {input.metadata}
+    """
