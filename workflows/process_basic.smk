@@ -31,6 +31,6 @@ rule get_core:
         scripts/get-core-names.py -o {output.csv} \
            --save-only-names {output.txt} --save-acc-names {output.acc_txt} \
            --save-core-gather {output.gather_csv} \
-           --expect-num==3216
+           --expect-num=3216 \
            {input.dir}/*.parquet -m {input.metadata}
     """

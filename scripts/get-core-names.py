@@ -64,7 +64,7 @@ def main():
     assert len(combo_df) == len(all_df), "should NOT lose rows"
 
     if args.expect_num_metagenomes:
-        assert len(combo_df) == args.expect_num_metagenomes
+        assert combo_df['query_name'].n_unique() == args.expect_num_metagenomes, combo_df['query_name'].n_unique()
     else:
         print(f"WARNING: no number of expected metagenomes set, verify thyself")
     ###
