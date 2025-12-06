@@ -15,7 +15,7 @@ def filter_combined_df(combined_df, frac, threshold_bp, min_mbases):
             .agg(pl.len()) \
             .filter(pl.col("len") >= cutoff)
 
-    return (cutoff, total, group_df)
+    return (cutoff, total, sub_df, group_df)
 
 
 def main():
@@ -28,6 +28,7 @@ def main():
     p.add_argument('-o', '--output', required=True, help='output CSV')
     p.add_argument('--save-acc-names', help="save acc+names to this file")
     p.add_argument('--save-only-names', help="save only names to this file")
+    p.add_argument('--save-core-gather-csv', help="save gather CSV lines for core to this file")
     p.add_argument('--expect-num-metagenomes', type=int)
     p.add_argument('--min-mbases', default=1000, type=int)
     p.add_argument('--min-intersect-threshold', default=10_000)
@@ -44,7 +45,7 @@ def main():
         # don't pfaff about; support both gather and fast(multi)gather results
         if args.match_name_col != 'match_name':
             df = df.with_columns([pl.col(args.match_name_col).alias("match_name")])
-        df = df.select(["match_name", "f_match_orig", "query_name", "unique_intersect_bp", "scaled"])
+        df = df.select(["match_name", "f_match_orig", "query_name", "unique_intersect_bp", "scaled", "median_abund", "intersect_bp", "f_unique_weighted"])
         
         dflist.append(df)
         total_rows += len(df)
@@ -68,7 +69,7 @@ def main():
         print(f"WARNING: no number of expected metagenomes set, verify thyself")
     ###
 
-    cutoff, total, final_df = filter_combined_df(combo_df, frac,
+    cutoff, total, filtered_df, final_df = filter_combined_df(combo_df, frac,
                                                  args.min_intersect_threshold,
                                                  args.min_mbases)
 
@@ -91,6 +92,14 @@ def main():
         names.sort()
         with open(args.save_only_names, "wt") as fp:
             fp.write("\n".join(names))
+
+    if args.save_core_gather_csv:
+        print(f"writing core gather CSV lines to output '{args.save_core_gather_csv}'")
+        names = set(final_df["match_name"].to_list())
+
+        core_df = filtered_df.filter(pl.col("match_name").is_in(names))
+
+        core_df.write_csv(args.save_core_gather_csv)
 
 
 if __name__ == '__main__':
