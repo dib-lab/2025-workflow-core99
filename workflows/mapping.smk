@@ -28,6 +28,8 @@ rule do_mapping:
         expand('outputs.mapping/bams.lowest/{m}.x.{s}.sig.zip', m=LOWEST_METAG, s=NAMES),
         expand('outputs.mapping/bams.lowest/{m}.x.{s}.readstats.txt', m=LOWEST_METAG, s=NAMES),
         expand('outputs.mapping/bams.lowest/{s}.readstats.csv', m=LOWEST_METAG, s=NAMES),
+        expand('outputs.mapping/species-reads.rand/{s}.fastq.gz', s=NAMES),
+        expand('outputs.mapping/singlem.rand/{s}.profile.tsv', s=NAMES),
 
 rule do_map_lowest:
     input:
@@ -309,6 +311,16 @@ rule extract_reads:
     shell: """
         samtools fastq {input:q} > {output:q}
     """
+
+rule cat_species_reads:
+    input:
+        expand('outputs.mapping/bams.rand/{m}.x.{{s}}.fastq', m=RAND_METAG),
+    output:
+        'outputs.mapping/species-reads.rand/{s}.fastq.gz'
+    shell: """
+        cat {input:q} | gzip -9c > {output:q}
+    """
+    
         
 rule seqtk_sample_reads:
     input:
@@ -394,4 +406,16 @@ rule manysearch_pg:
     shell: """
         sourmash scripts manysearch -k 31 -s 1000 -t 0 -c {threads} \
             {input.sigs:q} {input.genomes:q} -o {output:q}
+    """
+
+
+rule singlem:
+    input:
+        'outputs.mapping/species-reads.rand/{s}.fastq.gz'
+    output:
+        'outputs.mapping/singlem.rand/{s}.profile.tsv'
+    threads: 8
+    conda: "env-singlem.yml"
+    shell: """
+         singlem pipe --threads {threads} -1 {input:q} -p {output:q} 
     """

@@ -8,6 +8,7 @@ GRIST_RAND100='/home/ctbrown/scratch3/2025-grist-annie/outputs.rand100/'
 
 NAMES = [ x.strip() for x in open('inputs.mapping/names.list') ]
 print(f'loaded {len(NAMES)} core species names')
+print(NAMES[0])
 
 LOWEST_METAG = [ x.strip() for x in open('inputs.mapping/lowest-detection.metags.txt') ]
 print(f'loaded {len(LOWEST_METAG)} metagenome names for lowest-detection mapping')

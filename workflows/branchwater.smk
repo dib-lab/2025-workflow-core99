@@ -13,6 +13,6 @@ rule search_species:
     conda: "env-sourmash.yml"
     threads: 1
     shell: """
-        sourmash scripts manysearch -c {threads} -t 0.1 -k 21 -s 1000 \
+        sourmash scripts manysearch -c {threads} -t 0 -k 21 -s 1000 \
             {input.q:q} {input.db:q} -o {output:q}
     """
