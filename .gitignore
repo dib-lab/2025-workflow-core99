@@ -1,3 +1,5 @@
 outputs.mapping
+.ipynb_checkpoints
 *~
 .snakemake
+inputs.pangenome-gather
