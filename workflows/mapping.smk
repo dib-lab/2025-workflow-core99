@@ -176,9 +176,7 @@ rule make_pangenome_sigs:
 rule map_index_lowest:
     input:
         g="outputs.mapping/genomes/{s}.pangenome.fa.gz",
-        metag="/home/ctbrown/scratch3/2025-grist-annie/outputs.lowest-detection/trim/{m}.trim.fq.gz",
-#        metag=["/group/ctbrowngrp2/scratch/annie/2023-swine-sra/results/atlas/atlas_{m}/{m}/sequence_quality_control/{m}_QC_R1.fastq.gz",
-#               "/group/ctbrowngrp2/scratch/annie/2023-swine-sra/results/atlas/atlas_{m}/{m}/sequence_quality_control/{m}_QC_R2.fastq.gz"],
+        metag=GRIST_LOWEST+"trim/{m}.trim.fq.gz",
     output:
         bam='outputs.mapping/bams.lowest/{m}.x.{s}.bam',
         bai='outputs.mapping/bams.lowest/{m}.x.{s}.bam.bai',
@@ -192,7 +190,7 @@ rule map_index_lowest:
 rule map_index_rand:
     input:
         g="outputs.mapping/genomes/{s}.pangenome.fa.gz",
-        metag="/home/ctbrown/scratch3/2025-grist-annie/outputs.rand100/trim/{m}.trim.fq.gz",
+        metag=GRIST_RAND100 + "trim/{m}.trim.fq.gz",
     output:
         bam='outputs.mapping/bams.rand/{m}.x.{s}.bam',
         bai='outputs.mapping/bams.rand/{m}.x.{s}.bam.bai',
@@ -226,7 +224,7 @@ rule map_readstats:
 
 rule lowest_metags_mf_csv:
     input:
-        expand("/home/ctbrown/scratch3/2025-grist-annie/outputs.lowest-detection/sigs/{m}.trim.sig.zip", m=LOWEST_METAG)
+        expand(GRIST_LOWEST + "sigs/{m}.trim.sig.zip", m=LOWEST_METAG)
     output:
         "outputs.mapping/lowest-metags.mf.csv",
     conda: "env-mapping.yml"
@@ -236,7 +234,7 @@ rule lowest_metags_mf_csv:
 
 rule rand_metags_mf_csv:
     input:
-        expand("/home/ctbrown/scratch3/2025-grist-annie/outputs.rand100/sigs/{m}.trim.sig.zip", m=RAND_METAG)
+        expand(GRIST_RAND100 + "sigs/{m}.trim.sig.zip", m=RAND_METAG)
     output:
         "outputs.mapping/rand-metags.mf.csv",
     conda: "env-mapping.yml"

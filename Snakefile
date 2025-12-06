@@ -1,6 +1,11 @@
 import csv
 import pandas as pd
 
+## Mapping inputs
+
+GRIST_LOWEST='/home/ctbrown/scratch3/2025-grist-annie/outputs.lowest-detection/'
+GRIST_RAND100='/home/ctbrown/scratch3/2025-grist-annie/outputs.rand100/'
+
 NAMES = [ x.strip() for x in open('inputs.mapping/names.list') ]
 print(f'loaded {len(NAMES)} core species names')
 
