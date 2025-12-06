@@ -4,3 +4,4 @@ outputs.mapping
 .snakemake
 inputs.pangenome-gather
 outputs.branchwater
+outputs.core

@@ -24,6 +24,8 @@ BW_ROCKSDB='/group/ctbrowngrp5/sra-metagenomes/20241128-k21-s1000'
 
 ###
 
+include: "workflows/process_basic.smk"
+
 include: "workflows/mapping.smk"
 
 include: "workflows/branchwater.smk"
