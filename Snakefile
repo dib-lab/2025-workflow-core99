@@ -23,6 +23,13 @@ print(RAND_METAG[:3])
 BW_ROCKSDB='/group/ctbrowngrp5/sra-metagenomes/20241128-k21-s1000'
 #BW_METADATA='/group/ctbrowngrp5/sra-metagenomes/20241128-metadata.parquet'
 
+## Databases
+
+GTDB_K51 = '/group/ctbrowngrp5/sourmash-db.new/gtdb-rs226/gtdb-rs226-k51.dna.rocksdb'
+GTDB_TAX = '/group/ctbrowngrp5/sourmash-db.new/gtdb-rs226/gtdb-rs226.lineages.sqldb'
+EUK_K51='/group/ctbrowngrp5/sourmash-db.new/ncbi-euks-2025.01/ncbi-euks-all-2025.01-k51.dna.rocksdb'
+EUK_TAX = '/group/ctbrowngrp5/sourmash-db.new/ncbi-euks-2025.01/ncbi-eukaryotes.2025.01.lineages.sqldb'
+
 ###
 
 include: "workflows/process_basic.smk"

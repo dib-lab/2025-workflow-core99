@@ -30,6 +30,8 @@ rule do_mapping:
         expand('outputs.mapping/bams.lowest/{s}.readstats.csv', m=LOWEST_METAG, s=NAMES),
         expand('outputs.mapping/species-reads.rand/{s}.fastq.gz', s=NAMES),
         expand('outputs.mapping/singlem.rand/{s}.profile.tsv', s=NAMES),
+        expand('outputs.mapping/singlem.rand/{s}.profile.json', s=NAMES),
+        expand('outputs.mapping/bams.rand/{m}.x.{s}.gather.with-lineages.csv', s=NAMES, m=RAND_METAG),
 
 rule do_map_lowest:
     input:
@@ -418,4 +420,43 @@ rule singlem:
     conda: "env-singlem.yml"
     shell: """
          singlem pipe --threads {threads} -1 {input:q} -p {output:q} 
+    """
+
+rule taxburst:
+    input:
+        'outputs.mapping/singlem.rand/{s}.profile.tsv'
+    output:
+        'outputs.mapping/singlem.rand/{s}.profile.json'
+    threads: 1
+    conda: "env-singlem.yml"
+    shell: """
+         taxburst -F SingleM {input:q} --save-json {output:q}
+    """
+    
+rule gather_k51:
+    input:
+        q='outputs.mapping/bams.{dir}/{name}.sig.zip',
+        db=[GTDB_K51, EUK_K51],
+    output:
+        'outputs.mapping/bams.{dir}/{name}.gather.csv',
+    threads: 1
+    conda: "env-sourmash.yml"
+    shell: """
+        sourmash gather -k 51 --scaled 10_000 --threshold-bp=0 \
+            {input.q:q} {input.db:q} -o {output:q} 
+    """
+
+rule gather_tax:
+    input:
+        csv='outputs.mapping/bams.{dir}/{name}.gather.csv',
+        db=[GTDB_TAX, EUK_TAX]
+    output:
+        'outputs.mapping/bams.{dir}/{name}.gather.with-lineages.csv',
+    params:
+        outdir='outputs.mapping/bams.{dir}/'
+    threads: 1
+    conda: "env-sourmash.yml"
+    shell: """
+        sourmash tax annotate -t {input.db:q} -g {input.csv:q} \
+           -o {params.outdir}
     """
