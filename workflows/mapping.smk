@@ -3,20 +3,32 @@
 #    mapping requires about 30 GB of RAM for the largest pangenome (phaecicola)
 
 
-g, = glob_wildcards('outputs.mapping/genomes/s__Cryptobacteroides sp900546925.ncbi.d/{g}.fna.gz')
+
 ncbi_genomes = []
 ncbi_species = []
-for x in g:
-    ncbi_species.append('s__Cryptobacteroides sp900546925')
-    ncbi_genomes.append(x)
-    
-g, = glob_wildcards('outputs.mapping/genomes/s__Cryptobacteroides sp900546925.ath.d/{g}.fasta')
 ath_genomes = []
 ath_species = []
 
-for x in g:
-    ath_genomes.append(x)
-    ath_species.append('s__Cryptobacteroides sp900546925')
+SUB_SPECIES=('s__Cryptobacteroides sp900546925',
+             's__Phascolarctobacterium_A succinatutens',
+             's__Mogibacterium_A kristiansenii',
+             's__Prevotella sp002251295',
+             's__Prevotella sp000434975',
+             's__Holdemanella porci')
+
+for species in SUB_SPECIES:
+    g, = glob_wildcards(f'outputs.mapping/genomes/{species}.ncbi.d/{{g}}.fna.gz')
+    for x in g:
+        #print(species, x)
+        ncbi_species.append(species)
+        ncbi_genomes.append(x)
+
+    g, = glob_wildcards(f'outputs.mapping/genomes/{species}.ath.d/{{g}}.fasta')
+
+    for x in g:
+        #print(species, x)
+        ath_species.append(species)
+        ath_genomes.append(x)
 
 print('XXX', len(ncbi_genomes), ncbi_genomes[0])
 print('YYY', len(ath_genomes), ath_genomes[0])
@@ -55,6 +67,12 @@ rule do_mapping:
         expand('outputs.mapping/species-reads.rand/{s}.gather.with-lineages.csv', s=NAMES),
 
 
+rule make_cds:
+    input:
+        expand('outputs.mapping/cds/{species}.cds.fa.gz', species=SUB_SPECIES),
+        expand('outputs.mapping/cds/{species}.cds.sig.zip', species=SUB_SPECIES),
+        expand('outputs.mapping/cds/{species}.x.rand-metags.manysearch.csv', species=SUB_SPECIES),
+
 rule do_prokka_ncbi:
     input:
         expand('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
@@ -62,7 +80,7 @@ rule do_prokka_ncbi:
 
 rule do_prokka_ath:
     input:
-        expand('outputs.mapping/genomes/{species}.ath.prokka/{g}.prokka.d', species=ath_species, g=ath_genomes)
+        expand('outputs.mapping/genomes/{species}.ath.prokka/{g}.prokka.d', zip, species=ath_species, g=ath_genomes)
 #        expand('outputs.mapping/genomes/{species}.ath.prokka/{species}.cds.fa.gz', species=ath_species)
 
 rule do_sketch:
@@ -523,17 +541,55 @@ rule do_prokka_ath_wc:
         prokka --outdir {output.dir:q} {input.g:q} --fast --cpus {threads}
     """
 
-"""
+def get_ath_prokka_dirs(w):
+    ath_dirs = []
+    for (species, genome) in zip(ath_species, ath_genomes):
+        if species == w.species:
+            ath_dir = f'outputs.mapping/genomes/{species}.ath.prokka/{genome}.prokka.d'
+            ath_dirs.append(ath_dir)
 
-def get_ath_prokka_cds_for_species(w):
-    xx = []
-    for s, g in zip(ath_species, ath_genomes):
-        if s == w.species:
-           xx.append(g)
-    return expand('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d/
+    return ath_dirs
 
-rule ath_prokka_cds_wc:
-        expand('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
+def get_ncbi_prokka_dirs(w):
+    ncbi_dirs = []
+    for (species, genome) in zip(ncbi_species, ncbi_genomes):
+        if species == w.species:
+            ncbi_dir = f'outputs.mapping/genomes/{species}.ncbi.prokka/{genome}.prokka.d'
+            ncbi_dirs.append(ncbi_dir)
+
+    return ncbi_dirs
+
+rule prokka_cds_wc:
+    input:
+        get_ath_prokka_dirs,
+        get_ncbi_prokka_dirs,
     output:
-        'outputs.mapping/genomes/{species}.ath.prokka/{species}.cds.fa.gz'
-"""
+        'outputs.mapping/cds/{species}.cds.fa.gz'
+    shell: """
+        find {input:q} -name *.ffn -exec cat {{}} \; | gzip > {output:q}
+    """
+
+rule make_prokka_cds_sig_zip:
+    input:
+        '{dir}/{name}.cds.fa.gz',
+    output:
+        '{dir}/{name}.cds.sig.zip',
+    conda: "env-mapping.yml"
+    shell: """
+        sourmash scripts singlesketch -p dna,k=21,k=31,k=51,scaled=1000 \
+            {input:q} -o {output:q} --name {wildcards.name:q}
+    """
+
+rule manysearch_cds:
+    input:
+        cds="outputs.mapping/cds/{s}.cds.sig.zip",
+        metags="outputs.mapping/rand-metags.mf.csv",
+    output:
+        "outputs.mapping/cds/{s}.x.rand-metags.manysearch.csv"
+    threads: 32
+    conda: "env-sourmash.yml"
+    shell: """
+       sourmash scripts manysearch -k 31 -s 1000 -t 0 -c {threads} \
+           {input.cds:q} {input.metags:q} -o {output:q}
+    """
+
