@@ -2,6 +2,25 @@
 # NOTES:
 #    mapping requires about 30 GB of RAM for the largest pangenome (phaecicola)
 
+
+g, = glob_wildcards('outputs.mapping/genomes/s__Cryptobacteroides sp900546925.ncbi.d/{g}.fna.gz')
+ncbi_genomes = []
+ncbi_species = []
+for x in g:
+    ncbi_species.append('s__Cryptobacteroides sp900546925')
+    ncbi_genomes.append(x)
+    
+g, = glob_wildcards('outputs.mapping/genomes/s__Cryptobacteroides sp900546925.ath.d/{g}.fasta')
+ath_genomes = []
+ath_species = []
+
+for x in g:
+    ath_genomes.append(x)
+    ath_species.append('s__Cryptobacteroides sp900546925')
+
+print('XXX', len(ncbi_genomes), ncbi_genomes[0])
+print('YYY', len(ath_genomes), ath_genomes[0])
+
 rule do_mapping:
     input:
         expand('outputs.mapping/lists/{s}.ath-tax.csv', s=NAMES),
@@ -19,12 +38,12 @@ rule do_mapping:
         expand("outputs.mapping/manysearch/individual.{s}.x.lowest-metags.csv", s=NAMES),
         expand("outputs.mapping/manysearch/individual.{s}.x.pg.csv", s=NAMES),
         expand('outputs.mapping/bams.rand/{m}.x.{s}.bam', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.fastq', m=RAND_METAG, s=NAMES),
+        expand('outputs.mapping/bams.rand/{m}.x.{s}.fastq.gz', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.lowest/{m}.x.{s}.bam', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.fastq', m=LOWEST_METAG, s=NAMES),
+        expand('outputs.mapping/bams.lowest/{m}.x.{s}.fastq.gz', m=LOWEST_METAG, s=NAMES),
         expand('outputs.mapping/bams.lowest/{m}.x.{s}.sig.zip', m=LOWEST_METAG, s=NAMES),
         expand('outputs.mapping/bams.lowest/{m}.x.{s}.readstats.txt', m=LOWEST_METAG, s=NAMES),
         expand('outputs.mapping/bams.lowest/{s}.readstats.csv', m=LOWEST_METAG, s=NAMES),
@@ -32,11 +51,30 @@ rule do_mapping:
         expand('outputs.mapping/singlem.rand/{s}.profile.tsv', s=NAMES),
         expand('outputs.mapping/singlem.rand/{s}.profile.json', s=NAMES),
         expand('outputs.mapping/bams.rand/{m}.x.{s}.gather.with-lineages.csv', s=NAMES, m=RAND_METAG),
+        expand('outputs.mapping/bams.rand/{m}.x.{s}.profile.json', s=NAMES, m=RAND_METAG),
+        expand('outputs.mapping/species-reads.rand/{s}.gather.with-lineages.csv', s=NAMES),
+
+
+rule do_prokka_ncbi:
+    input:
+        expand('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
+#        expand('outputs.mapping/genomes/{species}.ncbi.prokka/{species}.cds.fa.gz', species=ncbi_species)
+
+rule do_prokka_ath:
+    input:
+        expand('outputs.mapping/genomes/{species}.ath.prokka/{g}.prokka.d', species=ath_species, g=ath_genomes)
+#        expand('outputs.mapping/genomes/{species}.ath.prokka/{species}.cds.fa.gz', species=ath_species)
+
+rule do_sketch:
+    input:
+        expand('outputs.mapping/bams.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMES),
+        expand('outputs.mapping/species-reads.rand/{s}.sig.zip', s=NAMES),
+        
 
 rule do_map_lowest:
     input:
         expand('outputs.mapping/bams.lowest/{m}.x.{s}.bam', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.fastq', m=LOWEST_METAG, s=NAMES),
+        expand('outputs.mapping/bams.lowest/{m}.x.{s}.fastq.gz', m=LOWEST_METAG, s=NAMES),
         expand('outputs.mapping/bams.lowest/{m}.x.{s}.sig.zip', m=LOWEST_METAG, s=NAMES),
         expand('outputs.mapping/bams.lowest/{m}.x.{s}.readstats.txt', m=LOWEST_METAG, s=NAMES),
         expand('outputs.mapping/bams.lowest/{s}.readstats.csv', m=LOWEST_METAG, s=NAMES),
@@ -44,7 +82,7 @@ rule do_map_lowest:
 rule do_map_rand:
     input:
         expand('outputs.mapping/bams.rand/{m}.x.{s}.bam', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.fastq', m=RAND_METAG, s=NAMES),
+        expand('outputs.mapping/bams.rand/{m}.x.{s}.fastq.gz', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMES),
@@ -207,12 +245,12 @@ rule map_index_rand:
 
 rule make_mapped_read_sigs:
     input:
-        'outputs.mapping/bams.{dir}/{name}.fastq',
+        '{dir}/{name}.fastq.gz',
     output:
-        'outputs.mapping/bams.{dir}/{name}.sig.zip',
+        '{dir}/{name}.sig.zip',
     conda: "env-mapping.yml"
     shell: """
-        sourmash scripts singlesketch -p dna,k=21,k=31,k=51,scaled=1000 \
+        sourmash scripts singlesketch -p dna,k=21,k=31,k=51,scaled=1000,abund \
             {input:q} -o {output:q} --name {wildcards.name:q}
     """
 
@@ -308,25 +346,25 @@ rule extract_reads:
     input:
         "{ms}.bam"
     output:
-        "{ms}.fastq"
+        "{ms}.fastq.gz"
     conda: "env-mapping.yml"
     shell: """
-        samtools fastq {input:q} > {output:q}
+        samtools fastq {input:q} | gzip -9c > {output:q}
     """
 
 rule cat_species_reads:
     input:
-        expand('outputs.mapping/bams.rand/{m}.x.{{s}}.fastq', m=RAND_METAG),
+        expand('outputs.mapping/bams.rand/{m}.x.{{s}}.fastq.gz', m=RAND_METAG),
     output:
         'outputs.mapping/species-reads.rand/{s}.fastq.gz'
     shell: """
-        cat {input:q} | gzip -9c > {output:q}
+        gunzip -c {input:q} | gzip -9c > {output:q}
     """
     
         
 rule seqtk_sample_reads:
     input:
-        "outputs.mapping/bams.lowest/{ms}.fastq"
+        "outputs.mapping/bams.lowest/{ms}.fastq.gz"
     output:
         "outputs.mapping/bams.lowest/{ms}.fastq.sample{r}"
     conda: "env-mapping.yml"
@@ -413,9 +451,9 @@ rule manysearch_pg:
 
 rule singlem:
     input:
-        'outputs.mapping/species-reads.rand/{s}.fastq.gz'
+        '{dir}/{s}.fastq.gz'
     output:
-        'outputs.mapping/singlem.rand/{s}.profile.tsv'
+        '{dir}/{s}.profile.tsv'
     threads: 8
     conda: "env-singlem.yml"
     shell: """
@@ -424,9 +462,9 @@ rule singlem:
 
 rule taxburst:
     input:
-        'outputs.mapping/singlem.rand/{s}.profile.tsv'
+        '{dir}/{s}.profile.tsv'
     output:
-        'outputs.mapping/singlem.rand/{s}.profile.json'
+        '{dir}/{s}.profile.json'
     threads: 1
     conda: "env-singlem.yml"
     shell: """
@@ -435,10 +473,10 @@ rule taxburst:
     
 rule gather_k51:
     input:
-        q='outputs.mapping/bams.{dir}/{name}.sig.zip',
+        q='{dir}/{name}.sig.zip',
         db=[GTDB_K51, EUK_K51],
     output:
-        'outputs.mapping/bams.{dir}/{name}.gather.csv',
+        '{dir}/{name}.gather.csv',
     threads: 1
     conda: "env-sourmash.yml"
     shell: """
@@ -448,15 +486,54 @@ rule gather_k51:
 
 rule gather_tax:
     input:
-        csv='outputs.mapping/bams.{dir}/{name}.gather.csv',
+        csv='{dir}/{name}.gather.csv',
         db=[GTDB_TAX, EUK_TAX]
     output:
-        'outputs.mapping/bams.{dir}/{name}.gather.with-lineages.csv',
+        '{dir}/{name}.gather.with-lineages.csv',
     params:
-        outdir='outputs.mapping/bams.{dir}/'
+        outdir='{dir}/'
     threads: 1
     conda: "env-sourmash.yml"
     shell: """
         sourmash tax annotate -t {input.db:q} -g {input.csv:q} \
            -o {params.outdir}
     """
+
+rule do_prokka_ncbi_wc:
+    input:
+        g='outputs.mapping/genomes/{species}.ncbi.d/{g}.fna.gz'
+    output:
+        g=temporary("outputs.mapping/genomes/{species}.ncbi.prokka/{g}.fa"),
+        dir=directory('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d')
+    threads: 8
+    conda: "env-prokka.yml"
+    shell: """
+        gunzip -c {input.g:q} > {output.g:q}
+        prokka --outdir {output.dir:q} {output.g:q} --fast --cpus {threads}
+    """
+
+rule do_prokka_ath_wc:
+    input:
+        g='outputs.mapping/genomes/{species}.ath.d/{g}.fasta'
+    output:
+        dir=directory('outputs.mapping/genomes/{species}.ath.prokka/{g}.prokka.d')
+    threads: 8
+    conda: "env-prokka.yml"
+    shell: """
+        prokka --outdir {output.dir:q} {input.g:q} --fast --cpus {threads}
+    """
+
+"""
+
+def get_ath_prokka_cds_for_species(w):
+    xx = []
+    for s, g in zip(ath_species, ath_genomes):
+        if s == w.species:
+           xx.append(g)
+    return expand('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d/
+
+rule ath_prokka_cds_wc:
+        expand('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
+    output:
+        'outputs.mapping/genomes/{species}.ath.prokka/{species}.cds.fa.gz'
+"""
