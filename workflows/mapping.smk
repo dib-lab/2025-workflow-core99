@@ -98,6 +98,14 @@ rule do_map_rand:
         expand('outputs.mapping/bams.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMES),
 
+rule do_map_cds:
+    input:
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.bam', m=RAND_METAG, s=NAMES),
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.fastq.gz', m=RAND_METAG, s=NAMES),
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMES),
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMES),
+        expand('outputs.mapping/bams.cds.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMES),
+
 rule genome_lists:
     input:
         expand('outputs.mapping/lists/{s}.gtdb-acc.txt', s=NAMES),
@@ -247,6 +255,20 @@ rule map_index_rand:
     output:
         bam='outputs.mapping/bams.rand/{m}.x.{s}.bam',
         bai='outputs.mapping/bams.rand/{m}.x.{s}.bam.bai',
+    threads: 8
+    conda: "env-mapping.yml"
+    shell: """
+        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - > {output.bam:q}
+        samtools index {output.bam:q}
+    """
+
+rule map_index_rand_cds:
+    input:
+        g="outputs.mapping/cds/{s}.cds.fa.gz",
+        metag=GRIST_RAND100 + "trim/{m}.trim.fq.gz",
+    output:
+        bam='outputs.mapping/bams.cds.rand/{m}.x.{s}.bam',
+        bai='outputs.mapping/bams.cds.rand/{m}.x.{s}.bam.bai',
     threads: 8
     conda: "env-mapping.yml"
     shell: """

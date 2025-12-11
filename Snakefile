@@ -35,7 +35,17 @@ SUB_SPECIES=('s__Cryptobacteroides sp900546925',
              's__Mogibacterium_A kristiansenii',
              's__Prevotella sp002251295',
              's__Prevotella sp000434975',
-             's__Holdemanella porci')
+             's__Holdemanella porci',
+             's__Bariatricus sp004560705',
+             's__Fimisoma sp002320005',
+             's__Gemmiger qucibialis',
+             's__JAFBIX01 sp021531895',
+             's__JALFVM01 sp022787145',
+             's__Lactobacillus amylovorus',
+             's__Roseburia inulinivorans',
+             's__Sodaliphilus sp004557565',
+             's__UBA2868 sp004552595',
+)
 
 ###
 
