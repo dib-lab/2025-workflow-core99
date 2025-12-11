@@ -30,6 +30,13 @@ GTDB_TAX = '/group/ctbrowngrp5/sourmash-db.new/gtdb-rs226/gtdb-rs226.lineages.sq
 EUK_K51='/group/ctbrowngrp5/sourmash-db.new/ncbi-euks-2025.01/ncbi-euks-all-2025.01-k51.dna.rocksdb'
 EUK_TAX = '/group/ctbrowngrp5/sourmash-db.new/ncbi-euks-2025.01/ncbi-eukaryotes.2025.01.lineages.sqldb'
 
+SUB_SPECIES=('s__Cryptobacteroides sp900546925',
+             's__Phascolarctobacterium_A succinatutens',
+             's__Mogibacterium_A kristiansenii',
+             's__Prevotella sp002251295',
+             's__Prevotella sp000434975',
+             's__Holdemanella porci')
+
 ###
 
 include: "workflows/process_basic.smk"

@@ -9,13 +9,6 @@ ncbi_species = []
 ath_genomes = []
 ath_species = []
 
-SUB_SPECIES=('s__Cryptobacteroides sp900546925',
-             's__Phascolarctobacterium_A succinatutens',
-             's__Mogibacterium_A kristiansenii',
-             's__Prevotella sp002251295',
-             's__Prevotella sp000434975',
-             's__Holdemanella porci')
-
 for species in SUB_SPECIES:
     g, = glob_wildcards(f'outputs.mapping/genomes/{species}.ncbi.d/{{g}}.fna.gz')
     for x in g:
