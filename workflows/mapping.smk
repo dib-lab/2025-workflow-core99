@@ -345,25 +345,9 @@ rule manysearch_rand:
 
 rule combine_readstats_rand:
     input:
-        expand('outputs.mapping/bams.rand/{m}.x.{{s}}.readstats.txt', m=RAND_METAG),
+        expand('outputs.mapping/{{dir}}/{m}.x.{{s}}.readstats.txt', m=RAND_METAG),
     output:
-        'outputs.mapping/bams.rand/{s}.readstats.csv'
-    run:
-        readcounts = []
-        for txtname in input:
-            metag = os.path.basename(txtname).split('.')[0]
-            with open(txtname) as fp:
-                count = int(fp.readline().strip())
-                readcounts.append(dict(metag=metag, count=count))
-
-        df = pd.DataFrame(readcounts)
-        df.to_csv(str(output[0]))
-
-rule combine_readstats_lowest:
-    input:
-        expand('outputs.mapping/bams.lowest/{m}.x.{{s}}.readstats.txt', m=LOWEST_METAG),
-    output:
-        'outputs.mapping/bams.lowest/{s}.readstats.csv'
+        'outputs.mapping/{dir}/{s}.readstats.csv'
     run:
         readcounts = []
         for txtname in input:
