@@ -33,11 +33,11 @@ def main():
             df.sink_parquet(pq_file)
             print(f"{n+1}: saved to '{pq_file}'")
         except pl.exceptions.NoDataError:
-            print("{n}: failed '{csvfile}': empty!'")
+            print(f"{n}: failed '{csvfile}': empty!'")
             failed.append(csvfile)
             continue
         except:
-            print("{n+1}: failed '{csvfile}': ???!'")
+            print(f"{n+1}: failed '{csvfile}': ???!'")
             traceback.print_exc()
             failed.append(csvfile)
             continue

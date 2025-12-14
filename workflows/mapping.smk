@@ -105,6 +105,8 @@ rule do_map_cds:
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMES),
         expand('outputs.mapping/bams.cds.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMES),
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.gather.with-lineages.csv', s=NAMES, m=RAND_METAG),
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.profile.json', s=NAMES, m=RAND_METAG),
 
 rule genome_lists:
     input:
