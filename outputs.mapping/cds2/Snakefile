@@ -1,0 +1,135 @@
+import pandas as pd
+
+BW_ROCKSDB='/group/ctbrowngrp5/sra-metagenomes/20241128-k21-s1000'
+
+SPECIES, = glob_wildcards('{s,[^/]+}.cds.min90.dedup.fa')
+print(SPECIES[:3])
+
+RAND_METAG = [ x.strip() for x in open('../../inputs.mapping/rand_subset.3216.100.txt') ]
+print(f'loaded {len(RAND_METAG)} metagenome names for rand mapping')
+print(RAND_METAG[:3])
+
+wildcard_constraints:
+    m="\d+",
+    scaled="\d+",
+
+rule all:
+    input:
+        expand('{s}.cds2.sig.zip', s=SPECIES),
+        expand('outputs.branchwater/manysearch.{s}.parquet', s=SPECIES),
+        expand('manysearch.3216.parquet'),
+
+rule do_bams:
+    input:
+        expand('bams/{m}.x.{s}.bam', m=RAND_METAG, s=SPECIES),
+        expand('bams/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=SPECIES),
+        expand('bams/{s}.readstats.csv', m=RAND_METAG, s=SPECIES),
+        expand('bams/{m}.x.{s}.depth.txt', m=RAND_METAG, s=SPECIES),
+
+rule sketch_dedup:
+    input:
+        fa='{s}.cds.min90.dedup.fa',
+    output:
+        fa='{s}.cds2.sig.zip',
+    shell: """
+        sourmash sketch dna -p k=21,k=31,k=51 {input.fa:q} -o {output.fa:q} \
+           --name {wildcards.s:q}
+    """
+
+rule csv_to_parquet:
+    input:
+        '{filename}.csv',
+    output:
+        touch('{filename}.parquet'),
+    params:
+        dirname=lambda w: './' + os.path.dirname(w.filename)
+    shell: """
+        ../../scripts/csv-to-parquet.py {input:q} -o {params.dirname:q}
+    """
+
+rule search_species:
+    input:
+        q="{species}.cds2.sig.zip",
+        db=BW_ROCKSDB,
+    output:
+        "outputs.branchwater/manysearch.{species}.csv",
+    #conda: "env-sourmash.yml"
+    threads: 1
+    shell: """
+        sourmash scripts manysearch -c {threads} -t 0 -k 21 -s 1000 \
+            {input.q:q} {input.db:q} -o {output:q}
+    """
+
+rule species_min_mf:
+    input:
+        expand("{s}.cds2.sig.zip", s=SPECIES)
+    output:
+        "species.mf.csv"
+    shell: """
+        sourmash sig collect -F csv {input:q} -o {output:q} --abspath
+    """
+        
+rule search_species_3216:
+    input:
+        q="species.mf.csv",
+        db="../../3216.manifest.csv",
+    output:
+        "manysearch.3216.csv",
+    #conda: "env-sourmash.yml"
+    threads: 32
+    shell: """
+        sourmash scripts manysearch -c {threads} -t 0 -k 21 -s 1000 \
+            {input.q:q} {input.db:q} -o {output:q}
+    """
+    
+rule map_index_rand:
+    input:
+        g="{s}.cds.min90.dedup.fa",
+        metag="../bams.cds.rand/{metag}.x.{s}.fastq.gz",
+    output:
+        bam='bams/{metag}.x.{s}.bam',
+        bai='bams/{metag}.x.{s}.bam.bai',
+    threads: 8
+    #conda: "env-mapping.yml"
+    shell: """
+        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - > {output.bam:q}
+        samtools index {output.bam:q}
+    """
+
+rule map_readstats:
+    input:
+        "{filename}.bam",
+    output:
+        "{filename}.readstats.txt",
+    #conda: "env-mapping.yml"
+    shell: """
+       samtools view -c -F 260 {input:q} > {output:q}
+    """
+
+rule combine_readstats_rand:
+    input:
+        expand('{{dir}}/{m}.x.{{s}}.readstats.txt', m=RAND_METAG),
+    output:
+        '{dir}/{s}.readstats.csv'
+    run:
+        readcounts = []
+        for txtname in input:
+            metag = os.path.basename(txtname).split('.')[0]
+            with open(txtname) as fp:
+                count = int(fp.readline().strip())
+                readcounts.append(dict(metag=metag, count=count))
+
+        df = pd.DataFrame(readcounts)
+        df.to_csv(str(output[0]))
+
+# get per-base depth information from BAM
+rule bam_to_depth_wc:
+    input:
+        bam = "{dir}/{bam}.bam",
+    output:
+        depth = "{dir}/{bam}.depth.txt",
+    #conda: "env/minimap2.yml"
+    shell: """
+        samtools depth -aa {input.bam:q} > {output.depth:q}
+    """
+
