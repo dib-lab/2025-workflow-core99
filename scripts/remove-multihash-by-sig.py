@@ -49,7 +49,7 @@ def main():
                     print('writing ...', n)
 
                 mh = ss.minhash
-                hashes = set(ss.minhash.hashes)
+                hashes = set(mh.hashes)
                 hashes -= nonsingletons
                 mh = mh.copy_and_clear()
                 mh.add_many(hashes)

@@ -2,14 +2,15 @@
 # NOTES:
 #    mapping requires about 30 GB of RAM for the largest pangenome (phaecicola)
 
-
+NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
+print(f'loaded {len(NAMESPLUS)} coreplus species names')
 
 ncbi_genomes = []
 ncbi_species = []
 ath_genomes = []
 ath_species = []
 
-for species in SUB_SPECIES:
+for species in NAMESPLUS:
     g, = glob_wildcards(f'outputs.mapping/genomes/{species}.ncbi.d/{{g}}.fna.gz')
     for x in g:
         #print(species, x)
@@ -60,11 +61,25 @@ rule do_mapping:
         expand('outputs.mapping/species-reads.rand/{s}.gather.with-lineages.csv', s=NAMES),
 
 
+rule get_genomes:
+    input:
+        expand('outputs.mapping/lists/{s}.ath-tax.csv', s=NAMESPLUS),
+        expand('outputs.mapping/lists/{s}.gtdb-tax.csv', s=NAMESPLUS),
+        expand('outputs.mapping/lists/{s}.gtdb-acc.txt', s=NAMESPLUS),
+        expand('outputs.mapping/genomes/{s}.ncbi.d/', s=NAMESPLUS),
+        expand('outputs.mapping/lists/{s}.ath-paths.txt', s=NAMESPLUS),
+        expand('outputs.mapping/genomes/{s}.ath.d/', s=NAMESPLUS),
+
 rule make_cds:
     input:
         expand('outputs.mapping/cds/{species}.cds.fa.gz', species=SUB_SPECIES),
         expand('outputs.mapping/cds/{species}.cds.sig.zip', species=SUB_SPECIES),
         expand('outputs.mapping/cds/{species}.x.rand-metags.manysearch.csv', species=SUB_SPECIES),
+
+rule make_cds2:
+    input:
+        expand('outputs.mapping/cds/{species}.cds.fa.gz', species=NAMESPLUS),
+        expand('outputs.mapping/cds/{species}.cds.sig.zip', species=NAMESPLUS),
 
 rule do_prokka_ncbi:
     input:
@@ -549,6 +564,9 @@ def get_ath_prokka_dirs(w):
             ath_dir = f'outputs.mapping/genomes/{species}.ath.prokka/{genome}.prokka.d'
             ath_dirs.append(ath_dir)
 
+    if len(ath_dirs) == 0:
+        print(f"WARNING, no AtH directories for '{w.species}'")
+
     return ath_dirs
 
 def get_ncbi_prokka_dirs(w):
@@ -557,6 +575,8 @@ def get_ncbi_prokka_dirs(w):
         if species == w.species:
             ncbi_dir = f'outputs.mapping/genomes/{species}.ncbi.prokka/{genome}.prokka.d'
             ncbi_dirs.append(ncbi_dir)
+
+    assert ncbi_dirs, f"no Prokka directories for {w.species}"
 
     return ncbi_dirs
 
@@ -567,7 +587,7 @@ rule prokka_cds_wc:
     output:
         'outputs.mapping/cds/{species}.cds.fa.gz'
     shell: """
-        find {input:q} -name *.ffn -exec cat {{}} \; | gzip > {output:q}
+        find {input:q} -name *.ffn -exec cat {{}} \\; | gzip > {output:q}
     """
 
 rule make_prokka_cds_sig_zip:
