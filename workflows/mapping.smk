@@ -2,6 +2,9 @@
 # NOTES:
 #    mapping requires about 30 GB of RAM for the largest pangenome (phaecicola)
 
+wildcard_constraints:
+    species="[^/]+"
+
 NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
 print(f'loaded {len(NAMESPLUS)} coreplus species names')
 
@@ -81,6 +84,13 @@ rule make_cds2:
         expand('outputs.mapping/cds/{species}.cds.fa.gz', species=NAMESPLUS),
         expand('outputs.mapping/cds/{species}.cds.sig.zip', species=NAMESPLUS),
 
+rule make_cds3:
+    input:
+        expand('outputs.mapping/cds/gtdb-only/{species}.cds.fa.gz', species=NAMESPLUS),
+        expand('outputs.mapping/cds/gtdb-only/{species}.cds.sig.zip', species=NAMESPLUS),
+        expand('outputs.mapping/cds/ath-only/{species}.cds.fa.gz', species=NAMESPLUS),
+        expand('outputs.mapping/cds/ath-only/{species}.cds.sig.zip', species=NAMESPLUS),
+
 rule do_prokka_ncbi:
     input:
         expand('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
@@ -115,13 +125,13 @@ rule do_map_rand:
 
 rule do_map_cds:
     input:
-        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.bam', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.fastq.gz', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.cds.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.gather.with-lineages.csv', s=NAMES, m=RAND_METAG),
-        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.profile.json', s=NAMES, m=RAND_METAG),
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.bam', m=RAND_METAG, s=NAMESPLUS),
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.fastq.gz', m=RAND_METAG, s=NAMESPLUS),
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMESPLUS),
+        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMESPLUS),
+        expand('outputs.mapping/bams.cds.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMESPLUS),
+#        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.gather.with-lineages.csv', s=NAMESPLUS, m=RAND_METAG),
+#        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.profile.json', s=NAMESPLUS, m=RAND_METAG),
 
 rule genome_lists:
     input:
@@ -582,10 +592,28 @@ def get_ncbi_prokka_dirs(w):
 
 rule prokka_cds_wc:
     input:
-        get_ath_prokka_dirs,
-        get_ncbi_prokka_dirs,
+        ancient(get_ath_prokka_dirs),
+        ancient(get_ncbi_prokka_dirs),
     output:
         'outputs.mapping/cds/{species}.cds.fa.gz'
+    shell: """
+        find {input:q} -name *.ffn -exec cat {{}} \\; | gzip > {output:q}
+    """
+
+rule prokka_cds_wc_gtdb_only:
+    input:
+        ancient(get_ncbi_prokka_dirs),
+    output:
+        'outputs.mapping/cds/gtdb-only/{species}.cds.fa.gz'
+    shell: """
+        find {input:q} -name *.ffn -exec cat {{}} \\; | gzip > {output:q}
+    """
+
+rule prokka_cds_wc_ath_only:
+    input:
+        ancient(get_ath_prokka_dirs),
+    output:
+        'outputs.mapping/cds/ath-only/{species}.cds.fa.gz'
     shell: """
         find {input:q} -name *.ffn -exec cat {{}} \\; | gzip > {output:q}
     """
