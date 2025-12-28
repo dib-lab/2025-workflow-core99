@@ -32,7 +32,6 @@ rule do_cds:
         #expand('outputs.cds/genomes/{s}.ath.d/', s=NAMES),
         expand('outputs.cds/cds/{species}.cds.fa.gz', species=NAMESPLUS),
         expand('outputs.cds/cds/{species}.cds.sig.zip', species=NAMESPLUS),
-    input:
         expand('outputs.cds/cds/gtdb-only/{species}.cds.fa.gz', species=NAMESPLUS),
         expand('outputs.cds/cds/gtdb-only/{species}.cds.sig.zip', species=NAMESPLUS),
         expand('outputs.cds/cds/ath-only/{species}.cds.fa.gz', species=NAMESPLUS),
@@ -466,17 +465,6 @@ rule search_species_bw_min_dedup:
     shell: """
         sourmash scripts manysearch -c {threads} -t 0 -k 21 -s 1000 \
             {input.q:q} {input.db:q} -o {output:q}
-    """
-
-rule csv_to_parquet2:
-    input:
-        '{filename}.csv',
-    output:
-        touch('{filename}.parquet'),
-    params:
-        dirname=lambda w: './' + os.path.dirname(w.filename)
-    shell: """
-        scripts/csv-to-parquet.py {input:q} -o {params.dirname:q}
     """
 
 rule screen_min90:

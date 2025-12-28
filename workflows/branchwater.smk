@@ -1,6 +1,4 @@
 # branchwater stuff - figure 3 and associated.
-import os.path
-
 rule do_branchwater:
     input:
         expand("outputs.branchwater/manysearch.{species}.parquet", species=NAMES),
@@ -8,17 +6,6 @@ rule do_branchwater:
         expand("outputs.branchwater/manysearch.cds-100k.{species}.parquet", species=SUB_SPECIES),
         expand("outputs.branchwater/manysearch.cds-500k.{species}.parquet", species=SUB_SPECIES),
         expand("outputs.branchwater/manysearch.cds-10k.{species}.parquet", species=SUB_SPECIES),
-
-rule csv_to_parquet:
-    input:
-        '{filename}.csv',
-    output:
-        '{filename}.parquet',
-    params:
-        dirname=lambda w: os.path.dirname(w.filename)
-    shell: """
-        scripts/csv-to-parquet.py {input:q} -o {params.dirname:q}
-    """
 
 rule search_species:
     input:

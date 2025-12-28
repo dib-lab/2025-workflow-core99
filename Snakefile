@@ -1,5 +1,6 @@
 import csv
 import pandas as pd
+import os.path
 
 ## Mapping inputs
 
@@ -74,3 +75,15 @@ include: "workflows/process_basic.smk"
 include: "workflows/cds.smk"
 
 include: "workflows/branchwater.smk"
+
+rule csv_to_parquet:
+    input:
+        '{filename}.csv',
+    output:
+        '{filename}.parquet',
+    params:
+        dirname=lambda w: os.path.dirname(w.filename)
+    shell: """
+        scripts/csv-to-parquet.py {input:q} -o {params.dirname:q}
+    """
+
