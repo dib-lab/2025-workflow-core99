@@ -1,5 +1,11 @@
-species,gene_name,description
-s__Phascolarctobacterium_A succinatutens,CNENGHLA_01260,BLAST match to hydrogenase large subunit [Phascolarctobacterium succinatutens]
-s__Phascolarctobacterium_A succinatutens,EHOAPHDI_01174,BLAST match to protein phosphatase 2C domain-containing protein partial [Phascolarctobacterium succinatutens]
-s__Phascolarctobacterium_A succinatutens,CNENGHLA_00658,BLAST match to 4-hydroxy-3-methylbut-2-enyl diphosphate reductase partial [Phascolarctobacterium succinatutens]
-s__Phascolarctobacterium_A succinatutens,IFIBFMPA_00800,BLAST match to  2-isopropylmalate synthase [Phascolarctobacterium sp.]
+good,species,gene_name,description
+1,s__Phascolarctobacterium_A succinatutens,CNENGHLA_01260,BLAST match to hydrogenase large subunit [Phascolarctobacterium succinatutens]
+1,s__Phascolarctobacterium_A succinatutens,EHOAPHDI_01174,BLAST match to protein phosphatase 2C domain-containing protein partial [Phascolarctobacterium succinatutens]
+1,s__Phascolarctobacterium_A succinatutens,CNENGHLA_00658,BLAST match to 4-hydroxy-3-methylbut-2-enyl diphosphate reductase partial [Phascolarctobacterium succinatutens]
+1,s__Phascolarctobacterium_A succinatutens,IFIBFMPA_00800,BLAST match to  2-isopropylmalate synthase [Phascolarctobacterium sp.]
+1,s__Lactobacillus amylovorus,BBOFCOCJ_01349,BLAST match to peptidase T [Lactobacillus sp.]
+1,s__Lactobacillus amylovorus,OBGMJDLM_01221,BLAST match to calcium-translocating P-type ATPase PMCA-type [Lactobacillus acidophilus]
+1,s__Lactobacillus amylovorus,OMBJBIHD_01711,BLAST match to LD-transpeptidase family protein [Lactobacillus amylovorus]
+1,s__Bariatricus sp004560705,CHOLCMOC_00863,BLAST match to BREX system Lon protease-like protein BrxL [Pilosibacter fragilis] (also Bariatricus spp.)
+1,s__Bariatricus sp004560705,LEHFNBLN_02301,BLAST match to YkgJ family cysteine cluster protein (also Bariatricus spp.)
+1,s__Bariatricus sp004560705,AIEIMHOC_00182,BLAST match to competence protein ComEC family protein (also Bariatricus spp.)
