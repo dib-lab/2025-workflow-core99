@@ -10,6 +10,24 @@ NAMES = [ x.strip() for x in open('inputs.mapping/names.list') ]
 print(f'loaded {len(NAMES)} core species names')
 print(NAMES[0])
 
+MIN50_NAMES = [
+    's__Bariatricus sp004560705',
+    's__Cryptobacteroides sp900546925',
+    's__Fimisoma sp002320005',
+    's__Gemmiger qucibialis',
+    's__Holdemanella porci',
+    's__JALFVM01 sp022787145',
+    's__Lactobacillus amylovorus',
+    's__Mogibacterium_A kristiansenii',
+    's__Phascolarctobacterium_A succinatutens',
+    's__Prevotella sp000434975',
+    's__Prevotella sp002251295',
+    's__Roseburia inulinivorans',
+    's__Sodaliphilus sp004557565',
+    's__UBA2868 sp004552595',
+]
+
+# @CTB remove?
 LOWEST_METAG = [ x.strip() for x in open('inputs.mapping/lowest-detection.metags.txt') ]
 print(f'loaded {len(LOWEST_METAG)} metagenome names for lowest-detection mapping')
 print(LOWEST_METAG[:3])
@@ -51,6 +69,8 @@ SUB_SPECIES=('s__Cryptobacteroides sp900546925',
 
 include: "workflows/process_basic.smk"
 
-include: "workflows/mapping.smk"
+#include: "workflows/mapping.smk"
+
+include: "workflows/cds.smk"
 
 include: "workflows/branchwater.smk"

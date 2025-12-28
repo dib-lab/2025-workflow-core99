@@ -5,3 +5,4 @@ outputs.mapping
 inputs.pangenome-gather
 outputs.branchwater
 outputs.core
+outputs.cds

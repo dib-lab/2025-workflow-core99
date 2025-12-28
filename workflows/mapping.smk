@@ -8,88 +8,8 @@ wildcard_constraints:
 NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
 print(f'loaded {len(NAMESPLUS)} coreplus species names')
 
-ncbi_genomes = []
-ncbi_species = []
-ath_genomes = []
-ath_species = []
-
-for species in NAMESPLUS:
-    g, = glob_wildcards(f'outputs.mapping/genomes/{species}.ncbi.d/{{g}}.fna.gz')
-    for x in g:
-        #print(species, x)
-        ncbi_species.append(species)
-        ncbi_genomes.append(x)
-
-    g, = glob_wildcards(f'outputs.mapping/genomes/{species}.ath.d/{{g}}.fasta')
-
-    for x in g:
-        #print(species, x)
-        ath_species.append(species)
-        ath_genomes.append(x)
-
-print('XXX', len(ncbi_genomes), ncbi_genomes[0])
-print('YYY', len(ath_genomes), ath_genomes[0])
-
-rule do_mapping:
-    input:
-        expand('outputs.mapping/lists/{s}.ath-tax.csv', s=NAMES),
-        expand('outputs.mapping/lists/{s}.gtdb-tax.csv', s=NAMES),
-        expand('outputs.mapping/lists/{s}.gtdb-acc.txt', s=NAMES),
-        expand('outputs.mapping/genomes/{s}.ncbi.d/', s=NAMES),
-        expand('outputs.mapping/lists/{s}.ath-paths.txt', s=NAMES),
-        expand('outputs.mapping/genomes/{s}.ath.d/', s=NAMES),
-        expand('outputs.mapping/genomes/{s}.pangenome.fa.gz', s=NAMES),
-        expand('outputs.mapping/genomes/{s}.pangenome.sig.zip', s=NAMES),
-        expand("outputs.mapping/containment/{s}.x.lowest-metags.manysearch.csv", s=NAMES),
-        expand("outputs.mapping/containment/{s}.x.rand-metags.manysearch.csv", s=NAMES),
-        expand("outputs.mapping/sigs/{s}-genomes.sig.zip", s=NAMES),
-        expand("outputs.mapping/manysearch/individual.{s}.x.rand-metags.csv", s=NAMES),
-        expand("outputs.mapping/manysearch/individual.{s}.x.lowest-metags.csv", s=NAMES),
-        expand("outputs.mapping/manysearch/individual.{s}.x.pg.csv", s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.bam', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.fastq.gz', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.bam', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.fastq.gz', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.sig.zip', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.readstats.txt', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{s}.readstats.csv', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/species-reads.rand/{s}.fastq.gz', s=NAMES),
-        expand('outputs.mapping/singlem.rand/{s}.profile.tsv', s=NAMES),
-        expand('outputs.mapping/singlem.rand/{s}.profile.json', s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.gather.with-lineages.csv', s=NAMES, m=RAND_METAG),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.profile.json', s=NAMES, m=RAND_METAG),
-        expand('outputs.mapping/species-reads.rand/{s}.gather.with-lineages.csv', s=NAMES),
-
-
-rule get_genomes:
-    input:
-        expand('outputs.mapping/lists/{s}.ath-tax.csv', s=NAMESPLUS),
-        expand('outputs.mapping/lists/{s}.gtdb-tax.csv', s=NAMESPLUS),
-        expand('outputs.mapping/lists/{s}.gtdb-acc.txt', s=NAMESPLUS),
-        expand('outputs.mapping/genomes/{s}.ncbi.d/', s=NAMESPLUS),
-        expand('outputs.mapping/lists/{s}.ath-paths.txt', s=NAMESPLUS),
-        expand('outputs.mapping/genomes/{s}.ath.d/', s=NAMESPLUS),
-
-rule make_cds:
-    input:
-        expand('outputs.mapping/cds/{species}.cds.fa.gz', species=SUB_SPECIES),
-        expand('outputs.mapping/cds/{species}.cds.sig.zip', species=SUB_SPECIES),
-        expand('outputs.mapping/cds/{species}.x.rand-metags.manysearch.csv', species=SUB_SPECIES),
-
-rule make_cds2:
-    input:
-        expand('outputs.mapping/cds/{species}.cds.fa.gz', species=NAMESPLUS),
-        expand('outputs.mapping/cds/{species}.cds.sig.zip', species=NAMESPLUS),
-
 rule make_cds3:
     input:
-        expand('outputs.mapping/cds/gtdb-only/{species}.cds.fa.gz', species=NAMESPLUS),
-        expand('outputs.mapping/cds/gtdb-only/{species}.cds.sig.zip', species=NAMESPLUS),
-        expand('outputs.mapping/cds/ath-only/{species}.cds.fa.gz', species=NAMESPLUS),
-        expand('outputs.mapping/cds/ath-only/{species}.cds.sig.zip', species=NAMESPLUS),
 
 rule do_prokka_ncbi:
     input:
