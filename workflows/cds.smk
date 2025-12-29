@@ -531,8 +531,8 @@ rule map_index_rand_cds:
         g="outputs.cds/singleclust/{s}.cds3.min50.dedup.fa",
         metag="outputs.mapping/bams.cds.rand/{m}.x.{s}.fastq.gz",
     output:
-        bam='outputs.cds/singleclust/{m}.x.{s}.bam',
-        bai='outputs.cds/singleclust/{m}.x.{s}.bam.bai',
+        bam='outputs.cds/singleclust/bam/{m}.x.{s}.bam',
+        bai='outputs.cds/singleclust/bam/{m}.x.{s}.bam.bai',
     threads: 8
     conda: "env-mapping.yml"
     shell: """
@@ -542,11 +542,11 @@ rule map_index_rand_cds:
 
 rule map_coverage_cds:
     input:
-        bam='outputs.cds/singleclust/{m}.x.{s}.bam',
-        bai='outputs.cds/singleclust/{m}.x.{s}.bam.bai',
+        bam='outputs.cds/singleclust/bam/{m}.x.{s}.bam',
+        bai='outputs.cds/singleclust/bam/{m}.x.{s}.bam.bai',
         fa='outputs.cds/singleclust/{s}.cds3.min50.dedup.fa',
     output:
-        'outputs.cds/singleclust/{m}.x.{s}.coverage.txt'
+        'outputs.cds/singleclust/bam/{m}.x.{s}.coverage.txt'
     threads: 8
     conda: "env-mapping.yml"
     shell: """
@@ -555,11 +555,11 @@ rule map_coverage_cds:
 
 rule map_coverage_cds_depth:
     input:
-        bam='outputs.cds/singleclust/{m}.x.{s}.bam',
-        bai='outputs.cds/singleclust/{m}.x.{s}.bam.bai',
+        bam='outputs.cds/singleclust/bam/{m}.x.{s}.bam',
+        bai='outputs.cds/singleclust/bam/{m}.x.{s}.bam.bai',
         fa='outputs.cds/singleclust/{s}.cds3.min50.dedup.fa',
     output:
-        'outputs.cds/singleclust/{m}.x.{s}.depth.txt'
+        'outputs.cds/singleclust/bam/{m}.x.{s}.depth.txt'
     threads: 8
     conda: "env-mapping.yml"
     shell: """
