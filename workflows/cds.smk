@@ -1,4 +1,6 @@
-# mapping stuff - figure 1 and associated data.
+# coding sequence stuff - figure 1 and associated data.
+# TODO:
+#  - automate cd-hit clustering of all + cluster extraction
 # NOTES:
 #    mapping requires about 30 GB of RAM for the largest pangenome (phaecicola)
 
@@ -7,6 +9,8 @@ wildcard_constraints:
 
 NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
 print(f'loaded {len(NAMESPLUS)} coreplus species names')
+
+SPECIES_WITH_GENES, =glob_wildcards('outputs.cds/cds3-genes/{s}.genes.fa')
 
 ncbi_genomes = []
 ncbi_species = []
@@ -56,7 +60,9 @@ rule do_cds:
         "outputs.cds/cds3/manysearch.cds3.min50.dedup.3216.csv",
         expand('outputs.cds/cds3/outputs.branchwater.cds3.singleclust/manysearch.{s}.parquet', s=MIN50_NAMES),
         "outputs.cds/cds3/manysearch.cds3.singleclust.3216.csv",
-
+        expand("outputs.cds/cds3-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
+        "outputs.cds/cds3-genes/manysearch.3216.csv",
+        expand("outputs.cds/cds3-genes/outputs.branchwater/manysearch.{s}.parquet", s=SPECIES_WITH_GENES),
 
 ####
 
@@ -560,3 +566,57 @@ rule map_coverage_cds_depth:
         samtools depth -aa {input.bam:q} {input.fa:q} > {output:q}
     """
 
+rule extract_species_genes:
+    input:
+        "outputs.cds/singleclust/species-genes.csv",
+        # singleclust FA files
+    output:
+        directory("outputs.cds/cds3-genes/")
+    shell: """
+        scripts/split-genes-by-species.py outputs.cds/singleclust/species-genes.csv outputs.cds/singleclust/*.fa -o {output}
+    """
+
+rule sketch_species_genes:
+    input:
+        "outputs.cds/cds3-genes/{s}.genes.fa",
+    output:
+        "outputs.cds/cds3-genes/{s}.sig.zip",
+    shell: """
+        sourmash sketch dna {input:q} -o {output:q} --name {wildcards.s:q} \
+           -p k=21,k=31,k=51
+    """
+
+rule genes_mf:
+    input:
+        expand("outputs.cds/cds3-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
+    output:
+        "outputs.cds/cds3-genes/cds3-genes.mf.csv",
+    shell: """
+        sourmash sig collect -F csv {input:q} -o {output:q}
+    """
+
+rule search_species_3216_genes:
+    input:
+        q="outputs.cds/cds3-genes/cds3-genes.mf.csv",
+        db="3216.manifest.csv",
+    output:
+        "outputs.cds/cds3-genes/manysearch.3216.csv",
+    conda: "env-sourmash.yml"
+    threads: 32
+    shell: """
+        sourmash scripts manysearch -c {threads} -t 0 -k 21 -s 1000 \
+            {input.q:q} {input.db:q} -o {output:q}
+    """
+
+rule search_species_bw_genes:
+    input:
+        q="outputs.cds/cds3-genes/{s}.sig.zip",
+        db=BW_ROCKSDB,
+    output:
+        "outputs.cds/cds3-genes/outputs.branchwater/manysearch.{s}.csv",
+    conda: "env-sourmash.yml"
+    threads: 1
+    shell: """
+        sourmash scripts manysearch -c {threads} -t 0 -k 21 -s 1000 \
+            {input.q:q} {input.db:q} -o {output:q}
+    """
