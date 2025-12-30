@@ -46,6 +46,9 @@ rule do_cds:
         expand('outputs.cds/cds3/{s}.cds4.sig.zip', s=NAMESPLUS),
         expand('outputs.cds/cds3/singleton_pg/{s}.sig.zip', s=NAMESPLUS),
         expand("outputs.cds/cds3/manysearch.cds{c}.3216.csv", c=[3,4,5,6]),
+
+rule foo:
+    input:
         expand('outputs.cds/cds3/outputs.branchwater.cds{c}/manysearch.{s}.parquet', s=NAMESPLUS,
                c=[3,4,5,6]),
         expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min{m}.sig.zip', s=NAMESPLUS, m=[10, 20, 50, 60, 70, 80, 90]),
@@ -297,7 +300,7 @@ rule extract_singleton_pg:
 rule cds3_isect:
     input:
         pg='outputs.cds/cds3/singleton_pg/{s}.sig.zip',
-        cds='outputs.cds/{s}.cds.sig.zip',
+        cds='outputs.cds/cds/{s}.cds.sig.zip',
     output:
         'outputs.cds/cds3/{s}.cds3.sig.zip',
     shell: """
@@ -335,7 +338,7 @@ rule cds6_isect:
     input:
         pg='outputs.cds/cds3/singleton_pg/{s}.sig.zip',
         cds_gtdb='outputs.cds/cds/gtdb-only/{s}.cds.sig.zip',
-        cds_ath='outputs./cds/ath-only/{s}.cds.sig.zip',
+        cds_ath='outputs.cds/cds/ath-only/{s}.cds.sig.zip',
     output:
         tmp=temporary("temp/{s}.cds6_isect.sig.zip"),
         cds5='outputs.cds/cds3/{s}.cds6.sig.zip',
@@ -350,7 +353,7 @@ rule species_cds_mf:
     input:
         expand("outputs.cds/cds3/{s}.cds{{c}}.sig.zip", s=NAMES)
     output:
-        "outputs.cds/cds3/species.cds{c,^[\\.]+}.mf.csv"
+        "outputs.cds/cds3/species.cds{c}.mf.csv"
     shell: """
         sourmash sig collect -F csv {input:q} -o {output:q} --abspath
     """
@@ -387,7 +390,7 @@ rule search_species_3216:
         q="outputs.cds/cds3/species.cds{c}.mf.csv",
         db="3216.manifest.csv",
     output:
-        "outputs.cds/cds3/manysearch.cds{c,^[\\.]+}.3216.csv",
+        "outputs.cds/cds3/manysearch.cds{c}.3216.csv",
     conda: "env-sourmash.yml"
     threads: 32
     shell: """
