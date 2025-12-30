@@ -5,7 +5,9 @@
 #    mapping requires about 30 GB of RAM for the largest pangenome (phaecicola)
 
 wildcard_constraints:
-    species="[^/]+"
+    species="[^/]+",
+    cds="[^.]+",
+    m="[^.]+",
 
 NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
 print(f'loaded {len(NAMESPLUS)} coreplus species names')
@@ -45,27 +47,25 @@ rule do_cds:
         expand('outputs.cds/cds3/{s}.cds3.sig.zip', s=NAMESPLUS),
         expand('outputs.cds/cds3/{s}.cds4.sig.zip', s=NAMESPLUS),
         expand('outputs.cds/cds3/singleton_pg/{s}.sig.zip', s=NAMESPLUS),
-        expand("outputs.cds/cds3/manysearch.cds{c}.3216.csv", c=[3,4,5,6]),
+        expand("outputs.cds/cds3/manysearch.cds{cds}.3216.csv", cds=[3,4,5,6]),
+        expand('outputs.cds/branchwater.cds3/manysearch.{s}.parquet',
+               s=NAMESPLUS),
+        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min{m}.sig.zip', s=NAMESPLUS, m=[10, 20, 50, 60, 70, 80, 90]),
+        expand('outputs.cds/branchwater.cds3.min50/manysearch.{s}.parquet', s=MIN50_NAMES),
+        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.fa', s=NAMESPLUS),
+        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup.fa', s=NAMESPLUS),
+        expand('outputs.cds/cds3/{s}.cds3.min50.dedup.sig.zip', s=MIN50_NAMES),
 
 rule foo:
     input:
-        expand('outputs.cds/cds3/outputs.branchwater.cds{c}/manysearch.{s}.parquet', s=NAMESPLUS,
-               c=[3,4,5,6]),
-        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min{m}.sig.zip', s=NAMESPLUS, m=[10, 20, 50, 60, 70, 80, 90]),
-        expand('outputs.cds/cds3/outputs.branchwater.cds3.min50/manysearch.{s}.parquet', s=NAMESPLUS),
-        "outputs.cds/cds3/manysearch.cds3.min50.3216.csv",
-        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.fa', s=NAMESPLUS),
-        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup.fa', s=NAMESPLUS),
-        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup2.fa', s=MIN50_NAMES),
-        expand('outputs.cds/cds3/{s}.cds3.min50.dedup.sig.zip', s=MIN50_NAMES),
         expand('outputs.cds/cds3/{s}.cds3.singleclust.sig.zip', s=MIN50_NAMES),
-        expand('outputs.cds/cds3/outputs.branchwater.cds3.min50.dedup/manysearch.{s}.parquet', s=MIN50_NAMES),
+        expand('outputs.cds/branchwater.cds3.min50.dedup/manysearch.{s}.parquet', s=MIN50_NAMES),
         "outputs.cds/cds3/manysearch.cds3.min50.dedup.3216.csv",
-        expand('outputs.cds/cds3/outputs.branchwater.cds3.singleclust/manysearch.{s}.parquet', s=MIN50_NAMES),
+        expand('outputs.cds/branchwater.cds3.singleclust/manysearch.{s}.parquet', s=MIN50_NAMES),
         "outputs.cds/cds3/manysearch.cds3.singleclust.3216.csv",
         expand("outputs.cds/cds3-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
         "outputs.cds/cds3-genes/manysearch.3216.csv",
-        expand("outputs.cds/cds3-genes/outputs.branchwater/manysearch.{s}.parquet", s=SPECIES_WITH_GENES),
+        expand("outputs.cds/branchwater.cds3-genes//manysearch.{s}.parquet", s=SPECIES_WITH_GENES),
 
 ####
 
@@ -351,18 +351,18 @@ rule cds6_isect:
         
 rule species_cds_mf:
     input:
-        expand("outputs.cds/cds3/{s}.cds{{c}}.sig.zip", s=NAMES)
+        expand("outputs.cds/cds3/{s}.cds{{cds}}.sig.zip", s=NAMESPLUS)
     output:
-        "outputs.cds/cds3/species.cds{c}.mf.csv"
+        "outputs.cds/cds3/species.cds{cds}.mf.csv"
     shell: """
         sourmash sig collect -F csv {input:q} -o {output:q} --abspath
     """
         
 rule species_min_mf:
     input:
-        expand("outputs.cds/cds3/outputs.minsig/{s}.cds{{c}}.min{{m}}.sig.zip", s=NAMES)
+        expand("outputs.cds/cds3/outputs.minsig/{s}.cds{{cds}}.min{{m}}.sig.zip", s=MIN50_NAMES)
     output:
-        "outputs.cds/cds3/species.cds{c}.min{m,^[\\.]+}.mf.csv"
+        "outputs.cds/cds3/species.cds{cds}.min{m}.mf.csv"
     shell: """
         sourmash sig collect -F csv {input:q} -o {output:q} --abspath
     """
@@ -387,10 +387,10 @@ rule species_min_mf_singleclust:
         
 rule search_species_3216:
     input:
-        q="outputs.cds/cds3/species.cds{c}.mf.csv",
+        q="outputs.cds/cds3/species.cds{cds}.mf.csv",
         db="3216.manifest.csv",
     output:
-        "outputs.cds/cds3/manysearch.cds{c}.3216.csv",
+        "outputs.cds/cds3/manysearch.cds{cds}.3216.csv",
     conda: "env-sourmash.yml"
     threads: 32
     shell: """
@@ -426,10 +426,10 @@ rule search_species_3216_singleclust:
 
 rule search_species_bw:
     input:
-        q="outputs.cds/cds3/{species}.cds{c}.sig.zip",
+        q="outputs.cds/cds3/{species}.cds{cds}.sig.zip",
         db=BW_ROCKSDB,
     output:
-        "outputs.cds/cds3/outputs.branchwater.cds{c,^[\\.]+}/manysearch.{species}.csv",
+        "outputs.cds/branchwater.cds{cds}/manysearch.{species}.csv",
     conda: "env-sourmash.yml"
     threads: 1
     shell: """
@@ -442,7 +442,7 @@ rule search_species_bw_singleclust:
         q="outputs.cds/cds3/{species}.cds3.singleclust.sig.zip",
         db=BW_ROCKSDB,
     output:
-        "outputs.cds/cds3/outputs.branchwater.cds3.singleclust/manysearch.{species}.csv",
+        "outputs.cds/branchwater.cds3.singleclust/manysearch.{species}.csv",
     conda: "env-sourmash.yml"
     threads: 1
     shell: """
@@ -452,10 +452,10 @@ rule search_species_bw_singleclust:
 
 rule search_species_bw_min:
     input:
-        q="outputs.cds/cds3/outputs.minsig/{species}.cds{c}.min{m}.sig.zip",
+        q="outputs.cds/cds3/outputs.minsig/{species}.cds{cds}.min{m}.sig.zip",
         db=BW_ROCKSDB,
     output:
-        "outputs.cds/cds3/outputs.branchwater.cds{c}.min{m,^[\\.]+}/manysearch.{species}.csv",
+        "outputs.cds/branchwater.cds{cds}.min{m}/manysearch.{species}.csv",
     conda: "env-sourmash.yml"
     threads: 1
     shell: """
@@ -465,10 +465,10 @@ rule search_species_bw_min:
 
 rule search_species_bw_min_dedup:
     input:
-        q="outputs.cds/cds3/{species}.cds{c}.min{m}.dedup.sig.zip",
+        q="outputs.cds/cds3/{species}.cds{cds}.min{m}.dedup.sig.zip",
         db=BW_ROCKSDB,
     output:
-        "outputs.cds/cds3/outputs.branchwater.cds{c}.min{m}.dedup/manysearch.{species}.csv",
+        "outputs.cds/branchwater.cds{cds}.min{m}.dedup/manysearch.{species}.csv",
     conda: "env-sourmash.yml"
     threads: 1
     shell: """
@@ -490,7 +490,7 @@ rule screen_min90:
 rule kmers_wc:
     input:
         sig='outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.sig.zip',
-        seqs='outputs./cds/{s}.cds.fa.gz',
+        seqs='outputs.cds/cds/{s}.cds.fa.gz',
     output:
         fa=touch('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.fa'),
     shell: """
@@ -616,7 +616,7 @@ rule search_species_bw_genes:
         q="outputs.cds/cds3-genes/{s}.sig.zip",
         db=BW_ROCKSDB,
     output:
-        "outputs.cds/cds3-genes/outputs.branchwater/manysearch.{s}.csv",
+        "outputs.cds/branchwater.cds3-genes/manysearch.{s}.csv",
     conda: "env-sourmash.yml"
     threads: 1
     shell: """
