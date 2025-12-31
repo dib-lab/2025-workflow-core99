@@ -3,6 +3,7 @@
 #  - automate cd-hit clustering of all + cluster extraction
 # NOTES:
 #    mapping requires about 30 GB of RAM for the largest pangenome (phaecicola)
+import polars as pl
 
 wildcard_constraints:
     species="[^/]+",
@@ -12,8 +13,10 @@ wildcard_constraints:
 NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
 print(f'loaded {len(NAMESPLUS)} coreplus species names')
 
-SPECIES_WITH_GENES, =glob_wildcards('outputs.cds/cds3-genes/{s}.genes.fa')
-
+species_genes_df = pl.read_csv("outputs.cds/singleclust/species-genes.csv")
+SPECIES_WITH_GENES = set(species_genes_df['species'].to_list())
+print(f'{len(SPECIES_WITH_GENES)} species have manually curated genes.')
+    
 ncbi_genomes = []
 ncbi_species = []
 ath_genomes = []
@@ -55,17 +58,17 @@ rule do_cds:
         expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.fa', s=NAMESPLUS),
         expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup.fa', s=NAMESPLUS),
         expand('outputs.cds/cds3/{s}.cds3.min50.dedup.sig.zip', s=MIN50_NAMES),
-
-rule foo:
-    input:
-        expand('outputs.cds/cds3/{s}.cds3.singleclust.sig.zip', s=MIN50_NAMES),
+        'outputs.cds/singleclust/all-dedup-95.fa',
+        expand('outputs.cds/singleclust/{s}.cds3.min50.dedup.fa', s=MIN50_NAMES),
         expand('outputs.cds/branchwater.cds3.min50.dedup/manysearch.{s}.parquet', s=MIN50_NAMES),
-        "outputs.cds/cds3/manysearch.cds3.min50.dedup.3216.csv",
+        expand('outputs.cds/cds3/{s}.cds3.singleclust.sig.zip', s=MIN50_NAMES),
         expand('outputs.cds/branchwater.cds3.singleclust/manysearch.{s}.parquet', s=MIN50_NAMES),
-        "outputs.cds/cds3/manysearch.cds3.singleclust.3216.csv",
+        "outputs.cds/cds3-genes/",
         expand("outputs.cds/cds3-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
+        expand("outputs.cds/branchwater.cds3-genes/manysearch.{s}.parquet", s=SPECIES_WITH_GENES),
+        "outputs.cds/cds3/manysearch.cds3.min50.dedup.3216.csv",
+        "outputs.cds/cds3/manysearch.cds3.singleclust.3216.csv",
         "outputs.cds/cds3-genes/manysearch.3216.csv",
-        expand("outputs.cds/branchwater.cds3-genes//manysearch.{s}.parquet", s=SPECIES_WITH_GENES),
 
 ####
 
@@ -571,12 +574,17 @@ rule map_coverage_cds_depth:
 
 rule extract_species_genes:
     input:
-        "outputs.cds/singleclust/species-genes.csv",
-        # singleclust FA files
+        csv="outputs.cds/singleclust/species-genes.csv",
+        fa=expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup.fa',
+                  s=MIN50_NAMES),
     output:
-        directory("outputs.cds/cds3-genes/")
+        expand("outputs.cds/cds3-genes/{s}.genes.fa",
+               s=SPECIES_WITH_GENES)
+    params:
+        outdir='outputs.cds/cds3-genes/'
     shell: """
-        scripts/split-genes-by-species.py outputs.cds/singleclust/species-genes.csv outputs.cds/singleclust/*.fa -o {output}
+        scripts/split-genes-by-species.py {input.csv:q} {input.fa:q} \
+            -o {params.outdir}
     """
 
 rule sketch_species_genes:
@@ -622,4 +630,38 @@ rule search_species_bw_genes:
     shell: """
         sourmash scripts manysearch -c {threads} -t 0 -k 21 -s 1000 \
             {input.q:q} {input.db:q} -o {output:q}
+    """
+
+rule combine_minsig:
+    input:
+        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.fa',
+               s=MIN50_NAMES)
+    output:
+        'outputs.cds/singleclust/all.fa',
+    shell: """
+        cat {input:q} > {output:q}
+    """
+
+rule cluster_all_minsig:
+    input:
+        'outputs.cds/singleclust/all.fa',
+    output:
+        fa='outputs.cds/singleclust/all-dedup-95.fa',
+        clstr='outputs.cds/singleclust/all-dedup-95.fa.clstr',
+    threads: 16
+    shell: """
+        cd-hit -c 0.95 -i {input:q} -o {output.fa:q} -T {threads} -M 5000
+    """
+
+rule extract_singleclust:
+    input:
+        clstr='outputs.cds/singleclust/all-dedup-95.fa.clstr',
+        fa=expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup.fa',
+               s=MIN50_NAMES)
+    output:
+        expand('outputs.cds/singleclust/{s}.cds3.min50.dedup.fa',
+               s=MIN50_NAMES),
+    shell: """
+        scripts/extract-cdhit-singleclust.py {input.clstr:q} {input.fa:q} \
+            -o outputs.cds/singleclust/
     """

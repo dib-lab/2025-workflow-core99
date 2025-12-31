@@ -50,7 +50,8 @@ def main():
 
     n_written = 0
     for filename in args.fasta_files:
-        outfile = os.path.join(args.outdir, filename)
+        basename = os.path.basename(filename)
+        outfile = os.path.join(args.outdir, basename)
         fp = open(outfile, 'wt')
         for record in screed.open(filename):
             thisname = record.name[:14]
