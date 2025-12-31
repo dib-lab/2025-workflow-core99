@@ -72,6 +72,12 @@ rule do_cds:
 
 ####
 
+rule do_singleclust_map:
+    input:
+        expand('outputs.cds/singleclust/bam/{m}.x.{s}.depth.txt',
+               m=RAND_METAG, s=MIN50_NAMES),
+        
+
 rule do_prokka_ncbi:
     input:
         expand('outputs.cds/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
