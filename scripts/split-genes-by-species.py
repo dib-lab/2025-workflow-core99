@@ -16,17 +16,24 @@ def main():
     p.add_argument('-o', '--outdir', help='output directory')
     args = p.parse_args()
 
+    args.outdir = args.outdir.rstrip('/')
+    assert args.outdir
+
     with open(args.genes_by_species_csv, newline='') as fp:
         r = csv.DictReader(fp)
         rows = list(r)
 
     gene_species = {}
+    genes_uniq = set()
     for row in rows:
         is_good = int(row["good"])
         if is_good:
             gene = row["gene_name"]
             species = row["species"]
             gene_species[gene] = species
+
+            assert gene not in genes_uniq, f"{gene} is present at least twice..."
+            genes_uniq.add(gene)
 
     try:
         os.mkdir(args.outdir)

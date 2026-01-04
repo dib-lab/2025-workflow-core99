@@ -14,7 +14,9 @@ NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
 print(f'loaded {len(NAMESPLUS)} coreplus species names')
 
 species_genes_df = pl.read_csv("outputs.cds/singleclust/species-genes.csv")
+species_genes_df = species_genes_df.filter(pl.col("good") != 0)
 SPECIES_WITH_GENES = set(species_genes_df['species'].to_list())
+assert not None in SPECIES_WITH_GENES
 print(f'{len(SPECIES_WITH_GENES)} species have manually curated genes.')
     
 ncbi_genomes = []
@@ -63,7 +65,6 @@ rule do_cds:
         expand('outputs.cds/branchwater.cds3.min50.dedup/manysearch.{s}.parquet', s=MIN50_NAMES),
         expand('outputs.cds/cds3/{s}.cds3.singleclust.sig.zip', s=MIN50_NAMES),
         expand('outputs.cds/branchwater.cds3.singleclust/manysearch.{s}.parquet', s=MIN50_NAMES),
-        "outputs.cds/cds3-genes/",
         expand("outputs.cds/cds3-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
         expand("outputs.cds/branchwater.cds3-genes/manysearch.{s}.parquet", s=SPECIES_WITH_GENES),
         "outputs.cds/cds3/manysearch.cds3.min50.dedup.3216.csv",
@@ -71,6 +72,11 @@ rule do_cds:
         "outputs.cds/cds3-genes/manysearch.3216.csv",
 
 ####
+
+rule do_cds_genes:
+    input:
+        expand("outputs.cds/cds3-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
+        
 
 rule do_singleclust_map:
     input:
@@ -581,8 +587,8 @@ rule map_coverage_cds_depth:
 rule extract_species_genes:
     input:
         csv="outputs.cds/singleclust/species-genes.csv",
-        fa=expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup.fa',
-                  s=MIN50_NAMES),
+        fa=ancient(expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup.fa',
+                  s=MIN50_NAMES)),
     output:
         expand("outputs.cds/cds3-genes/{s}.genes.fa",
                s=SPECIES_WITH_GENES)
