@@ -49,6 +49,8 @@ rule do_cds:
         expand('outputs.cds/cds/ath-only/{species}.cds.sig.zip', species=NAMESPLUS),
         'outputs.cds/cds3/clean-gtdb+bins.species.singleton.k21.sig.zip',
         'outputs.cds/cds3/clean-gtdb.species.singleton.k21.sig.zip',
+        'outputs.cds/cds3/clean-gtdb+bins.species.singleton.k21.rocksdb',
+        'outputs.cds/cds3/clean-gtdb.species.singleton.k21.rocksdb',
         expand('outputs.cds/cds3/{s}.cds3.sig.zip', s=NAMESPLUS),
         expand('outputs.cds/cds3/{s}.cds4.sig.zip', s=NAMESPLUS),
         expand('outputs.cds/cds3/singleton_pg/{s}.sig.zip', s=NAMESPLUS),
@@ -72,6 +74,21 @@ rule do_cds:
         "outputs.cds/cds3-genes/manysearch.3216.csv",
 
 ####
+
+rule make_rocksdb:
+    input:
+        'outputs.cds/cds3/clean-gtdb+bins.species.singleton.k21.rocksdb',
+        'outputs.cds/cds3/clean-gtdb.species.singleton.k21.rocksdb',
+
+rule make_rocksdb_k21_wc:
+    input:
+        '{db}.k21.sig.zip',
+    output:
+        directory('{db}.k21.rocksdb'),
+    conda: "env-sourmash.yml"
+    shell: """
+         sourmash index -k 21 -F rocksdb {output} {input}
+    """
 
 rule do_cds_genes:
     input:
