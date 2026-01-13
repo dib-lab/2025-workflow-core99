@@ -17,6 +17,11 @@ def main():
     p.add_argument('-o', '--output-directory', required=True)
     args = p.parse_args()
 
+    try:
+        os.mkdir(args.output_directory)
+    except:
+        pass
+
     # load and count.
     cnt = Counter()
     for filename in args.pangenome_db:
