@@ -1,11 +1,11 @@
 good,anchor,species,gene_name,description
-1,0,s__Phascolarctobacterium_A succinatutens,CNENGHLA_01260,BLAST match to hydrogenase large subunit [Phascolarctobacterium succinatutens]
-1,0,s__Phascolarctobacterium_A succinatutens,EHOAPHDI_01174,BLAST match to protein phosphatase 2C domain-containing protein partial [Phascolarctobacterium succinatutens]
+1,1,s__Phascolarctobacterium_A succinatutens,CNENGHLA_01260,BLAST match to hydrogenase large subunit [Phascolarctobacterium succinatutens]
+1,1,s__Phascolarctobacterium_A succinatutens,EHOAPHDI_01174,BLAST match to protein phosphatase 2C domain-containing protein partial [Phascolarctobacterium succinatutens]
 1,0,s__Phascolarctobacterium_A succinatutens,CNENGHLA_00658,BLAST match to 4-hydroxy-3-methylbut-2-enyl diphosphate reductase partial [Phascolarctobacterium succinatutens]
 1,0,s__Phascolarctobacterium_A succinatutens,IFIBFMPA_00800,BLAST match to  2-isopropylmalate synthase [Phascolarctobacterium sp.]
 1,0,s__Lactobacillus amylovorus,BBOFCOCJ_01349,BLAST match to peptidase T [Lactobacillus sp.]
 1,0,s__Lactobacillus amylovorus,OBGMJDLM_01221,BLAST match to calcium-translocating P-type ATPase PMCA-type [Lactobacillus acidophilus]
-1,0,s__Lactobacillus amylovorus,OMBJBIHD_01711,BLAST match to LD-transpeptidase family protein [Lactobacillus amylovorus]
+1,1,s__Lactobacillus amylovorus,OMBJBIHD_01711,BLAST match to LD-transpeptidase family protein [Lactobacillus amylovorus]
 1,0,s__Bariatricus sp004560705,CHOLCMOC_00863,BLAST match to BREX system Lon protease-like protein BrxL [Pilosibacter fragilis] (also Bariatricus spp.)
 1,0,s__Bariatricus sp004560705,LEHFNBLN_02301,BLAST match to YkgJ family cysteine cluster protein (also Bariatricus spp.)
 1,0,s__Bariatricus sp004560705,AIEIMHOC_00182,BLAST match to competence protein ComEC family protein (also Bariatricus spp.)
@@ -15,7 +15,7 @@ good,anchor,species,gene_name,description
 1,0,s__Mogibacterium_A kristiansenii,BHHJJAAP_00933,BLAST match to isolate genome
 1,0,s__Mogibacterium_A kristiansenii,IEPMJGAI_00771,BLAST match to isolate genome
 1,0,s__Mogibacterium_A kristiansenii,NADIOELI_00170,BLAST match to isolate genome
-1,0,s__Mogibacterium_A kristiansenii,DKAPMIEG_00121,BLAST match to isolate genome
+1,1,s__Mogibacterium_A kristiansenii,DKAPMIEG_00121,BLAST match to isolate genome
 1,0,s__Mogibacterium_A kristiansenii,PKGEEMPI_00758,BLAST match to isolate genome
 1,0,s__Mogibacterium_A kristiansenii,AKLOHKAG_01416,BLAST match to isolate genome
 1,0,s__Holdemanella porci,DAPDNANK_01228,BLAST match to isolate genome
@@ -23,7 +23,7 @@ good,anchor,species,gene_name,description
 0,0,s__Sodaliphilus sp004557565,COJGPLPN_01769,non-specific Arginine--tRNA ligase
 1,0,s__Sodaliphilus sp004557565,MMBDDDLD_00384,malate dehydrogenase
 0,0,s__Sodaliphilus sp004557565,MMBDDDLD_00013,non-specific Penicillin-binding protein 1A
-1,0,s__Sodaliphilus sp004557565,NLNOELNI_01902,IG-like domain-containing protein
+1,1,s__Sodaliphilus sp004557565,NLNOELNI_01902,IG-like domain-containing protein
 1,0,s__Sodaliphilus sp004557565,FGLPJJIK_03110,GDP-L-fucose synthase
 0,0,s__Sodaliphilus sp004557565,FGLPJJIK_00822,hypothetical protein - non species specific
 0,0,s__Sodaliphilus sp004557565,JHPFMEME_00905,(not reviewed)
@@ -99,7 +99,7 @@ good,anchor,species,gene_name,description
 0,0,s__Cryptobacteroides sp900546925,LELOEEPG_00783,(not reviewed)
 0,0,s__Cryptobacteroides sp900546925,LELOEEPG_01683,(not reviewed)
 0,0,s__Cryptobacteroides sp900546925,FNIGJHLI_00528,(not reviewed)
-1,0,s__Cryptobacteroides sp900546925,OIGHMFGK_00345,Stealth CR1 domain-containing protein [Candidatus Cryptobacteroides sp.] 
+1,1,s__Cryptobacteroides sp900546925,OIGHMFGK_00345,Stealth CR1 domain-containing protein [Candidatus Cryptobacteroides sp.] 
 0,0,s__Cryptobacteroides sp900546925,BEKEPKDC_00812,(not reviewed)
 0,0,s__Cryptobacteroides sp900546925,FNIGJHLI_01182,(not reviewed)
 0,0,s__Cryptobacteroides sp900546925,DHLCKKDO_00372,(not reviewed)
@@ -180,7 +180,7 @@ good,anchor,species,gene_name,description
 0,0,s__Prevotella sp002251295,IPDEFMND_01992,glutamate tRNA ligase
 1,0,s__Prevotella sp002251295,KINAFDOL_01550,transcription-repair coupling factor
 1,0,s__Prevotella sp002251295,KPACIEHJ_00390,DUF4302 protein
-1,0,s__Prevotella sp002251295,GFALEAHI_01277,YfnO
+1,1,s__Prevotella sp002251295,GFALEAHI_01277,YfnO
 1,0,s__Prevotella sp002251295,MNKNIMJG_02022,hypothetical
 0,0,s__Prevotella sp002251295,HJAAFCJA_01737,(not reviewed)
 0,0,s__Prevotella sp002251295,IMEHPLBM_01421,(not reviewed)
