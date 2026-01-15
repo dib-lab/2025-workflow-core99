@@ -78,6 +78,8 @@ include: "workflows/branchwater.smk"
 
 include: "workflows/abundhist.smk"
 
+include: "workflows/manysearch.smk"
+
 rule csv_to_parquet:
     input:
         '{filename}.csv',
