@@ -10,7 +10,7 @@ wildcard_constraints:
     cds="[^.]+",
     m="[^.]+",
 
-NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
+NAMESPLUS = [ x.strip() for x in open('inputs.cds/names-plus.list') ]
 print(f'loaded {len(NAMESPLUS)} coreplus species names')
 
 species_genes_df = pl.read_csv("outputs.cds/singleclust/species-genes.csv")
@@ -36,11 +36,30 @@ for species in NAMESPLUS:
         ath_species.append(species)
         ath_genomes.append(x)
 
+# run FIRST (before do_prokka_*)
+rule do_genome_lists:
+    input:
+        expand('outputs.cds/lists/{s}.gtdb-acc.txt', s=NAMES),
+        expand('outputs.cds/lists/{s}.ath-paths.txt', s=NAMES),
+
+rule do_get_genomes:
+    input:
+        expand('outputs.cds/genomes/{s}.ncbi.d/', s=NAMES),
+        expand('outputs.cds/lists/{s}.ath-paths.txt', s=NAMES),
+        expand('outputs.cds/genomes/{s}.ath.d/', s=NAMES),
+
+# run before do_cds
+rule do_prokka_ncbi:
+    input:
+        expand('outputs.cds/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
+
+# run before do_cds
+rule do_prokka_ath:
+    input:
+        expand('outputs.cds/genomes/{species}.ath.prokka/{g}.prokka.d', zip, species=ath_species, g=ath_genomes)
+
 rule do_cds:
     input:
-        #expand('outputs.cds/genomes/{s}.ncbi.d/', s=NAMES),
-        #expand('outputs.cds/lists/{s}.ath-paths.txt', s=NAMES),
-        #expand('outputs.cds/genomes/{s}.ath.d/', s=NAMES),
         expand('outputs.cds/cds/{species}.cds.fa.gz', species=NAMESPLUS),
         expand('outputs.cds/cds/{species}.cds.sig.zip', species=NAMESPLUS),
         expand('outputs.cds/cds/gtdb-only/{species}.cds.fa.gz', species=NAMESPLUS),
@@ -100,20 +119,6 @@ rule do_singleclust_map:
         expand('outputs.cds/singleclust/bam/{m}.x.{s}.depth.txt',
                m=RAND_METAG, s=MIN50_NAMES),
         
-
-rule do_prokka_ncbi:
-    input:
-        expand('outputs.cds/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
-
-rule do_prokka_ath:
-    input:
-        expand('outputs.cds/genomes/{species}.ath.prokka/{g}.prokka.d', zip, species=ath_species, g=ath_genomes)
-
-rule genome_lists:
-    input:
-        expand('outputs.cds/lists/{s}.gtdb-acc.txt', s=NAMES),
-        expand('outputs.cds/lists/{s}.ath-paths.txt', s=NAMES),
-
 rule get_ath_mag_names:
     input:
         lineage='/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/bin-sketches.lineages.csv'
