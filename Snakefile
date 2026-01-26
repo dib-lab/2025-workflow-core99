@@ -10,22 +10,29 @@ GRIST_RAND100='/home/ctbrown/scratch3/2025-grist-annie/outputs.rand100/'
 NAMES = [ x.strip() for x in open('inputs.cds/names.list') ]
 print(f'loaded {len(NAMES)} core species names')
 print(NAMES[0])
+print(NAMES)
 
 MIN50_NAMES = [
-    's__Bariatricus sp004560705',
+    's__Sodaliphilus sp004557565',
+    's__Ornithospirochaeta sp022785155',
+    's__Prevotella sp002251295',
     's__Cryptobacteroides sp900546925',
-    's__Fimisoma sp002320005',
+    's__UBA2868 sp004552595',
+    's__Colivicinus sp002299675',
+    's__Prevotella sp000434975',
+    's__Bariatricus sp004560705',
+    's__Cryptobacteroides sp000432655',
+    's__Cryptobacteroides sp000434935',
+    's__Cryptobacteroides sp034089285',
+    's__Lactobacillus amylovorus',
+    's__Phascolarctobacterium_A succinatutens',
     's__Gemmiger qucibialis',
     's__Holdemanella porci',
-    's__JALFVM01 sp022787145',
-    's__Lactobacillus amylovorus',
+    's__Fimisoma sp002320005',
+    's__Floccifex porci',
     's__Mogibacterium_A kristiansenii',
-    's__Phascolarctobacterium_A succinatutens',
-    's__Prevotella sp000434975',
-    's__Prevotella sp002251295',
     's__Roseburia inulinivorans',
-    's__Sodaliphilus sp004557565',
-    's__UBA2868 sp004552595',
+    's__JALFVM01 sp022787145',
 ]
 
 # @CTB remove?
@@ -68,7 +75,7 @@ SUB_SPECIES=('s__Cryptobacteroides sp900546925',
 
 include: "workflows/process_basic.smk"
 
-#include: "workflows/mapping.smk"
+include: "workflows/mapping.smk"
 
 include: "workflows/cds.smk"
 

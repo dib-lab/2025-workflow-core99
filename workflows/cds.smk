@@ -16,6 +16,13 @@ print(f'loaded {len(NAMESPLUS)} coreplus species names')
 species_genes_df = pl.read_csv("outputs.cds/singleclust/species-genes.csv")
 species_genes_df = species_genes_df.filter(pl.col("good") != 0)
 SPECIES_WITH_GENES = set(species_genes_df['species'].to_list())
+
+rm = set()
+for k in SPECIES_WITH_GENES:
+    if k not in NAMESPLUS:
+        rm.add(k)
+SPECIES_WITH_GENES -= rm
+
 assert not None in SPECIES_WITH_GENES
 print(f'{len(SPECIES_WITH_GENES)} species have manually curated genes.')
     
@@ -35,6 +42,8 @@ for species in NAMESPLUS:
     for x in g:
         ath_species.append(species)
         ath_genomes.append(x)
+
+print('XXX', set(ath_species))
 
 # run FIRST (before do_prokka_*)
 rule do_genome_lists:
@@ -566,7 +575,7 @@ rule sketch_singleclust:
            --name {wildcards.s:q} -f
     """
 
-rule map_index_rand_cds:
+rule map_index_rand_cds_min50:
     input:
         g="outputs.cds/singleclust/{s}.cds3.min50.dedup.fa",
         metag="outputs.mapping/bams.cds.rand/{m}.x.{s}.fastq.gz",
