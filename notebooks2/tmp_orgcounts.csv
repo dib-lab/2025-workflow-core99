@@ -1,0 +1,541 @@
+organism,1,15,2,3,4,10,12,11,14,9,8,7,13,6,5,16
+outdoor metagenome,3,0,1,4,6,4,0,2,0,4,4,4,2,4,7,1
+fermentation metagenome,67,9,5,0,0,3,3,3,8,0,0,0,3,0,0,3
+rock metagenome,34,0,19,10,2,0,0,0,0,0,5,2,0,4,3,0
+Acetobacterium,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+root metagenome,108,1,58,80,18,12,6,12,2,11,2,6,2,4,10,0
+biocathode metagenome,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+primate metagenome,12,0,7,18,6,1,3,1,0,0,0,0,0,2,8,0
+insect gut metagenome,7,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+cold seep metagenome,3,3,2,5,5,0,1,1,2,3,4,2,3,1,0,12
+groundwater metagenome,87,11,58,39,30,12,13,10,12,12,17,18,8,27,29,13
+coral metagenome,72,1,35,13,3,2,1,1,0,0,1,1,0,2,4,0
+Severe acute respiratory syndrome coronavirus 2,20,0,5,1,1,0,0,0,0,0,0,0,0,0,1,0
+Candidatus Harpocratesius repetitus,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+mosquito metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bifidobacterium longum,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nomascus siki,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marine metagenome,965,188,541,297,208,109,171,132,209,132,112,114,182,133,195,146
+air metagenome,78,7,49,44,37,8,9,3,3,17,18,20,4,19,33,33
+marine sediment metagenome,55,22,55,41,29,19,15,10,19,14,15,18,14,9,16,69
+compost metagenome,55,7,9,6,2,3,6,1,2,1,7,10,2,3,5,22
+wetland metagenome,36,14,27,35,23,10,9,8,11,13,11,12,13,20,23,43
+Acrocephalus sechellensis,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+microbial mat metagenome,26,0,11,15,4,0,2,0,0,1,3,3,1,3,2,0
+metagenomes,15,0,4,1,0,0,0,0,0,1,0,1,0,1,0,0
+Neisseriaceae bacterium,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0
+synthetic metagenome,44,6,19,11,7,1,7,1,18,1,4,2,39,2,6,1
+pig metagenome,70,79,61,38,28,19,22,18,54,16,15,20,25,32,40,192
+algae metagenome,13,0,4,4,3,1,1,0,1,0,2,2,1,1,4,0
+Bubalus bubalis,1,0,0,1,3,0,0,0,0,0,0,3,0,7,2,0
+bioreactor metagenome,63,8,25,18,15,8,4,5,4,13,7,11,3,9,17,53
+human sputum metagenome,24,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0
+human blood metagenome,105,0,29,1,0,0,0,0,0,0,0,0,0,0,0,0
+food production metagenome,3,0,1,0,0,0,0,0,0,0,0,0,0,0,1,2
+Bos taurus,34,0,31,8,4,13,10,9,1,21,14,19,7,11,9,0
+aquatic metagenome,202,6,79,44,29,0,4,4,2,4,6,8,3,18,29,7
+seawater metagenome,181,11,133,88,70,18,16,23,13,38,30,30,22,40,53,10
+mouse metagenome,39,0,2,6,2,0,0,0,0,2,0,1,0,0,1,0
+bioreactor sludge metagenome,54,4,9,6,4,1,1,0,1,1,1,1,0,2,2,11
+chicken gut metagenome,786,1,113,37,14,1,1,0,2,0,1,0,0,5,5,1
+Globobulimina sp.,2,0,1,2,1,0,0,0,0,0,0,0,0,0,0,0
+Myriapoda,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+leaf metagenome,4,0,0,3,3,1,0,0,0,0,0,2,0,3,4,0
+Graptopsaltria nigrofuscata,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Roseburia,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mangrove metagenome,9,4,1,1,1,4,0,1,1,1,2,3,2,4,1,6
+wastewater metagenome,814,11,455,400,370,58,14,13,12,56,90,133,25,210,337,30
+moss metagenome,10,1,14,18,12,2,0,0,0,2,10,4,1,14,14,0
+lichen metagenome,9,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2
+Sus scrofa domesticus,1,0,0,2,1,4,3,6,0,2,7,6,2,3,6,1
+rat gut metagenome,25,0,20,50,15,0,0,0,0,0,0,0,0,2,0,0
+biogas fermenter metagenome,21,1,3,6,8,0,2,0,1,3,1,2,0,2,7,0
+Nonionella auris,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0
+Cyclotella cryptica,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ovis aries,1,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0
+plant metagenome,115,1,59,39,17,3,0,1,0,8,8,10,0,11,14,0
+rice paddy metagenome,21,0,6,6,3,0,0,0,0,0,0,0,0,0,2,0
+human saliva metagenome,67,0,27,22,8,0,0,0,0,0,0,1,0,4,5,0
+riverine metagenome,17,0,8,4,6,4,1,0,1,0,1,3,1,2,3,1
+uncultured Acidobacteriia bacterium,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+skin metagenome,25,1,11,3,3,3,0,4,1,5,3,3,4,4,5,1
+Phocaeicola vulgatus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+invertebrate environmental sample,0,0,1,2,7,0,0,0,0,0,0,0,0,0,2,0
+factory metagenome,18,0,19,1,1,0,0,0,0,0,0,0,0,0,0,0
+Rhipicephalus microplus,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Equus caballus,17,0,3,4,12,0,0,0,0,0,0,22,0,24,14,0
+cow dung metagenome,1,0,3,8,9,0,1,0,0,3,0,0,2,2,3,0
+Rinodina peloleuca,2,14,4,5,3,1,2,0,8,0,0,0,3,0,2,14
+sponge metagenome,17,0,9,2,2,0,0,0,1,1,1,0,1,0,1,0
+mixed sample,48,0,9,1,0,0,2,2,0,1,0,0,0,0,0,0
+lung metagenome,27,0,30,15,3,0,0,0,0,0,0,1,0,0,1,0
+human metagenome,1569,0,327,107,46,0,0,0,0,0,1,3,2,10,17,0
+environmental samples,2,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+poultry litter metagenome,166,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+hydrothermal vent metagenome,23,1,23,12,13,4,4,2,0,3,3,2,5,4,4,0
+brine metagenome,2,0,0,0,2,1,0,3,0,1,2,0,0,1,1,0
+bovine gut metagenome,391,41,160,99,91,82,57,58,21,56,62,99,55,82,87,43
+alkali sediment metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+salt pan metagenome,1,0,1,0,2,0,0,0,0,0,0,0,0,0,1,0
+Fibrobacteria,1,0,1,0,0,1,0,2,0,0,1,3,0,1,0,0
+Rikenellaceae bacterium,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Globobulimina pacifica,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0
+Cervus nippon,2,0,1,0,0,0,1,2,0,0,0,0,0,0,0,0
+African swine fever virus,12,1,7,0,5,1,0,0,0,3,2,1,2,1,5,8
+human nasopharyngeal metagenome,7,0,5,18,43,0,0,0,0,0,0,0,0,1,9,0
+mixed culture metagenome,4,1,2,2,1,0,0,1,1,1,2,1,1,2,0,3
+Streptococcaceae,10,0,2,3,1,1,1,2,0,0,1,0,0,2,1,0
+human gut metagenome,15634,3,3689,1760,903,10,12,6,4,21,50,175,7,347,532,22
+hypersaline lake metagenome,4,0,4,5,3,0,0,0,0,0,0,0,0,0,2,0
+plastisphere metagenome,0,0,0,2,2,0,0,0,0,0,0,0,0,0,2,0
+termite gut metagenome,10,4,10,9,5,3,2,5,3,1,6,7,5,4,12,3
+Balaenoptera acutorostrata,4,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+pig gut metagenome,81,810,86,76,88,116,167,124,347,120,94,100,271,81,80,3733
+oral metagenome,29,0,6,35,49,0,0,0,0,0,0,0,0,3,7,0
+wildlife metagenome,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+freshwater sediment metagenome,182,7,75,62,38,11,19,10,4,10,10,13,6,17,28,8
+Delftia acidovorans,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+permafrost metagenome,13,1,7,16,12,3,0,1,1,1,0,2,1,6,5,1
+invertebrate metagenome,10,0,7,0,4,1,1,0,1,2,3,2,2,1,0,1
+Candidatus Liberibacter asiaticus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+epibiont metagenome,2,0,7,2,0,0,0,0,0,0,0,0,0,0,0,0
+activated sludge metagenome,158,3,70,30,13,2,1,0,3,2,4,3,1,6,9,21
+Dama dama,6,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0
+hypolithon metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+fish metagenome,7,0,0,0,1,0,1,0,0,3,1,0,2,1,0,0
+leaf litter metagenome,26,0,10,19,15,0,0,0,0,0,1,0,0,2,12,0
+cave metagenome,11,0,2,1,0,1,0,0,0,0,0,0,0,0,1,1
+aquatic viral metagenome,0,0,1,0,0,2,4,4,0,5,1,1,0,1,0,0
+uncultured human fecal virus,0,0,2,1,2,0,0,0,0,0,0,0,0,0,0,0
+subsurface metagenome,9,2,7,3,2,3,1,1,1,1,2,2,1,2,4,0
+Brevundimonas sp. NIBR10,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+bovine metagenome,223,10,126,90,72,13,17,11,13,20,24,48,25,44,95,0
+vaginal metagenome,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+nervous system metagenome,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+hospital metagenome,7,0,2,4,2,0,0,0,0,0,0,0,0,0,0,0
+Streptomyces albireticuli,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+peat metagenome,248,1,133,117,53,13,5,2,3,19,13,26,3,35,33,8
+Cervus elaphus,2,0,2,0,0,2,0,0,0,1,0,0,0,0,0,0
+mouse gut metagenome,215,11,35,12,11,5,9,3,5,4,5,0,12,4,9,8
+hot springs metagenome,29,0,8,8,4,0,0,0,0,0,0,0,0,2,3,0
+uncultured bacterium,0,0,2,0,1,1,0,0,0,1,2,2,0,3,1,0
+lake water metagenome,218,2,138,99,72,9,11,7,2,13,13,23,7,39,46,9
+coal metagenome,5,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Hordeum vulgare,4,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+drinking water metagenome,20,0,11,4,1,1,2,4,1,2,0,4,0,2,0,1
+money metagenome,2,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+Bos indicus,15,0,5,0,0,0,0,0,0,1,2,0,0,2,5,0
+fish gut metagenome,10,0,5,3,1,0,0,0,0,0,1,0,0,0,1,0
+human oral metagenome,224,0,56,52,18,0,0,1,0,0,0,0,1,0,1,0
+Lactuca sativa,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+soil metagenome,2314,38,1632,1844,921,163,92,126,48,194,225,275,87,366,568,38
+glacier metagenome,9,0,3,1,0,0,0,0,0,0,0,0,0,0,0,2
+Halapricum salinum,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crocidura russula,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+food metagenome,55,3,11,9,1,4,7,2,6,5,1,0,5,0,2,2
+Neisseria gonorrhoeae,1,0,8,1,2,0,0,1,0,0,2,1,0,4,2,0
+Cassidulina limbata,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0
+fossil metagenome,1,2,4,3,0,0,1,0,0,1,1,0,0,3,1,0
+Subdoligranulum,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+milk metagenome,29,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+aquifer metagenome,3,0,2,0,1,0,0,0,0,0,0,0,0,0,0,0
+sludge metagenome,34,0,13,6,5,0,0,0,1,0,1,0,0,2,5,0
+biofilter metagenome,7,0,2,4,1,0,0,0,0,0,0,0,0,1,0,0
+Equus asinus,3,0,0,0,0,5,7,6,4,3,1,1,5,0,0,0
+landfill metagenome,40,1,2,1,0,1,0,1,3,0,0,2,3,0,1,3
+Cervus albirostris,1,0,0,1,1,0,0,1,0,1,0,1,0,0,0,0
+Amblyomma sp. C21,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+freshwater metagenome,441,2,220,140,110,30,16,15,4,22,38,34,4,44,73,14
+Sus scrofa,7,25,4,3,3,6,10,8,8,2,4,5,11,2,2,110
+Bolivinella seminuda,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Enterobacter asburiae,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+upper respiratory tract metagenome,3,0,5,4,5,1,0,0,0,1,0,0,1,1,5,0
+Klebsiella pneumoniae,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0
+reproductive system metagenome,6,0,7,1,6,0,1,0,0,1,2,3,1,2,2,0
+Telmatochromis temporalis,0,0,1,0,0,0,0,0,0,0,0,0,0,1,2,0
+sediment metagenome,566,70,362,229,203,93,46,48,47,83,92,99,32,149,166,228
+human lung metagenome,26,0,3,1,0,0,0,0,0,0,0,0,0,0,0,0
+Bifidobacterium,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+salt marsh metagenome,17,0,29,26,22,0,0,2,0,2,6,8,0,18,15,0
+Candidatus Hodgkinia cicadicola,0,0,1,1,3,0,0,0,0,0,0,0,0,0,2,0
+Thiothrix,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+goat gut metagenome,7,1,1,4,3,2,2,2,6,4,7,2,3,1,0,1
+Candelina submexicana,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+anaerobic digester metagenome,30,1,18,15,7,1,0,0,2,1,3,4,2,5,9,24
+Candidatus Peribacter riflensis,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Alteromonas stellipolaris,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0
+retting metagenome,3,0,1,2,0,0,0,0,0,0,1,1,0,0,0,0
+biocrust metagenome,19,0,12,13,4,0,0,0,0,0,0,0,0,1,0,0
+rat metagenome,23,0,10,2,0,0,0,0,0,0,0,0,0,0,0,0
+human viral metagenome,23,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0
+sea squirt metagenome,1,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+insect metagenome,20,0,8,1,1,0,0,0,1,0,2,1,0,1,1,0
+Solanum tuberosum,48,0,4,4,0,0,0,0,0,0,0,0,0,0,0,0
+tidal flat metagenome,0,0,2,2,2,1,0,0,1,0,0,1,0,0,2,0
+sheep gut metagenome,27,3,23,4,5,11,1,2,1,7,6,13,1,2,6,3
+Agarivorans albus,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+Barnesiella,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Prostephanus truncatus,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+biofilm metagenome,50,0,16,10,10,4,0,1,1,2,7,7,0,7,6,0
+Valvulineria inflata,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Lobaria pulmonaria,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+dust metagenome,55,0,21,26,23,2,2,4,7,6,6,6,1,4,9,53
+Gallus gallus,53,0,9,7,7,0,0,0,0,0,0,1,0,1,3,0
+Axis porcinus,3,0,0,2,0,0,0,0,0,0,0,0,0,0,1,0
+Pantoea ananatis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bioleaching metagenome,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+terrestrial metagenome,7,11,13,13,7,1,11,6,17,6,2,6,11,3,7,1
+Bacteroides stercoris,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fertilizer metagenome,5,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+estuary metagenome,83,5,38,16,15,2,3,1,0,3,2,4,0,4,5,9
+lagoon metagenome,1,1,0,1,1,0,0,0,2,0,0,0,0,0,0,2
+straw metagenome,2,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cladonia rangiferina,3,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Corynebacterium simulans,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+viral metagenome,34,1,9,9,2,1,0,0,0,2,1,0,0,4,1,0
+hydrocarbon metagenome,4,0,0,1,1,0,0,0,1,0,0,0,0,0,0,1
+Arabidopsis thaliana,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Enterococcus faecium,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+uncultured virus,14,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+marine plankton metagenome,142,0,91,62,41,12,4,2,0,15,19,28,0,31,32,0
+Vibrio cholerae,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+sheep metagenome,3,0,2,0,1,1,0,0,1,0,1,3,0,0,2,0
+Bos grunniens,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pond metagenome,23,0,5,2,4,1,0,1,0,0,1,0,0,4,3,0
+Actinomycetota,1,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0
+bird metagenome,19,0,5,2,0,0,0,0,0,0,0,0,0,0,1,0
+snake metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Equus asinus asinus,0,20,1,0,0,0,0,0,10,0,0,0,7,0,0,11
+Abramis brama,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Treponema pallidum,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Pinnotheres pholadis,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Brevundimonas subvibrioides,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+coral reef metagenome,19,0,7,3,1,0,0,0,1,0,0,0,1,0,0,0
+mollusc metagenome,16,1,16,7,1,1,1,0,0,0,0,0,0,0,0,0
+indoor metagenome,12,0,6,1,0,0,0,0,0,0,0,1,0,0,1,0
+surface metagenome,11,0,1,1,1,0,0,0,0,0,1,0,0,0,1,0
+Escherichia coli,5,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+Leclercia adecarboxylata,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Liberibacter sp. Z1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aurantiacibacter sp. MUD61,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+beach sand metagenome,6,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Campylobacter jejuni,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+oyster metagenome,3,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pseudomonadota,8,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+uncultured organism,0,0,1,16,0,0,0,0,0,0,0,0,0,0,0,0
+Homo sapiens,1620,1,524,248,80,1,0,0,0,2,4,4,0,19,29,1
+unidentified prokaryotic organism,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Helicobacter pylori,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Dermacentor steini,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Brevundimonas sp. NIBR11,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+plastic metagenome,32,0,10,11,6,0,0,0,0,0,0,0,0,2,1,0
+canine metagenome,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Amarolinea aalborgensis,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+fungus metagenome,6,0,1,0,0,2,1,2,0,3,1,1,0,2,0,0
+phycosphere metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+whole organism metagenome,0,0,0,1,0,0,0,0,0,0,3,1,0,1,3,0
+Ostreid herpesvirus 1,17,0,4,1,1,0,0,0,0,0,0,0,0,0,0,0
+Pigoraptor vietnamica,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Saccharomyces cerevisiae,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+salt lake metagenome,9,0,4,3,2,0,0,0,0,0,0,0,0,0,1,0
+dairy metagenome,1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+phyllosphere metagenome,3,0,7,1,0,0,0,0,0,0,0,0,0,0,0,0
+rhizosphere metagenome,188,26,100,133,70,27,40,46,30,39,24,36,34,47,48,4
+Cancris carmenensis,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Pseudomonas aeruginosa,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+human bile metagenome,14,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0
+aquaculture metagenome,9,1,2,0,1,2,3,1,4,2,2,2,4,2,0,1
+crustacean metagenome,11,0,7,2,1,0,0,0,0,0,0,1,0,1,2,0
+Elaphurus davidianus,1,0,2,0,0,0,0,0,0,1,1,1,0,0,0,0
+nematode metagenome,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Diceros bicornis,7,0,5,3,3,0,0,0,0,0,0,0,0,0,0,0
+Roseburia intestinalis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+medical device metagenome,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Paraprevotella,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acidobacteriota bacterium,8,0,21,26,3,0,0,0,0,0,0,0,0,0,2,0
+Vitis hybrid cultivar,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Lepraria sp.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sand metagenome,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+annelid metagenome,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0
+Macaca fascicularis,0,0,0,2,1,0,0,0,0,0,0,0,0,1,0,0
+human feces metagenome,258,0,86,50,61,0,0,0,0,0,0,0,0,35,49,0
+Candidatus Arthromitus sp. SFB-turkey,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bacillota,6,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0
+protist metagenome,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Gomesa flexuosa,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Amblyomma sparsum,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mite metagenome,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pseudomonas sp. T0H0CK3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Muntiacus reevesi,1,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+Uvigerina striata,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+Tannerella forsythia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Blautia,0,0,0,0,0,0,0,0,0,6,1,2,0,1,0,0
+food fermentation metagenome,47,0,7,2,0,0,0,0,0,0,0,0,0,0,0,0
+Lawsonia intracellularis,1,1,0,1,1,0,2,0,0,0,3,0,1,3,0,15
+spider metagenome,2,0,2,1,1,0,0,0,0,0,0,0,0,0,0,0
+Clostridiales bacterium UBA643,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Puttea exsequens,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mine metagenome,6,0,8,22,12,0,0,0,0,0,0,0,0,1,4,0
+Pseudomonas sp. T0H0CK1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Macaca mulatta,29,1,19,32,38,0,1,0,2,0,2,4,0,13,38,0
+Oncorhynchus mykiss,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Perimyotis subflavus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+steel metagenome,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+bog metagenome,0,0,7,9,7,0,1,0,1,2,0,0,0,1,2,0
+Pinnotheres excussus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+human vaginal metagenome,64,0,7,1,1,0,0,0,0,0,0,0,0,0,1,0
+Candidatus Nitrospira nitrosa,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cryptotympana facialis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+root,1,0,1,3,0,0,0,0,0,0,0,0,0,0,1,0
+Haemaphysalis danieli,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sus,0,1,0,0,0,0,0,1,0,0,0,2,0,0,0,4
+unclassified bacterial viruses,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cladonia furcata,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mycoplasma sp. B17,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+mine drainage metagenome,12,0,5,4,5,0,0,0,0,1,0,0,0,6,7,0
+Alteromonas macleodii,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+silage metagenome,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Staphylococcus epidermidis,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Canis lupus familiaris,59,0,9,5,1,1,0,0,0,0,0,0,0,0,0,0
+aerosol metagenome,0,0,0,0,1,0,0,0,0,0,1,1,1,1,0,0
+Alistipes,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+crude oil metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mine tailings metagenome,3,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+termitarium metagenome,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+Coleoptera,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+blank sample,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Pan troglodytes,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0
+Pyrinomonas methylaliphatogenes,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+zooplankton environmental sample,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Neisseria meningitidis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stromatolite metagenome,11,0,3,4,1,0,0,0,0,0,0,0,0,0,0,0
+Arcotheres purpureus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hydropotes inermis,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0
+Rothia dentocariosa,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Caulobacter sp. NIBR1757,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Subdoligranulum sp. PS108,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Staphylococcus aureus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+rhizoplane metagenome,0,0,1,3,1,0,0,0,0,0,0,0,0,0,0,0
+gas well metagenome,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Haemaphysalis longicornis,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Carpoglyphus lactis,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Bolivina spissa,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+Synchytrium endobioticum,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+invertebrate gut metagenome,7,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
+biosolids metagenome,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Salmo salar,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sorghum bicolor,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acinetobacter beijerinckii,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0
+Procyon lotor,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Alviniconcha marisindica,0,0,3,1,0,0,0,0,0,0,0,0,0,0,0,0
+Viruses,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Anaerolineae bacterium,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+human skin metagenome,33,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+eye metagenome,30,0,13,2,0,0,0,0,0,0,0,0,0,0,0,0
+Aesculus chinensis var. wilsonii,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Arcotheres sinensis,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Acinetobacter johnsonii,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rattus norvegicus,9,0,17,16,12,0,0,0,0,0,0,1,0,2,6,0
+lichen crust metagenome,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+tar pit metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+shrimp gut metagenome,17,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
+Trizodia sp. TS-e1964,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Graminella nigrifrons,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+horse metagenome,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Rickettsia endosymbiont of Nesidiocoris tenuis,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Monochamus saltuarius,1,0,3,1,0,0,0,0,0,0,0,0,0,0,0,0
+Lactobacillus sp.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Elysia diomedea,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acinetobacter baumannii,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Porphyromonadaceae bacterium,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cosavirus,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+wood decay metagenome,6,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0
+Cryptolestes pusillus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rusa unicolor,2,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0
+solid waste metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+root nodule metagenome,1,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0
+Lactobacillus helveticus,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bolivina costata,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0
+volcano metagenome,3,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+Haemaphysalis mageshimaensis,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bradyrhizobium sp. SK17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Veillonella parvula,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cervus canadensis,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Lissoclinum sp. TIC-2013-079,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+shale gas metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Neoehrlichia mikurensis,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+Capra ibex,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pseudomonas sp. T0H0CK4,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Apostichopus japonicus,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0
+cold spring metagenome,0,0,2,0,0,0,0,0,0,0,0,0,1,0,0,0
+Bubarida sp. SCS-44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Parabacteroides,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+human tracheal metagenome,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Actinomyces oris,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Electrothrix gigas,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stereocaulon cornutum,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Phytophthora infestans,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+respiratory tract metagenome,25,0,19,15,3,0,0,0,0,0,0,0,0,0,0,0
+Lepraria chileana,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+clothing metagenome,6,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+phage metagenome,6,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Diaphorobacter sp.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+tick metagenome,6,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+Cinara curvipes,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+macroalgae metagenome,7,0,1,1,0,0,0,0,0,0,0,0,0,0,0,2
+Elaeis guineensis,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bolivina plicata,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0
+Haemaphysalis kitaokai,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Neisseria elongata,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+runoff metagenome,26,0,20,14,15,2,0,0,0,0,0,0,1,0,8,0
+Lepraria eburnea,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Yersinia pestis,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+human milk metagenome,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Prevotella sp. UBA633,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+human eye metagenome,19,0,3,4,0,0,0,0,0,0,0,0,0,0,0,0
+methanogenic toluene-degrading enrichment culture,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ciliate metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sphingomonas sp. URHD0057,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Monkeypox virus,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0
+biochar metagenome,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bacteroides oleiciplenus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sulfurospirillum sp. 017860615,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Coilia nasus,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bacillus subtilis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+food contamination metagenome,4,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Tedania ignis,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Moschus moschiferus,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Romboutsia timonensis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Geodia barretti,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Haemaphysalis tibetensis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Uroviricota,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lichina confinis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+blood metagenome,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Proteus mirabilis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+museum specimen metagenome,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lepidoglyphus destructor,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+industrial waste metagenome,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Paraescarpia echinospica,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bemisia tabaci,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+biofloc metagenome,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+symbiont metagenome,2,0,2,0,0,1,0,0,0,0,0,0,0,1,1,0
+human urinary tract metagenome,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Methylobacterium komagatae,4,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Flavobacterium,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nostoc sp. GT001,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Streptococcus parasanguinis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Apatura laverna,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Hapalocarcinus marsupialis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Balclutha neglecta,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+canine gut metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Canis lupus lupus,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Staphylococcus pseudintermedius,5,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Candelina mexicana,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+urban metagenome,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rangifer tarandus,1,0,0,1,0,0,0,0,0,0,0,2,0,1,0,0
+microbial fuel cell metagenome,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Phormidium yuhuli AB48,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nonionella stella,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Leveillula taurica,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bacillus anthracis,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Gadus morhua,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Abditibacteriota,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Dalpada sp.,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aphanizomenon flos-aquae UKL13-PB,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Piccolia ochrophora,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Porcine circovirus 2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Cladonia submitis,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Electrothrix sp. GW3-4,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Heimdallarchaeum endolithica,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Thelocarpon impressellum,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+ice metagenome,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Lepraria finkii,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Erinaceus europaeus,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thelotrema lepadinum,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+clinical metagenome,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Methanophagales archaeon,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ctenocephalides orientis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sphingomonas sp. NIBR02145,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Haemaphysalis doenitzi,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aquabacterium sp. A3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Akkermansia muciniphila,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+soda lake metagenome,4,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0
+Physeter catodon,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Chitinophaga rupis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pseudomonas fragi,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Scalindua sp.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Haemaphysalis qinghaiensis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+uncultured marine microorganism,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Podosphaera aphanis,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Anopheles stephensi,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Capra hircus,6,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+bat metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tetrao urogallus,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Haslea ostrearia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Subdoligranulum sp. PS107,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bachmanniomyces sp. S44760,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Chelicerata,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Lactobacillus amylolyticus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marsupial metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Vampirovibrio chlorellavorus,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Electrothrix scaldis,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Neotoma albigula,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Giraffa camelopardalis,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+probiotic metagenome,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Balclutha rubrostriata,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Coprinopsis aff. cinerea SZMC-NL-1266,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Corynebacterium argentoratense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tettigades auropilosa,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cryptotympana atrata,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marsh metagenome,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hyphomonadaceae bacterium UKL13-1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Chlorocebus pygerythrus,1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+zooplankton metagenome,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Neamphius huxleyi,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gammaproteobacteria bacterium (ex Lamellibrachia satsuma),0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Mycobacterium methanotrophicum,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Haemaphysalis yeni,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dermacentor sinicus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Corynebacterium aurimucosum,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acidaminococcus,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Proteobacteria,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bacillota bacterium,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Meimuna opalifera,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Vezdaea acicularis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dolycoris baccarum,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gigantidas childressi,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Exitianus exitiosus,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Salamandra salamandra,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Moschus berezovskii,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nomascus gabriellae,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+seagrass metagenome,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Oryctes rhinoceros,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+feline metagenome,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Erthesina fullo,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cupriavidus pauculus,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mus musculus,46,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acarus siro,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Methanospirare jalkutatii,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Geoglossum umbratile,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Brevundimonas vesicularis,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Solobacterium sp. UBA636,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Enterococcus lacertideformus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mixed culture,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spiroplasma poulsonii,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Halyomorpha halys,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spiroplasma endosymbiont of Nesidiocoris tenuis,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Felis catus,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Vezdaea aestivalis,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Candidatus Heimdallarchaeum aukensis,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lepraria nothofagi,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sarcosagium campestre,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ecological metagenomes,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+periphyton metagenome,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Parauncinula polyspora,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tettigades chilensis,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Metapseudomonas resinovorans,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+oil production facility metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lotus aduncus,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bacteroides sp. CAG:98,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lactobacillus amylovorus,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+saltern metagenome,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
