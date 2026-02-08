@@ -6,7 +6,7 @@ good,anchor,species,gene_name,description
 1,0,s__Lactobacillus amylovorus,BBOFCOCJ_01349,BLAST match to peptidase T [Lactobacillus sp.]
 1,0,s__Lactobacillus amylovorus,OBGMJDLM_01221,BLAST match to calcium-translocating P-type ATPase PMCA-type [Lactobacillus acidophilus]
 1,1,s__Lactobacillus amylovorus,OMBJBIHD_01711,BLAST match to LD-transpeptidase family protein [Lactobacillus amylovorus]
-1,0,s__Bariatricus sp004560705,CHOLCMOC_00863,BLAST match to BREX system Lon protease-like protein BrxL [Pilosibacter fragilis] (also Bariatricus spp.)
+1,1,s__Bariatricus sp004560705,CHOLCMOC_00863,BLAST match to BREX system Lon protease-like protein BrxL [Pilosibacter fragilis] (also Bariatricus spp.)
 1,0,s__Bariatricus sp004560705,LEHFNBLN_02301,BLAST match to YkgJ family cysteine cluster protein (also Bariatricus spp.)
 1,0,s__Bariatricus sp004560705,AIEIMHOC_00182,BLAST match to competence protein ComEC family protein (also Bariatricus spp.)
 1,0,s__Mogibacterium_A kristiansenii,EBLLCBKE_00022,BLAST match to isolate genome
@@ -19,6 +19,7 @@ good,anchor,species,gene_name,description
 1,0,s__Mogibacterium_A kristiansenii,PKGEEMPI_00758,BLAST match to isolate genome
 1,0,s__Mogibacterium_A kristiansenii,AKLOHKAG_01416,BLAST match to isolate genome
 1,0,s__Holdemanella porci,DAPDNANK_01228,BLAST match to isolate genome
+1,1,s__Holdemanella porci,CAJDFOMO_00566,hypothetical protein [Erysipelotrichales bacterium] 
 0,0,s__Sodaliphilus sp004557565,HENFICJG_01772,non-specific Lysine-tRNA ligase
 0,0,s__Sodaliphilus sp004557565,COJGPLPN_01769,non-specific Arginine--tRNA ligase
 1,0,s__Sodaliphilus sp004557565,MMBDDDLD_00384,malate dehydrogenase
@@ -142,7 +143,7 @@ good,anchor,species,gene_name,description
 0,0,s__Prevotella sp000434975,BJGOEPIF_01785,(not reviewed)
 0,0,s__Prevotella sp000434975,ADEAHPKA_00850,not species specific
 0,0,s__Prevotella sp000434975,AOHCKNEB_00316,(not reviewed)
-1,0,s__Prevotella sp000434975,APOLKBKG_00160,efflux RND transporter permease subunit
+1,1,s__Prevotella sp000434975,APOLKBKG_00160,efflux RND transporter permease subunit
 0,0,s__Prevotella sp000434975,PBEPHKLP_00986,(not reviewed)
 0,0,s__Prevotella sp000434975,MKJPHDIO_02117,(not reviewed)
 0,0,s__Prevotella sp000434975,CDDALOHL_00304,(not reviewed)
@@ -169,7 +170,8 @@ good,anchor,species,gene_name,description
 0,0,s__Prevotella sp000434975,FLLEODKL_00268,(not reviewed)
 0,0,s__Prevotella sp000434975,DLCEKAJD_01669,(not reviewed)
 0,0,s__Prevotella sp000434975,EEMFJJMB_01353,(not reviewed)
-1,0,s__JALFVM01 sp022787145,JDFEBBFI_00464,maybe species specific? hypothetical protein
+0,0,s__JALFVM01 sp022787145,JDFEBBFI_00464,maybe species specific? hypothetical protein - does not correlate with k-mer curves
+1,1,s__JALFVM01 sp022787145,ABMFBACJ_01732,maybe species specific? hypothetical protein
 0,0,s__UBA2868 sp004552595,GHILBDOG_00591,ribosomal protein
 0,0,s__UBA2868 sp004552595,KMEHCMKH_00746,s__UBA2868 sp004552595.cds.min50.dedup.top50(1)
 0,0,s__UBA2868 sp004552595,JGIIMPIP_01734,cysteine/tRNA ligase - maybe not species specific
@@ -382,3 +384,5 @@ good,anchor,species,gene_name,description
 0,0,s__Cryptobacteroides sp000434935,ADCODNMF_01281,(not reviewed)
 0,0,s__Cryptobacteroides sp000434935,EIGGHFPC_02121,(not reviewed)
 0,0,s__Cryptobacteroides sp000434935,DOLCGLJK_00897,(not reviewed)
+1,1,s__Floccifex porci,IIAENJBH_00799,anaerobic ribonucleoside-triphosphate reductase [Lacrimispora indolis]
+1,1,s__Fimisoma sp002320005,JBNOCHBL_00669,PEP/pyruvate-binding domain-containing protein [Bacillota bacterium] 

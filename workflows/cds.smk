@@ -532,7 +532,9 @@ rule screen_min90:
         scripts/screen-sigs-x-metags.py {input.sig:q} {input.metags:q} \
             -m {wildcards.m} -o {output:q} -k 21
     '''
-    
+
+# get all the sequences correspondingg to the k-mers present in
+# 50% of the rand collection of metagenomes: cds3.min50.fa.
 rule kmers_wc:
     input:
         sig='outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.sig.zip',
@@ -544,7 +546,8 @@ rule kmers_wc:
             --save-sequences {output.fa:q} -k 21 || true
     """
         
-    
+# remove exact copies of genes that come from multiple genomes' CDS:
+# cds3.min50.dedup.fa.
 rule cdhit_wc:
     input:
         fa='outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.fa',
@@ -575,6 +578,7 @@ rule sketch_singleclust:
            --name {wildcards.s:q} -f
     """
 
+# map reads to dedup.fa
 rule map_index_rand_cds_min50:
     input:
         g="outputs.cds/singleclust/{s}.cds3.min50.dedup.fa",
@@ -602,6 +606,9 @@ rule map_coverage_cds:
         samtools coverage {input.bam:q} {input.fa:q} > {output:q}
     """
 
+# calculate coverage txt files for all min50 dedup mappings.
+# this gives us direct read-to-gene breadth & depth info, to
+# be processed in a notebook.
 rule map_coverage_cds_depth:
     input:
         bam='outputs.cds/singleclust/bam/{m}.x.{s}.bam',
