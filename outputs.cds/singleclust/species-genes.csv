@@ -311,14 +311,14 @@ good,anchor,species,gene_name,description
 0,0,s__Cryptobacteroides sp034089285,JOICFBBB_00740,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,PAFOMHJE_00204,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,ALBNLPDA_00834,(not reviewed)
-0,0,s__Cryptobacteroides sp034089285,APPGPOOG_00561,(not reviewed)
+1,0,s__Cryptobacteroides sp034089285,APPGPOOG_00561,oxaloacetate decarboxylase [Candidatus Cryptobacteroides sp.] 
 0,0,s__Cryptobacteroides sp034089285,HMMKHJPF_01362,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,NEGNLLKM_00252,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,HJDFDDEP_01000,(not reviewed)
-0,0,s__Cryptobacteroides sp034089285,CEGKJMLJ_00367,(not reviewed)
+1,0,s__Cryptobacteroides sp034089285,CEGKJMLJ_00367,aminomethyl-transferring glycine dehydrogenase subunit GcvPB [Bacteroidales bacterium] 
 0,0,s__Cryptobacteroides sp034089285,GNJJLPEK_01053,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,PCBBEIBO_00195,(not reviewed)
-0,0,s__Cryptobacteroides sp034089285,PMGOFJOK_00542,(not reviewed)
+1,1,s__Cryptobacteroides sp034089285,PMGOFJOK_00542,carbon starvation protein A [Bacteroidales bacterium] 
 0,0,s__Cryptobacteroides sp034089285,EEAMPIIE_00833,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,FELCFHKP_00383,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,NEGNLLKM_00860,(not reviewed)
@@ -333,7 +333,7 @@ good,anchor,species,gene_name,description
 0,0,s__Cryptobacteroides sp034089285,FELCFHKP_01394,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,OLBLADKB_00718,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,CNAGNAME_00948,(not reviewed)
-0,0,s__Cryptobacteroides sp034089285,PMGOFJOK_01051,(not reviewed)
+1,0,s__Cryptobacteroides sp034089285,PMGOFJOK_01051,excinuclease ABC subunit UvrA [Bacteroidales bacterium] 
 0,0,s__Cryptobacteroides sp034089285,HMMKHJPF_01279,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,OHOEGCNB_00840,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,PCBBEIBO_00320,(not reviewed)
@@ -342,7 +342,7 @@ good,anchor,species,gene_name,description
 0,0,s__Cryptobacteroides sp034089285,FELCFHKP_00696,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,FELCFHKP_00402,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,CNAGNAME_00992,(not reviewed)
-0,0,s__Cryptobacteroides sp034089285,FELCFHKP_00032,(not reviewed)
+1,0,s__Cryptobacteroides sp034089285,FELCFHKP_00032,hypothetical protein [Candidatus Cryptobacteroides sp.] 
 0,0,s__Cryptobacteroides sp034089285,FPIFHBMH_01139,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,NPOLDECK_00948,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,PMGOFJOK_00567,(not reviewed)
@@ -356,5 +356,29 @@ good,anchor,species,gene_name,description
 0,0,s__Cryptobacteroides sp034089285,FELCFHKP_01384,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,GGPMIOKJ_00509,(not reviewed)
 0,0,s__Cryptobacteroides sp034089285,MDBCOJHL_00827,(not reviewed)
-0,0,s__Cryptobacteroides sp034089285,KIEIMPHD_01493,(not reviewed)
+1,0,s__Cryptobacteroides sp034089285,KIEIMPHD_01493, outer membrane beta-barrel protein [Candidatus Cryptobacteroides sp.] 
 0,0,s__Cryptobacteroides sp034089285,CKOMHICM_01072,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,KGJCAHGF_01031,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,DOLCGLJK_00979,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,NBGEPFAP_00285,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,LKCGFCMG_01869,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,EKFEBOAA_01312,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,GJCCMEIK_00760,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,DOBPLNND_00617,(not reviewed)
+1,0,s__Cryptobacteroides sp000434935,JBPBJODD_01157, relA/SpoT family protein [Bacteroides sp. CAG:709] 
+0,0,s__Cryptobacteroides sp000434935,DOLCGLJK_01318,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,HMGOBICH_01223,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,IGNNFAEN_01038,(not reviewed)
+1,1,s__Cryptobacteroides sp000434935,JBPBJODD_00501,hypothetical protein [Bacteroides sp.] 
+0,0,s__Cryptobacteroides sp000434935,HMGOBICH_00354,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,HMGOBICH_02217,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,DOLCGLJK_00691,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,KGJCAHGF_00582,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,LHPEIPOG_01570,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,FCHBMNJF_01547,(not reviewed)
+1,0,s__Cryptobacteroides sp000434935,KHMCBGLI_01458,putative uncharacterized protein [Bacteroides sp. CAG:709] 
+1,0,s__Cryptobacteroides sp000434935,FCHBMNJF_01297,ATP-binding protein [Bacteroides sp.] 
+0,0,s__Cryptobacteroides sp000434935,MGCIIDEG_02262,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,ADCODNMF_01281,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,EIGGHFPC_02121,(not reviewed)
+0,0,s__Cryptobacteroides sp000434935,DOLCGLJK_00897,(not reviewed)
