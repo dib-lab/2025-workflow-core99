@@ -1,6 +1,6 @@
 good,anchor,species,gene_name,description
 1,1,s__Phascolarctobacterium_A succinatutens,CNENGHLA_01260,BLAST match to hydrogenase large subunit [Phascolarctobacterium succinatutens]
-1,1,s__Phascolarctobacterium_A succinatutens,EHOAPHDI_01174,BLAST match to protein phosphatase 2C domain-containing protein partial [Phascolarctobacterium succinatutens]
+1,0,s__Phascolarctobacterium_A succinatutens,EHOAPHDI_01174,BLAST match to protein phosphatase 2C domain-containing protein partial [Phascolarctobacterium succinatutens]
 1,0,s__Phascolarctobacterium_A succinatutens,CNENGHLA_00658,BLAST match to 4-hydroxy-3-methylbut-2-enyl diphosphate reductase partial [Phascolarctobacterium succinatutens]
 1,0,s__Phascolarctobacterium_A succinatutens,IFIBFMPA_00800,BLAST match to  2-isopropylmalate synthase [Phascolarctobacterium sp.]
 1,0,s__Lactobacillus amylovorus,BBOFCOCJ_01349,BLAST match to peptidase T [Lactobacillus sp.]
@@ -226,3 +226,135 @@ good,anchor,species,gene_name,description
 0,0,s__Prevotella sp002251295,IOPEOCKD_00946,(not reviewed)
 0,0,s__Prevotella sp002251295,FPJFICOB_00189,(not reviewed)
 0,0,s__Prevotella sp002251295,KNLPPHPD_00844,(not reviewed)
+0,0,s__Colivicinus sp002299675,GEJNMJHK_01170,(not reviewed)
+1,1,s__Colivicinus sp002299675,CJCMOHOO_00566,RNA lysidine(34) synthetase TilS [Erysipelotrichaceae bacterium] 
+0,0,s__Colivicinus sp002299675,MFJKOBHN_00700,(not reviewed)
+0,0,s__Colivicinus sp002299675,IHHGCNHF_01282,(not reviewed)
+1,0,s__Colivicinus sp002299675,LDCMLOKM_00609,adenine deaminase [Erysipelotrichaceae bacterium] 
+1,0,s__Colivicinus sp002299675,HLAFBHBG_00131,AAA family ATPase [Solobacterium sp.] 
+1,0,s__Colivicinus sp002299675,EDFHFOCH_00218,proton-conducting transporter membrane subunit [Solobacterium sp.]
+0,0,s__Colivicinus sp002299675,CLPLIIHD_02094,(not reviewed)
+0,0,s__Colivicinus sp002299675,OMGBCPFD_00113,(not reviewed)
+0,0,s__Colivicinus sp002299675,OLMMMHMA_00691,(not reviewed)
+1,0,s__Colivicinus sp002299675,AINLKECP_00121,glycoside hydrolase family 1 protein [Solobacterium sp.] 
+0,0,s__Colivicinus sp002299675,IHHGCNHF_00035,(not reviewed)
+0,0,s__Colivicinus sp002299675,DCNGDHLN_00188,(not reviewed)
+0,0,s__Colivicinus sp002299675,MAEKDHDM_00310,(not reviewed)
+0,0,s__Colivicinus sp002299675,OKBMHBJH_00253,(not reviewed)
+0,0,s__Colivicinus sp002299675,HLAFBHBG_00423,(not reviewed)
+0,0,s__Colivicinus sp002299675,NPHOINMK_01102,(not reviewed)
+0,0,s__Colivicinus sp002299675,OKBMHBJH_00564,(not reviewed)
+1,0,s__Ornithospirochaeta sp022785155,DIHHAJIK_01286,pyruvate phosphate dikinase [Spirochaetales bacterium]
+0,0,s__Ornithospirochaeta sp022785155,LKMFJOKJ_01452,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BCHPCDPL_01462,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,AOCKAKOA_02189,(not reviewed)
+1,0,s__Ornithospirochaeta sp022785155,DIHHAJIK_00954,hypothetical protein [Spirochaetales bacterium] 
+1,0,s__Ornithospirochaeta sp022785155,BCHPCDPL_00184,porin family protein [Spirochaetales bacterium] 
+0,0,s__Ornithospirochaeta sp022785155,AOCKAKOA_01158,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BDAFNFPJ_00422,(not reviewed)
+1,0,s__Ornithospirochaeta sp022785155,DEDCPOFE_01964,flippase [Spirochaetales bacterium] 
+0,0,s__Ornithospirochaeta sp022785155,AOCKAKOA_02034,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,DIHHAJIK_00867,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,DEDCPOFE_01907,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,DEDCPOFE_01493,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BOGJGCEM_00419,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,PIBCIPOC_00260,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,LKMFJOKJ_00057,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,PIBCIPOC_01182,(not reviewed)
+1,0,s__Ornithospirochaeta sp022785155,LKMFJOKJ_01443,histidine--tRNA ligase [Candidatus Ornithospirochaeta sp.] 
+0,0,s__Ornithospirochaeta sp022785155,BCHPCDPL_00471,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,HIMDPHKH_01011,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BOGJGCEM_01580,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BOGJGCEM_00480,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,DEDCPOFE_01259,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,HIMDPHKH_00880,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,AOCKAKOA_01574,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,AOCKAKOA_01569,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,DEDCPOFE_01483,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,PIBCIPOC_01718,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,AOCKAKOA_00824,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BOGJGCEM_00506,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BOGJGCEM_01327,(not reviewed)
+1,1,s__Ornithospirochaeta sp022785155,DEDCPOFE_00144,MATE family efflux transporter [Spirochaetales bacterium] 
+0,0,s__Ornithospirochaeta sp022785155,LKMFJOKJ_01322,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,PIBCIPOC_00574,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,MNGIJOPD_01760,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,PIBCIPOC_01343,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BOGJGCEM_00883,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BOGJGCEM_00716,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,LKMFJOKJ_00632,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BDAFNFPJ_01589,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BCHPCDPL_00203,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,BCHPCDPL_00410,(not reviewed)
+0,0,s__Ornithospirochaeta sp022785155,LKMFJOKJ_01321,(not reviewed)
+0,0,s__Cryptobacteroides sp000432655,FCPPOLBJ_01097,(not reviewed)
+0,0,s__Cryptobacteroides sp000432655,FCPPOLBJ_01539,(not reviewed)
+1,0,s__Cryptobacteroides sp000432655,PGJBNNGM_01103,DUF349 domain-containing protein [Bacteroides sp.] 
+0,0,s__Cryptobacteroides sp000432655,AINGCLHH_01781,excinuclease ABC subunit A [Rikenellaceae bacterium] 
+0,0,s__Cryptobacteroides sp000432655,FCPPOLBJ_01981,(not reviewed)
+0,0,s__Cryptobacteroides sp000432655,BDIGJAEE_01929,transposase
+0,0,s__Cryptobacteroides sp000432655,AJAOAAFA_00423,(not reviewed)
+1,0,s__Cryptobacteroides sp000432655,CJBPHMOC_00609,hypothetical protein [Bacteroides sp.] 
+1,0,s__Cryptobacteroides sp000432655,FCPPOLBJ_00489,phospholipase D-like domain-containing protein [Candidatus Cryptobacteroides sp.] 
+0,0,s__Cryptobacteroides sp000432655,CHNKIMHD_00529,(not reviewed)
+0,0,s__Cryptobacteroides sp000432655,BPIFCFLL_00708,(not reviewed)
+0,0,s__Cryptobacteroides sp000432655,JDIPOLOI_01075,(not reviewed)
+0,0,s__Cryptobacteroides sp000432655,BIBFGMOK_01065,(not reviewed)
+1,1,s__Cryptobacteroides sp000432655,FCPPOLBJ_01182,TonB-dependent receptor [Bacteroides sp.] 
+1,0,s__Cryptobacteroides sp000432655,AINGCLHH_00714,outer membrane protein assembly complex YaeT protein [Bacteroides sp. CAG:1060] 
+1,0,s__Cryptobacteroides sp000432655,BIBFGMOK_00552,PD-(D/E)XK nuclease family protein [Bacteroides sp.] 
+0,0,s__UBA2868 sp004552595,GHILBDOG_00591,18S
+1,1,s__UBA2868 sp004552595,KMEHCMKH_00746,multiple monosaccharide ABC transporter permease [Lachnospiraceae] 
+1,0,s__UBA2868 sp004552595,IPIMNMMB_00240,type I DNA topoisomerase [Lachnospiraceae bacterium] 
+1,0,s__UBA2868 sp004552595,IEHIAHIF_00466,L-arabinose isomerase [Lachnospiraceae bacterium] 
+0,0,s__UBA2868 sp004552595,GLNAKBGL_01080,RNA-guided endonuclease TnpB family protein [Prevotella sp.]
+0,0,s__Cryptobacteroides sp034089285,JOICFBBB_00740,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,PAFOMHJE_00204,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,ALBNLPDA_00834,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,APPGPOOG_00561,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,HMMKHJPF_01362,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,NEGNLLKM_00252,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,HJDFDDEP_01000,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,CEGKJMLJ_00367,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,GNJJLPEK_01053,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,PCBBEIBO_00195,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,PMGOFJOK_00542,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,EEAMPIIE_00833,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,FELCFHKP_00383,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,NEGNLLKM_00860,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,GDKPDOMG_00965,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,GNJJLPEK_00577,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,DEAECHMJ_00925,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,EKOLMFGH_00599,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,EEAMPIIE_00950,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,PLJBAKLA_01316,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,OHOEGCNB_00660,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,ABLFDFLJ_01175,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,FELCFHKP_01394,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,OLBLADKB_00718,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,CNAGNAME_00948,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,PMGOFJOK_01051,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,HMMKHJPF_01279,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,OHOEGCNB_00840,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,PCBBEIBO_00320,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,KCCFHJAA_01076,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,BOALNEDM_00067,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,FELCFHKP_00696,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,FELCFHKP_00402,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,CNAGNAME_00992,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,FELCFHKP_00032,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,FPIFHBMH_01139,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,NPOLDECK_00948,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,PMGOFJOK_00567,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,NPOLDECK_00055,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,PEKMIKHI_00001,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,GLKIOBHJ_00088,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,FELCFHKP_00703,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,OCHBJKLI_00472,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,GDKPDOMG_00903,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,JMHMILHI_00102,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,FELCFHKP_01384,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,GGPMIOKJ_00509,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,MDBCOJHL_00827,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,KIEIMPHD_01493,(not reviewed)
+0,0,s__Cryptobacteroides sp034089285,CKOMHICM_01072,(not reviewed)
