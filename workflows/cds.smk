@@ -43,8 +43,6 @@ for species in NAMESPLUS:
         ath_species.append(species)
         ath_genomes.append(x)
 
-print('XXX', set(ath_species))
-
 # run FIRST (before do_prokka_*)
 rule do_genome_lists:
     input:
@@ -121,6 +119,15 @@ rule make_rocksdb_k21_wc:
 rule do_cds_genes:
     input:
         expand("outputs.cds/cds3-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
+
+rule do_branchwater_cds_genes:
+    input:
+        expand("outputs.cds/branchwater.cds3-genes/manysearch.{s}.parquet", s=SPECIES_WITH_GENES),
+        "outputs.cds/cds3-genes/manysearch.3216.csv",
+
+rule do_screen_min90:
+    input:
+        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min{m}.sig.zip', s=NAMESPLUS, m=[10, 20, 50, 60, 70, 80, 90]),
         
 
 rule do_singleclust_map:
