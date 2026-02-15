@@ -11,6 +11,7 @@ print(f'loaded {len(NAMESPLUS)} coreplus species names')
 rule do_map_cds:
     input:
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.bam', m=RAND_METAG, s=NAMESPLUS),
+        expand('outputs.mapping/bams.cds.highcov/{m}.x.{s}.bam', m=HIGHCOV_METAG, s=NAMESPLUS),
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.fastq.gz', m=RAND_METAG, s=NAMESPLUS),
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMESPLUS),
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMESPLUS),
@@ -50,6 +51,20 @@ rule map_index_rand_cds:
     output:
         bam='outputs.mapping/bams.cds.rand/{m}.x.{s}.bam',
         bai='outputs.mapping/bams.cds.rand/{m}.x.{s}.bam.bai',
+    threads: 8
+    conda: "env-mapping.yml"
+    shell: """
+        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - > {output.bam:q}
+        samtools index {output.bam:q}
+    """
+
+rule map_index_highcov_cds:
+    input:
+        g="outputs.cds/cds/{s}.cds.fa.gz",
+        metag=GRIST_HIGHCOV + "trim/{m}.trim.fq.gz",
+    output:
+        bam='outputs.mapping/bams.cds.highcov/{m}.x.{s}.bam',
+        bai='outputs.mapping/bams.cds.highcov/{m}.x.{s}.bam.bai',
     threads: 8
     conda: "env-mapping.yml"
     shell: """

@@ -6,6 +6,7 @@ import os.path
 
 GRIST_LOWEST='/home/ctbrown/scratch3/2025-grist-annie/outputs.lowest-detection/'
 GRIST_RAND100='/home/ctbrown/scratch3/2025-grist-annie/outputs.rand100/'
+GRIST_HIGHCOV='/home/ctbrown/scratch3/2025-grist-annie/outputs.highcov-core/'
 
 NAMES = [ x.strip() for x in open('inputs.cds/names.list') ]
 print(f'loaded {len(NAMES)} core species names')
@@ -25,14 +26,9 @@ MIN50_NAMES = [
     's__Cryptobacteroides sp000434935',
     's__Cryptobacteroides sp034089285',
     's__Lactobacillus amylovorus',
-    's__Phascolarctobacterium_A succinatutens',
-    's__Gemmiger qucibialis',
-    's__Holdemanella porci',
     's__Fimisoma sp002320005',
     's__Floccifex porci',
     's__Mogibacterium_A kristiansenii',
-    's__Roseburia inulinivorans',
-    's__JALFVM01 sp022787145',
 ]
 
 # @CTB remove?
@@ -41,6 +37,9 @@ LOWEST_METAG=[]
 RAND_METAG = [ x.strip() for x in open('inputs.cds/rand_subset.3216.100.txt') ]
 print(f'loaded {len(RAND_METAG)} metagenome names for rand mapping')
 print(RAND_METAG[:3])
+
+HIGHCOV_METAG = [ x.strip() for x in open('outputs.cds/highcov-metags.txt') ]
+print(f'loaded {len(HIGHCOV_METAG)} metagenome names for high coverage mapping')
 
 ## Branchwater inputs
 

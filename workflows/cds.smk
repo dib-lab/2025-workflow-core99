@@ -98,6 +98,7 @@ rule do_cds:
         "outputs.cds/cds3/manysearch.cds3.min50.dedup.3216.csv",
         "outputs.cds/cds3/manysearch.cds3.singleclust.3216.csv",
         "outputs.cds/cds3-genes/manysearch.3216.csv",
+        "outputs.cds/cds3-anchor-genes/manysearch.3216.csv",
 
 ####
 
@@ -134,6 +135,11 @@ rule do_singleclust_map:
     input:
         expand('outputs.cds/singleclust/bam/{m}.x.{s}.depth.txt',
                m=RAND_METAG, s=MIN50_NAMES),
+        
+rule do_singleclust_highcov_map:
+    input:
+        expand('outputs.cds/singleclust.highcov/bam/{m}.x.{s}.depth.txt',
+               m=HIGHCOV_METAG, s=MIN50_NAMES),
         
 rule get_ath_mag_names:
     input:
@@ -586,17 +592,17 @@ rule sketch_singleclust:
     """
 
 # map reads to dedup.fa
-rule map_index_rand_cds_min50:
+rule map_index_rand_cds_min50_highcov:
     input:
         g="outputs.cds/singleclust/{s}.cds3.min50.dedup.fa",
-        metag="outputs.mapping/bams.cds.rand/{m}.x.{s}.fastq.gz",
+        metag="outputs.mapping/bams.cds.highcov/{m}.x.{s}.fastq.gz",
     output:
-        bam='outputs.cds/singleclust/bam/{m}.x.{s}.bam',
-        bai='outputs.cds/singleclust/bam/{m}.x.{s}.bam.bai',
+        bam='outputs.cds/singleclust.highcov/bam/{m}.x.{s}.bam',
+        bai='outputs.cds/singleclust.highcov/bam/{m}.x.{s}.bam.bai',
     threads: 8
     conda: "env-mapping.yml"
     shell: """
-        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - > {output.bam:q}
+        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - -o {output.bam:q}
         samtools index {output.bam:q}
     """
 
@@ -629,6 +635,22 @@ rule map_coverage_cds_depth:
         samtools depth -aa {input.bam:q} {input.fa:q} > {output:q}
     """
 
+# calculate coverage txt files for all min50 dedup mappings, for highcov metag.
+# this gives us direct read-to-gene breadth & depth info, to
+# be processed in a notebook.
+rule map_coverage_cds_depth_highcov:
+    input:
+        bam='outputs.cds/singleclust.highcov/bam/{m}.x.{s}.bam',
+        bai='outputs.cds/singleclust.highcov/bam/{m}.x.{s}.bam.bai',
+        fa='outputs.cds/singleclust/{s}.cds3.min50.dedup.fa',
+    output:
+        'outputs.cds/singleclust.highcov/bam/{m}.x.{s}.depth.txt'
+    threads: 8
+    conda: "env-mapping.yml"
+    shell: """
+        samtools depth -aa {input.bam:q} {input.fa:q} > {output:q}
+    """
+
 rule extract_species_genes:
     input:
         csv="outputs.cds/singleclust/species-genes.csv",
@@ -644,11 +666,26 @@ rule extract_species_genes:
             -o {params.outdir}
     """
 
+rule extract_species_genes_anchor:
+    input:
+        csv="outputs.cds/singleclust/species-genes.csv",
+        fa=ancient(expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup.fa',
+                  s=MIN50_NAMES)),
+    output:
+        expand("outputs.cds/cds3-anchor-genes/{s}.genes.fa",
+               s=SPECIES_WITH_GENES)
+    params:
+        outdir='outputs.cds/cds3-anchor-genes/'
+    shell: """
+        scripts/split-genes-by-species.py {input.csv:q} {input.fa:q} \
+            -o {params.outdir} --anchor-only
+    """
+
 rule sketch_species_genes:
     input:
-        "outputs.cds/cds3-genes/{s}.genes.fa",
+        "outputs.cds/{dir}/{s}.genes.fa",
     output:
-        "outputs.cds/cds3-genes/{s}.sig.zip",
+        "outputs.cds/{dir}/{s}.sig.zip",
     shell: """
         sourmash sketch dna {input:q} -o {output:q} --name {wildcards.s:q} \
            -p k=21,k=31,k=51
@@ -663,12 +700,34 @@ rule genes_mf:
         sourmash sig collect -F csv {input:q} -o {output:q}
     """
 
+rule anchor_genes_mf:
+    input:
+        expand("outputs.cds/cds3-anchor-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
+    output:
+        "outputs.cds/cds3-anchor-genes/cds3-genes.mf.csv",
+    shell: """
+        sourmash sig collect -F csv {input:q} -o {output:q}
+    """
+
 rule search_species_3216_genes:
     input:
         q="outputs.cds/cds3-genes/cds3-genes.mf.csv",
         db="3216.manifest.csv",
     output:
         "outputs.cds/cds3-genes/manysearch.3216.csv",
+    conda: "env-sourmash.yml"
+    threads: 32
+    shell: """
+        sourmash scripts manysearch -c {threads} -t 0 -k 21 -s 1000 \
+            {input.q:q} {input.db:q} -o {output:q}
+    """
+
+rule search_species_3216_genes_anchor:
+    input:
+        q="outputs.cds/cds3-anchor-genes/cds3-genes.mf.csv",
+        db="3216.manifest.csv",
+    output:
+        "outputs.cds/cds3-anchor-genes/manysearch.3216.csv",
     conda: "env-sourmash.yml"
     threads: 32
     shell: """
