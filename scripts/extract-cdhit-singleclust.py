@@ -19,12 +19,17 @@ def main():
     cluster_sizes = defaultdict(int)
 
     cluster = None
+    # for each cluster,
     for line in open(args.cdhit_clstr):
         line = line.strip()
+
+        # get name of cluster in 'cluster',
         if line[0] == '>':      # start of cluster
             assert line[1:9] == 'Cluster ', line[1:9]
             cluster = int(line[9:])
         else:
+            # for every sequence, save name of sequence => cluster in
+            # 'names_to_clusters'.
             assert cluster is not None
             cluster_sizes[cluster] += 1
             line = line.split('\t')[1]
@@ -33,6 +38,7 @@ def main():
             assert len(seq) == 14, len(seq)
             names_to_clusters[seq] = cluster
 
+    # now choose all cluster names that have precisely one sequence.
     n_single = 0
     singleclust = set()
     for cluster, size in cluster_sizes.items():
