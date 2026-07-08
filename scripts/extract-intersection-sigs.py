@@ -1,4 +1,17 @@
 #! /usr/bin/env python
+"""
+Compute many intersections at once between species sketches and
+metagenomes, efficiently (but still in Python).
+
+Loads all species sketches once, then loads each metagenome, calculates
+intersection, and inflates the intersection with the metagenome abundances.
+
+Does approximately the same thing as sourmash sig intersect ... -A ...,
+but much more efficiently for large operations.
+
+Outputs to either a directory full of nicely-named files (-o), or a zip file
+(with -O) with nicely named signatures.
+"""
 import sys
 import argparse
 import os
@@ -9,18 +22,38 @@ from sourmash.save_load import SaveSignaturesToLocation
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('--query-sigs', nargs='+', required=True)
+    p.add_argument('--query-sigs', nargs='+', required=True,
+                   help='list of genome/species signatures')
     p.add_argument('--metagenomes', required=True,
                    help='list of paths to metagenome signatures')
     p.add_argument('-k', '--ksize', default=21, type=int)
     p.add_argument('--scaled', default=1000, type=float)
-    p.add_argument('-o', '--output-dir', required=True)
+    p.add_argument('-o', '--output-dir',
+                   help='save intersection signatures to this directory as individual files')
+    p.add_argument('-O', '--output-file',
+                   help='save intersection signatures to this file (e.g. a zip file)')
     args = p.parse_args()
 
-    try:
-        os.mkdir(args.output_dir)
-    except FileExistsError:
-        pass
+    if args.output_dir and args.output_file:
+        print("ERROR: can only specify one of --output-dir and --output-file",
+              file=sys.stderr)
+        sys.exit(-1)
+
+    if not (args.output_dir or args.output_file):
+        print("ERROR: must specify one of --output-dir or --output-file",
+              file=sys.stderr)
+        sys.exit(-1)
+
+    if args.output_dir:
+        try:
+            os.mkdir(args.output_dir)
+        except FileExistsError:
+            pass
+
+    bulk_save = None
+    if args.output_file:
+        bulk_save = SaveSignaturesToLocation(args.output_file)
+        bulk_save.open()
 
     scaled = int(args.scaled)
     ksize = args.ksize
@@ -38,26 +71,38 @@ def main():
     print(f'loaded {len(query_mh_list)} query signatures')
 
     lines = [ x.strip() for x in open(args.metagenomes) ]
+
     for metagenome_file in lines:
         sigs = sourmash.load_file_as_signatures(metagenome_file,
                                                 ksize=ksize)
+
+        # for every metagenome,
         for ss in sigs:
             metag_name = ss.name
             metag_mh = ss.minhash.downsample(scaled=scaled)
             metag_flat_mh = metag_mh.flatten()
 
+            # loop across all query sketches,
             for (query_name, query_mh) in query_mh_list:
+                # find intersection & borrow abundances from metagenome,
                 isect_mh = metag_flat_mh.intersection(query_mh)
                 isect_mh = isect_mh.inflate(metag_mh)
                 print(metag_name, query_name, len(isect_mh))
 
+                # then create new sig and save.
                 isect_name = f'{query_name}.x.{metag_name} isect'
-                filename = f'{args.output_dir}/{query_name}.x.{metag_name}.sig.zip'
                 isect_ss = sourmash.SourmashSignature(isect_mh, isect_name)
 
-                with SaveSignaturesToLocation(filename) as save_ss:
-                    save_ss.add(isect_ss)
+                # save to either file-in-directory, or add to large file.
+                if args.output_dir:
+                    filename = f'{args.output_dir}/{query_name}.x.{metag_name}.sig.zip'
+                    with SaveSignaturesToLocation(filename) as save_ss:
+                        save_ss.add(isect_ss)
+                else:
+                    bulk_save.add(isect_ss)
 
+    if bulk_save:
+        bulk_save.close()
 
 
 if __name__ == '__main__':
