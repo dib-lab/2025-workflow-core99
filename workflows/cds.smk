@@ -10,12 +10,19 @@ wildcard_constraints:
     cds="[^.]+",
     m="[^.]+",
 
-NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
+NAMESPLUS = [ x.strip() for x in open('inputs.cds/names-plus.list') ]
 print(f'loaded {len(NAMESPLUS)} coreplus species names')
 
 species_genes_df = pl.read_csv("outputs.cds/singleclust/species-genes.csv")
 species_genes_df = species_genes_df.filter(pl.col("good") != 0)
 SPECIES_WITH_GENES = set(species_genes_df['species'].to_list())
+
+rm = set()
+for k in SPECIES_WITH_GENES:
+    if k not in NAMESPLUS:
+        rm.add(k)
+SPECIES_WITH_GENES -= rm
+
 assert not None in SPECIES_WITH_GENES
 print(f'{len(SPECIES_WITH_GENES)} species have manually curated genes.')
     
@@ -36,11 +43,30 @@ for species in NAMESPLUS:
         ath_species.append(species)
         ath_genomes.append(x)
 
+# run FIRST (before do_prokka_*)
+rule do_genome_lists:
+    input:
+        expand('outputs.cds/lists/{s}.gtdb-acc.txt', s=NAMES),
+        expand('outputs.cds/lists/{s}.ath-paths.txt', s=NAMES),
+
+rule do_get_genomes:
+    input:
+        expand('outputs.cds/genomes/{s}.ncbi.d/', s=NAMES),
+        expand('outputs.cds/lists/{s}.ath-paths.txt', s=NAMES),
+        expand('outputs.cds/genomes/{s}.ath.d/', s=NAMES),
+
+# run before do_cds
+rule do_prokka_ncbi:
+    input:
+        expand('outputs.cds/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
+
+# run before do_cds
+rule do_prokka_ath:
+    input:
+        expand('outputs.cds/genomes/{species}.ath.prokka/{g}.prokka.d', zip, species=ath_species, g=ath_genomes)
+
 rule do_cds:
     input:
-        #expand('outputs.cds/genomes/{s}.ncbi.d/', s=NAMES),
-        #expand('outputs.cds/lists/{s}.ath-paths.txt', s=NAMES),
-        #expand('outputs.cds/genomes/{s}.ath.d/', s=NAMES),
         expand('outputs.cds/cds/{species}.cds.fa.gz', species=NAMESPLUS),
         expand('outputs.cds/cds/{species}.cds.sig.zip', species=NAMESPLUS),
         expand('outputs.cds/cds/gtdb-only/{species}.cds.fa.gz', species=NAMESPLUS),
@@ -72,6 +98,7 @@ rule do_cds:
         "outputs.cds/cds3/manysearch.cds3.min50.dedup.3216.csv",
         "outputs.cds/cds3/manysearch.cds3.singleclust.3216.csv",
         "outputs.cds/cds3-genes/manysearch.3216.csv",
+        "outputs.cds/cds3-anchor-genes/manysearch.3216.csv",
 
 ####
 
@@ -93,6 +120,15 @@ rule make_rocksdb_k21_wc:
 rule do_cds_genes:
     input:
         expand("outputs.cds/cds3-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
+
+rule do_branchwater_cds_genes:
+    input:
+        expand("outputs.cds/branchwater.cds3-genes/manysearch.{s}.parquet", s=SPECIES_WITH_GENES),
+        "outputs.cds/cds3-genes/manysearch.3216.csv",
+
+rule do_screen_min90:
+    input:
+        expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min{m}.sig.zip', s=NAMESPLUS, m=[10, 20, 50, 60, 70, 80, 90]),
         
 
 rule do_singleclust_map:
@@ -100,20 +136,11 @@ rule do_singleclust_map:
         expand('outputs.cds/singleclust/bam/{m}.x.{s}.depth.txt',
                m=RAND_METAG, s=MIN50_NAMES),
         
-
-rule do_prokka_ncbi:
+rule do_singleclust_highcov_map:
     input:
-        expand('outputs.cds/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
-
-rule do_prokka_ath:
-    input:
-        expand('outputs.cds/genomes/{species}.ath.prokka/{g}.prokka.d', zip, species=ath_species, g=ath_genomes)
-
-rule genome_lists:
-    input:
-        expand('outputs.cds/lists/{s}.gtdb-acc.txt', s=NAMES),
-        expand('outputs.cds/lists/{s}.ath-paths.txt', s=NAMES),
-
+        expand('outputs.cds/singleclust.highcov/bam/{m}.x.{s}.depth.txt',
+               m=HIGHCOV_METAG, s=MIN50_NAMES),
+        
 rule get_ath_mag_names:
     input:
         lineage='/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/bin-sketches.lineages.csv'
@@ -518,7 +545,9 @@ rule screen_min90:
         scripts/screen-sigs-x-metags.py {input.sig:q} {input.metags:q} \
             -m {wildcards.m} -o {output:q} -k 21
     '''
-    
+
+# get all the sequences correspondingg to the k-mers present in
+# 50% of the rand collection of metagenomes: cds3.min50.fa.
 rule kmers_wc:
     input:
         sig='outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.sig.zip',
@@ -530,7 +559,8 @@ rule kmers_wc:
             --save-sequences {output.fa:q} -k 21 || true
     """
         
-    
+# remove exact copies of genes that come from multiple genomes' CDS:
+# cds3.min50.dedup.fa.
 rule cdhit_wc:
     input:
         fa='outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.fa',
@@ -561,17 +591,18 @@ rule sketch_singleclust:
            --name {wildcards.s:q} -f
     """
 
-rule map_index_rand_cds:
+# map reads to dedup.fa
+rule map_index_rand_cds_min50_highcov:
     input:
         g="outputs.cds/singleclust/{s}.cds3.min50.dedup.fa",
-        metag="outputs.mapping/bams.cds.rand/{m}.x.{s}.fastq.gz",
+        metag="outputs.mapping/bams.cds.highcov/{m}.x.{s}.fastq.gz",
     output:
-        bam='outputs.cds/singleclust/bam/{m}.x.{s}.bam',
-        bai='outputs.cds/singleclust/bam/{m}.x.{s}.bam.bai',
+        bam='outputs.cds/singleclust.highcov/bam/{m}.x.{s}.bam',
+        bai='outputs.cds/singleclust.highcov/bam/{m}.x.{s}.bam.bai',
     threads: 8
     conda: "env-mapping.yml"
     shell: """
-        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - > {output.bam:q}
+        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - -o {output.bam:q}
         samtools index {output.bam:q}
     """
 
@@ -588,6 +619,9 @@ rule map_coverage_cds:
         samtools coverage {input.bam:q} {input.fa:q} > {output:q}
     """
 
+# calculate coverage txt files for all min50 dedup mappings.
+# this gives us direct read-to-gene breadth & depth info, to
+# be processed in a notebook.
 rule map_coverage_cds_depth:
     input:
         bam='outputs.cds/singleclust/bam/{m}.x.{s}.bam',
@@ -595,6 +629,22 @@ rule map_coverage_cds_depth:
         fa='outputs.cds/singleclust/{s}.cds3.min50.dedup.fa',
     output:
         'outputs.cds/singleclust/bam/{m}.x.{s}.depth.txt'
+    threads: 8
+    conda: "env-mapping.yml"
+    shell: """
+        samtools depth -aa {input.bam:q} {input.fa:q} > {output:q}
+    """
+
+# calculate coverage txt files for all min50 dedup mappings, for highcov metag.
+# this gives us direct read-to-gene breadth & depth info, to
+# be processed in a notebook.
+rule map_coverage_cds_depth_highcov:
+    input:
+        bam='outputs.cds/singleclust.highcov/bam/{m}.x.{s}.bam',
+        bai='outputs.cds/singleclust.highcov/bam/{m}.x.{s}.bam.bai',
+        fa='outputs.cds/singleclust/{s}.cds3.min50.dedup.fa',
+    output:
+        'outputs.cds/singleclust.highcov/bam/{m}.x.{s}.depth.txt'
     threads: 8
     conda: "env-mapping.yml"
     shell: """
@@ -616,11 +666,26 @@ rule extract_species_genes:
             -o {params.outdir}
     """
 
+rule extract_species_genes_anchor:
+    input:
+        csv="outputs.cds/singleclust/species-genes.csv",
+        fa=ancient(expand('outputs.cds/cds3/outputs.minsig/{s}.cds3.min50.dedup.fa',
+                  s=MIN50_NAMES)),
+    output:
+        expand("outputs.cds/cds3-anchor-genes/{s}.genes.fa",
+               s=SPECIES_WITH_GENES)
+    params:
+        outdir='outputs.cds/cds3-anchor-genes/'
+    shell: """
+        scripts/split-genes-by-species.py {input.csv:q} {input.fa:q} \
+            -o {params.outdir} --anchor-only
+    """
+
 rule sketch_species_genes:
     input:
-        "outputs.cds/cds3-genes/{s}.genes.fa",
+        "outputs.cds/{dir}/{s}.genes.fa",
     output:
-        "outputs.cds/cds3-genes/{s}.sig.zip",
+        "outputs.cds/{dir}/{s}.sig.zip",
     shell: """
         sourmash sketch dna {input:q} -o {output:q} --name {wildcards.s:q} \
            -p k=21,k=31,k=51
@@ -635,12 +700,34 @@ rule genes_mf:
         sourmash sig collect -F csv {input:q} -o {output:q}
     """
 
+rule anchor_genes_mf:
+    input:
+        expand("outputs.cds/cds3-anchor-genes/{s}.sig.zip", s=SPECIES_WITH_GENES),
+    output:
+        "outputs.cds/cds3-anchor-genes/cds3-genes.mf.csv",
+    shell: """
+        sourmash sig collect -F csv {input:q} -o {output:q}
+    """
+
 rule search_species_3216_genes:
     input:
         q="outputs.cds/cds3-genes/cds3-genes.mf.csv",
         db="3216.manifest.csv",
     output:
         "outputs.cds/cds3-genes/manysearch.3216.csv",
+    conda: "env-sourmash.yml"
+    threads: 32
+    shell: """
+        sourmash scripts manysearch -c {threads} -t 0 -k 21 -s 1000 \
+            {input.q:q} {input.db:q} -o {output:q}
+    """
+
+rule search_species_3216_genes_anchor:
+    input:
+        q="outputs.cds/cds3-anchor-genes/cds3-genes.mf.csv",
+        db="3216.manifest.csv",
+    output:
+        "outputs.cds/cds3-anchor-genes/manysearch.3216.csv",
     conda: "env-sourmash.yml"
     threads: 32
     shell: """

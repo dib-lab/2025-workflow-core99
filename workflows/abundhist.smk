@@ -63,7 +63,27 @@ ISECT_METAG = {
                                      'ERR3211929',
                                      'ERR1135303',
                                      'SRR10209683',
-                                     'SRR16235699']
+                                     'SRR16235699'],
+    's__Colivicinus sp002299675': ['SRR5241534',
+                                   'ERR3211906',
+                                   'SRR5240744',
+                                   'ERR1135346',
+                                   'SRR17241663',
+                                   'SRR10209667',
+                                   'SRR12795793',
+                                   'ERR8314733',
+                                   'SRR11489783',
+                                   'SRR11551383'],
+    's__Ornithospirochaeta sp022785155': ['ERR1135273',
+                                          'ERR3211801',
+                                          'SRR18048904',
+                                          'ERR8314788',
+                                          'SRR8960625',
+                                          'ERR1135213',
+                                          'ERR3211929',
+                                          'ERR1135304',
+                                          'SRR11489781',
+                                          'SRR11489783']
 }
 
 ISECT_FILES = []
@@ -75,6 +95,11 @@ for s, mm in ISECT_METAG.items():
 rule do_abundhist:
     input:
         ISECT_FILES
+
+rule do_update_mapping_parquet:
+    shell: """
+        scripts/csv-to-parquet.py outputs.cds/cds3-genes/mapping-coverage.csv -o inputs.abundhist/ --redo
+    """
     
 
 rule abundhist_isect_wc:

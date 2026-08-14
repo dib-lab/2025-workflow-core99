@@ -14,6 +14,7 @@ def main():
                    help='manually curated genes')
     p.add_argument('fasta_files', nargs='+')
     p.add_argument('-o', '--outdir', help='output directory')
+    p.add_argument('--anchor-only', action='store_true')
     args = p.parse_args()
 
     args.outdir = args.outdir.rstrip('/')
@@ -27,7 +28,8 @@ def main():
     genes_uniq = set()
     for row in rows:
         is_good = int(row["good"])
-        if is_good:
+        keep_anchor = int(row["anchor"]) or not args.anchor_only
+        if is_good and keep_anchor:
             gene = row["gene_name"]
             species = row["species"]
             gene_species[gene] = species

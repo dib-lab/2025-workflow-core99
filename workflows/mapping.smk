@@ -5,159 +5,22 @@
 wildcard_constraints:
     species="[^/]+"
 
-NAMESPLUS = [ x.strip() for x in open('inputs.mapping/names-plus.list') ]
+NAMESPLUS = [ x.strip() for x in open('inputs.cds/names-plus.list') ]
 print(f'loaded {len(NAMESPLUS)} coreplus species names')
-
-rule make_cds3:
-    input:
-
-rule do_prokka_ncbi:
-    input:
-        expand('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d', zip, species=ncbi_species, g=ncbi_genomes)
-#        expand('outputs.mapping/genomes/{species}.ncbi.prokka/{species}.cds.fa.gz', species=ncbi_species)
-
-rule do_prokka_ath:
-    input:
-        expand('outputs.mapping/genomes/{species}.ath.prokka/{g}.prokka.d', zip, species=ath_species, g=ath_genomes)
-#        expand('outputs.mapping/genomes/{species}.ath.prokka/{species}.cds.fa.gz', species=ath_species)
-
-rule do_sketch:
-    input:
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/species-reads.rand/{s}.sig.zip', s=NAMES),
-        
-
-rule do_map_lowest:
-    input:
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.bam', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.fastq.gz', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.sig.zip', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{m}.x.{s}.readstats.txt', m=LOWEST_METAG, s=NAMES),
-        expand('outputs.mapping/bams.lowest/{s}.readstats.csv', m=LOWEST_METAG, s=NAMES),
-
-rule do_map_rand:
-    input:
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.bam', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.fastq.gz', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMES),
-        expand('outputs.mapping/bams.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMES),
 
 rule do_map_cds:
     input:
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.bam', m=RAND_METAG, s=NAMESPLUS),
+        expand('outputs.mapping/bams.cds.highcov/{m}.x.{s}.bam', m=HIGHCOV_METAG, s=NAMESPLUS),
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.fastq.gz', m=RAND_METAG, s=NAMESPLUS),
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.sig.zip', m=RAND_METAG, s=NAMESPLUS),
         expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.readstats.txt', m=RAND_METAG, s=NAMESPLUS),
         expand('outputs.mapping/bams.cds.rand/{s}.readstats.csv', m=RAND_METAG, s=NAMESPLUS),
-#        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.gather.with-lineages.csv', s=NAMESPLUS, m=RAND_METAG),
-#        expand('outputs.mapping/bams.cds.rand/{m}.x.{s}.profile.json', s=NAMESPLUS, m=RAND_METAG),
-
-rule genome_lists:
-    input:
-        expand('outputs.mapping/lists/{s}.gtdb-acc.txt', s=NAMES),
-        expand('outputs.mapping/lists/{s}.ath-paths.txt', s=NAMES),
 
 rule do_pangenomes:
     input:
         expand('outputs.mapping/genomes/{s}.pangenome.fa.gz', s=NAMES),
         expand('outputs.mapping/genomes/{s}.pangenome.sig.zip', s=NAMES),
-
-rule get_ath_mag_names:
-    input:
-        lineage='/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/bin-sketches.lineages.csv'
-    output:
-        csv='outputs.mapping/lists/{species}.ath-tax.csv'
-    conda: "env-mapping.yml"
-    shell: """
-        sourmash tax grep {wildcards.species:q} -t {input.lineage} -o {output.csv:q}
-    """
-
-rule get_gtdb_tax_names_1:
-    input:
-        lineage='/group/ctbrowngrp5/sourmash-db.new/gtdb-rs226/gtdb-rs226.lineages.sqldb'
-    output:
-        csv='outputs.mapping/lists/{species}.gtdb-tax.csv',
-    conda: "env-mapping.yml"
-    shell: """
-        sourmash tax grep {wildcards.species:q} -t {input.lineage} -o {output.csv:q}
-    """
-
-rule get_gtdb_tax_names_2:
-    input:
-        csv='outputs.mapping/lists/{species}.gtdb-tax.csv',
-        exclude_csv='/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/host/picklist-exclude.csv'
-    output:
-        txt='outputs.mapping/lists/{species}.gtdb-acc.txt',
-    run:
-        exclude = set()
-        with open(input.exclude_csv, "rt") as fp:
-            for row in csv.DictReader(fp):
-                ident = row["ident"].split('.')[0]
-                exclude.add(ident)
-
-        outfp = open(output.txt, "wt")
-        with open(input.csv, "rt") as fp:
-            for row in csv.DictReader(fp):
-                ident = row["ident"]
-                if ident in exclude:
-                    print(f"excluding {ident}")
-                else:
-                    print(ident, file=outfp)
-    
-
-rule get_ncbi_genomes:
-    input:
-        txt='outputs.mapping/lists/{species}.gtdb-acc.txt',
-    output:
-        directory('outputs.mapping/genomes/{species}.ncbi.d/')
-    conda: "env-mapping.yml"
-    shell: """
-        get-some-ncbi-genomes --from-file {input:q} -G --output-dir {output:q}
-    """
-
-rule get_ath_paths:
-    input:
-        tax_csv='outputs.mapping/lists/{species}.ath-tax.csv',
-        sketch_csv='/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/rename/manysketch-renamed.csv',
-        exclude_csv='/home/ctbrown/scratch3/sourmash-midgie-raker/outputs.ath/host/picklist-exclude.csv'
-    output:
-        csv='outputs.mapping/lists/{species}.ath-paths.txt'
-    run:
-        exclude = set()
-        with open(input.exclude_csv, "rt") as fp:
-            for row in csv.DictReader(fp):
-                ident = row["ident"].split('.')[0]
-                exclude.add(ident)
-
-        paths_by_ident = {}
-        with open(input.sketch_csv, 'rt') as fp:
-            r = csv.DictReader(fp)
-            for row in r:
-                ident = row['name'].split(' ')[0]
-                path = row['genome_filename']
-                paths_by_ident[ident] = path
-
-        with open(output.csv, 'wt') as outfp:
-            with open(input.tax_csv, 'rt') as fp:
-                r = csv.DictReader(fp)
-                for row in r:
-                    ident = row['ident']
-                    if ident in exclude:
-                        print(f"excluding {ident}")
-                    else:
-                        path = paths_by_ident[ident]
-                        outfp.write(f"{path}\n")
-
-rule get_ath_genomes:
-    input:
-        csv='outputs.mapping/lists/{species}.ath-paths.txt'
-    output:
-        directory('outputs.mapping/genomes/{species}.ath.d/')
-    shell: """
-        mkdir -p {output:q}
-        cp $(cat {input.csv:q}) {output:q} || true
-    """
 
 rule make_pangenomes:
     input:
@@ -181,41 +44,27 @@ rule make_pangenome_sigs:
             {input:q} -o {output:q} --name {wildcards.species:q}
     """
 
-rule map_index_lowest:
-    input:
-        g="outputs.mapping/genomes/{s}.pangenome.fa.gz",
-        metag=GRIST_LOWEST+"trim/{m}.trim.fq.gz",
-    output:
-        bam='outputs.mapping/bams.lowest/{m}.x.{s}.bam',
-        bai='outputs.mapping/bams.lowest/{m}.x.{s}.bam.bai',
-    threads: 8
-    conda: "env-mapping.yml"
-    shell: """
-        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - > {output.bam:q}
-        samtools index {output.bam:q}
-    """
-
-rule map_index_rand:
-    input:
-        g="outputs.mapping/genomes/{s}.pangenome.fa.gz",
-        metag=GRIST_RAND100 + "trim/{m}.trim.fq.gz",
-    output:
-        bam='outputs.mapping/bams.rand/{m}.x.{s}.bam',
-        bai='outputs.mapping/bams.rand/{m}.x.{s}.bam.bai',
-    threads: 8
-    conda: "env-mapping.yml"
-    shell: """
-        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - > {output.bam:q}
-        samtools index {output.bam:q}
-    """
-
 rule map_index_rand_cds:
     input:
-        g="outputs.mapping/cds/{s}.cds.fa.gz",
+        g="outputs.cds/cds/{s}.cds.fa.gz",
         metag=GRIST_RAND100 + "trim/{m}.trim.fq.gz",
     output:
         bam='outputs.mapping/bams.cds.rand/{m}.x.{s}.bam',
         bai='outputs.mapping/bams.cds.rand/{m}.x.{s}.bam.bai',
+    threads: 8
+    conda: "env-mapping.yml"
+    shell: """
+        minimap2 -ax sr -t {threads} {input.g:q} {input.metag:q} | samtools view -b -F 4 - | samtools sort - > {output.bam:q}
+        samtools index {output.bam:q}
+    """
+
+rule map_index_highcov_cds:
+    input:
+        g="outputs.cds/cds/{s}.cds.fa.gz",
+        metag=GRIST_HIGHCOV + "trim/{m}.trim.fq.gz",
+    output:
+        bam='outputs.mapping/bams.cds.highcov/{m}.x.{s}.bam',
+        bai='outputs.mapping/bams.cds.highcov/{m}.x.{s}.bam.bai',
     threads: 8
     conda: "env-mapping.yml"
     shell: """
@@ -244,16 +93,6 @@ rule map_readstats:
        samtools view -c -F 260 {input:q} > {output:q}
     """
 
-rule lowest_metags_mf_csv:
-    input:
-        expand(GRIST_LOWEST + "sigs/{m}.trim.sig.zip", m=LOWEST_METAG)
-    output:
-        "outputs.mapping/lowest-metags.mf.csv",
-    conda: "env-mapping.yml"
-    shell: """
-        sourmash sig collect --abspath -F csv -o {output} {input}
-    """
-
 rule rand_metags_mf_csv:
     input:
         expand(GRIST_RAND100 + "sigs/{m}.trim.sig.zip", m=RAND_METAG)
@@ -262,19 +101,6 @@ rule rand_metags_mf_csv:
     conda: "env-mapping.yml"
     shell: """
         sourmash sig collect --abspath -F csv -o {output} {input}
-    """
-
-rule manysearch_lowest:
-    input:
-        pg="outputs.mapping/genomes/{s}.pangenome.sig.zip",
-        metags="outputs.mapping/lowest-metags.mf.csv",
-    output:
-        "outputs.mapping/containment/{s}.x.lowest-metags.manysearch.csv"
-    threads: 32
-    conda: "env-mapping.yml"
-    shell: """
-       sourmash scripts manysearch -k 31 -s 1000 -t 0 -c {threads} \
-           {input.pg:q} {input.metags:q} -o {output:q}
     """
 
 rule manysearch_rand:
@@ -462,103 +288,3 @@ rule gather_tax:
         sourmash tax annotate -t {input.db:q} -g {input.csv:q} \
            -o {params.outdir}
     """
-
-rule do_prokka_ncbi_wc:
-    input:
-        g='outputs.mapping/genomes/{species}.ncbi.d/{g}.fna.gz'
-    output:
-        g=temporary("outputs.mapping/genomes/{species}.ncbi.prokka/{g}.fa"),
-        dir=directory('outputs.mapping/genomes/{species}.ncbi.prokka/{g}.prokka.d')
-    threads: 8
-    conda: "env-prokka.yml"
-    shell: """
-        gunzip -c {input.g:q} > {output.g:q}
-        prokka --outdir {output.dir:q} {output.g:q} --fast --cpus {threads}
-    """
-
-rule do_prokka_ath_wc:
-    input:
-        g='outputs.mapping/genomes/{species}.ath.d/{g}.fasta'
-    output:
-        dir=directory('outputs.mapping/genomes/{species}.ath.prokka/{g}.prokka.d')
-    threads: 8
-    conda: "env-prokka.yml"
-    shell: """
-        prokka --outdir {output.dir:q} {input.g:q} --fast --cpus {threads}
-    """
-
-def get_ath_prokka_dirs(w):
-    ath_dirs = []
-    for (species, genome) in zip(ath_species, ath_genomes):
-        if species == w.species:
-            ath_dir = f'outputs.mapping/genomes/{species}.ath.prokka/{genome}.prokka.d'
-            ath_dirs.append(ath_dir)
-
-    if len(ath_dirs) == 0:
-        print(f"WARNING, no AtH directories for '{w.species}'")
-
-    return ath_dirs
-
-def get_ncbi_prokka_dirs(w):
-    ncbi_dirs = []
-    for (species, genome) in zip(ncbi_species, ncbi_genomes):
-        if species == w.species:
-            ncbi_dir = f'outputs.mapping/genomes/{species}.ncbi.prokka/{genome}.prokka.d'
-            ncbi_dirs.append(ncbi_dir)
-
-    assert ncbi_dirs, f"no Prokka directories for {w.species}"
-
-    return ncbi_dirs
-
-rule prokka_cds_wc:
-    input:
-        ancient(get_ath_prokka_dirs),
-        ancient(get_ncbi_prokka_dirs),
-    output:
-        'outputs.mapping/cds/{species}.cds.fa.gz'
-    shell: """
-        find {input:q} -name *.ffn -exec cat {{}} \\; | gzip > {output:q}
-    """
-
-rule prokka_cds_wc_gtdb_only:
-    input:
-        ancient(get_ncbi_prokka_dirs),
-    output:
-        'outputs.mapping/cds/gtdb-only/{species}.cds.fa.gz'
-    shell: """
-        find {input:q} -name *.ffn -exec cat {{}} \\; | gzip > {output:q}
-    """
-
-rule prokka_cds_wc_ath_only:
-    input:
-        ancient(get_ath_prokka_dirs),
-    output:
-        'outputs.mapping/cds/ath-only/{species}.cds.fa.gz'
-    shell: """
-        find {input:q} -name *.ffn -exec cat {{}} \\; | gzip > {output:q}
-    """
-
-rule make_prokka_cds_sig_zip:
-    input:
-        '{dir}/{name}.cds.fa.gz',
-    output:
-        '{dir}/{name}.cds.sig.zip',
-    conda: "env-mapping.yml"
-    shell: """
-        sourmash scripts singlesketch -p dna,k=21,k=31,k=51,scaled=1000 \
-            {input:q} -o {output:q} --name {wildcards.name:q}
-    """
-
-rule manysearch_cds:
-    input:
-        cds="outputs.mapping/cds/{s}.cds.sig.zip",
-        metags="outputs.mapping/rand-metags.mf.csv",
-    output:
-        "outputs.mapping/cds/{s}.x.rand-metags.manysearch.csv"
-    threads: 32
-    conda: "env-sourmash.yml"
-    shell: """
-       sourmash scripts manysearch -k 31 -s 1000 -t 0 -c {threads} \
-           {input.cds:q} {input.metags:q} -o {output:q}
-    """
-

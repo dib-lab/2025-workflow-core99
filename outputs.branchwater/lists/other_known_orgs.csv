@@ -1,0 +1,931 @@
+organism,is_pig_assoc,acc,bioproject,count,broad_cat,mbases,host,project_name
+bovine gut metagenome,1,ERR3224576,PRJEB31266,8,other,39686,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048405,PRJEB52849,16,other,152280,,
+Bos taurus,1,ERR2019396,PRJEB21508,10,other,20546,,"[""Ruminomics EU FP7""]"
+termite gut metagenome,0,SRR6206199,PRJNA366375,15,other,47836,"[""not applicable""]",
+Equus asinus,1,SRR28806309,PRJNA1103961,14,other,13923,,
+bovine gut metagenome,1,SRR22221980,PRJNA843354,9,other,11117,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371511,PRJNA356291,16,other,67315,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418359,PRJNA792486,9,other,28392,"[""Black goat""]",
+bovine gut metagenome,1,SRR3181140,PRJNA309291,11,other,15442,"[""Bos taurus""]",
+Bos taurus,1,SRR24891230,PRJNA981443,9,other,13531,,
+bovine gut metagenome,1,ERR3220179,PRJEB31266,11,other,22365,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3211462,PRJEB31266,8,other,28248,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801455,PRJEB33080,12,other,18867,,
+bovine gut metagenome,1,ERR3224609,PRJEB31266,12,other,38658,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR10098304,PRJNA563872,8,other,13686,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220178,PRJEB31266,10,other,18157,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3220184,PRJEB31266,9,other,19360,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3220198,PRJEB31266,8,other,21850,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR12358621,PRJNA649861,12,other,39731,"[""BALB/c""]",
+Bos taurus,1,ERR2019391,PRJEB21508,9,other,24783,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR5371499,PRJNA356291,16,other,24297,"[""Bos taurus""]",
+termite gut metagenome,0,SRR6218741,PRJNA405701,12,other,58309,"[""not applicable""]",
+bovine gut metagenome,1,ERR3220207,PRJEB31266,11,other,18732,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR13741615,PRJNA600179,8,other,9656,"[""Mus musculus""]",
+invertebrate metagenome,0,SRR13927422,PRJNA662631,12,other,23936,"[""Synoicum adareanum""]",
+bovine gut metagenome,1,SRR22213169,PRJNA898608,9,other,8918,"[""Bos taurus indicus""]",
+bovine metagenome,1,SRR6512893,PRJNA420682,15,other,13706,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053182,PRJNA292471,11,other,5576,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201393,PRJEB31266,10,other,20998,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Bos taurus,1,ERR2019366,PRJEB21508,12,other,23053,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR5371471,PRJNA356291,16,other,42225,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098296,PRJNA563872,15,other,16025,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048382,PRJEB52849,15,other,106567,,
+bovine gut metagenome,1,SRR3181158,PRJNA309291,10,other,17055,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371381,PRJNA356291,16,other,12813,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801454,PRJEB33080,10,other,14415,,
+Bos taurus,1,SRR24891241,PRJNA981443,8,other,12677,,
+bovine gut metagenome,1,SRR094437,PRJNA60251,16,other,87947,,
+bovine gut metagenome,1,SRR17023466,PRJNA779163,12,other,20259,"[""cattle""]",
+bovine gut metagenome,1,ERR3220195,PRJEB31266,11,other,24460,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR6512901,PRJNA420682,13,other,4288,"[""Bos taurus""]",
+Bos taurus,1,SRR24891222,PRJNA981443,9,other,13576,,
+bovine gut metagenome,1,ERR3275111,PRJEB31266,11,other,42159,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR3181160,PRJNA309291,14,other,13369,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR26824602,PRJNA1040231,12,other,24984,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371465,PRJNA356291,15,other,24159,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053170,PRJNA292471,9,other,3363,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12358617,PRJNA649861,10,other,57759,"[""BALB/c""]",
+bovine gut metagenome,1,SRR12668996,PRJNA654761,13,other,47983,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098324,PRJNA563872,10,other,9936,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371403,PRJNA356291,13,other,12490,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048389,PRJEB52849,16,other,109570,,
+sheep gut metagenome,1,SRR9006730,PRJNA539639,14,other,57946,"[""Ovis aries""]",
+bovine metagenome,1,SRR10098322,PRJNA563872,13,other,12680,"[""Bos taurus""]",
+bovine metagenome,1,SRR13059364,PRJNA678365,14,other,14641,"[""Capra aegagrus hircus""]",
+bovine gut metagenome,1,ERR3224567,PRJEB31266,10,other,28757,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801478,PRJEB33080,8,other,15043,,
+bovine metagenome,1,SRR9037496,PRJNA420682,13,other,10578,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048377,PRJEB52849,14,other,84895,,
+bovine gut metagenome,1,SRR5371435,PRJNA356291,16,other,25815,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275105,PRJEB31266,14,other,42674,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371377,PRJNA356291,15,other,17408,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12358611,PRJNA649861,15,other,37371,"[""BALB/c""]",
+bovine gut metagenome,1,SRR3181148,PRJNA309291,8,other,11909,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098306,PRJNA563872,11,other,12117,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371501,PRJNA356291,16,other,34856,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR13433992,PRJNA691977,13,other,28030,"[""Bos taurus""]",
+Bos taurus,1,SRR24882553,PRJNA980404,9,other,13404,,
+goat gut metagenome,1,SRR17418335,PRJNA792486,8,other,29458,"[""Black goat""]",
+Bos taurus,1,ERR2019386,PRJEB21508,10,other,25392,,"[""Ruminomics EU FP7""]"
+sheep gut metagenome,1,SRR17274348,PRJNA783381,11,other,10179,"[""sheep103""]",
+Equus asinus asinus,1,ERR10048374,PRJEB52849,16,other,110207,,
+bovine gut metagenome,1,ERR3224607,PRJEB31266,10,other,32348,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR31127829,PRJNA1153624,9,other,37218,"[""bovine""]",
+termite gut metagenome,0,SRR10512954,PRJNA590611,15,other,51353,"[""Embiratermes neotenicus""]",
+bovine metagenome,1,SRR10098321,PRJNA563872,10,other,15046,"[""Bos taurus""]",
+bovine metagenome,1,SRR24956272,PRJNA984925,10,other,10877,"[""Bos taurus""]",
+Bos taurus,1,ERR2019413,PRJEB21508,12,other,21362,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3224605,PRJEB31266,12,other,33488,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801483,PRJEB33080,11,other,15056,,
+bovine gut metagenome,1,ERR3801492,PRJEB33080,12,other,19955,,
+bovine gut metagenome,1,SRR29517105,PRJNA1125719,12,other,25766,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12398540,PRJNA655594,8,other,30143,"[""C57BL/6J""]",
+Bos taurus,1,ERR7756148,PRJEB44278,12,other,9632,,
+sheep gut metagenome,1,SRR17274350,PRJNA783381,9,other,10737,"[""sheep119""]",
+bovine gut metagenome,1,ERR3275108,PRJEB31266,13,other,43267,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3275091,PRJEB31266,12,other,38630,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+sheep gut metagenome,1,SRR17274331,PRJNA783381,10,other,9697,"[""sheep108""]",
+bovine gut metagenome,1,SRR5371385,PRJNA356291,16,other,15536,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220182,PRJEB31266,10,other,21684,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3220194,PRJEB31266,10,other,24255,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR17023457,PRJNA779163,11,other,19269,"[""cattle""]",
+Bos taurus,1,ERR2019356,PRJEB21508,11,other,26798,,"[""Ruminomics EU FP7""]"
+invertebrate metagenome,0,SRR13325273,PRJNA687334,9,other,20928,"[""wild plants""]",
+bovine gut metagenome,1,ERR3211463,PRJEB31266,10,other,20935,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801468,PRJEB33080,13,other,19892,,
+termite gut metagenome,0,SRR6219166,PRJNA405700,8,other,54880,"[""not applicable""]",
+termite gut metagenome,0,SRR5215141,PRJNA365049,14,other,52879,"[""not applicable""]",
+bovine gut metagenome,1,SRR26824601,PRJNA1040231,13,other,28211,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181116,PRJNA309291,10,other,13189,"[""Bos taurus""]",
+Bos taurus,1,ERR2019397,PRJEB21508,11,other,26086,,"[""Ruminomics EU FP7""]"
+invertebrate metagenome,0,SRR13325295,PRJNA687334,8,other,42684,"[""citrus""]",
+bovine gut metagenome,1,ERR3801481,PRJEB33080,11,other,13355,,
+sheep gut metagenome,1,SRR17274333,PRJNA783381,9,other,11285,"[""sheep106""]",
+bovine metagenome,1,SRR6512897,PRJNA420682,15,other,7642,"[""Bos taurus""]",
+Equus asinus,1,SRR20707896,PRJNA860652,13,other,14929,,
+bovine gut metagenome,1,SRR5371395,PRJNA356291,15,other,19787,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275115,PRJEB31266,9,other,36197,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR10098319,PRJNA563872,13,other,13507,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR22213149,PRJNA898608,11,other,7376,"[""Bos taurus indicus""]",
+bovine metagenome,1,SRR6512904,PRJNA420682,13,other,9177,"[""Bos taurus""]",
+Bos taurus,1,ERR2019388,PRJEB21508,10,other,20056,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR5371433,PRJNA356291,15,other,29874,"[""Bos taurus""]",
+Equus asinus,1,SRR20707899,PRJNA860652,9,other,13013,,
+termite gut metagenome,0,SRR5248941,PRJNA366255,10,other,55329,"[""not applicable""]",
+Equus asinus asinus,1,ERR10048395,PRJEB52849,15,other,110449,,
+bovine metagenome,1,SRR3053138,PRJNA292471,10,other,6002,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275126,PRJEB31266,13,other,40958,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3201418,PRJEB31266,14,other,29321,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR10858971,PRJNA600179,13,other,12123,"[""Mus musculus""]",
+goat gut metagenome,1,SRR17418344,PRJNA792486,14,other,25344,"[""Black goat""]",
+sheep gut metagenome,1,SRR12081293,PRJNA641579,8,other,22715,"[""sheep""]",
+bovine gut metagenome,1,SRR7971122,PRJNA469173,10,other,69977,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR13741606,PRJNA600179,14,other,13057,"[""Mus musculus""]",
+Bos taurus,1,ERR2019378,PRJEB21508,8,other,20886,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR5371409,PRJNA356291,15,other,13229,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181128,PRJNA309291,10,other,15054,"[""Bos taurus""]",
+Bos taurus,1,ERR2019362,PRJEB21508,11,other,27731,,"[""Ruminomics EU FP7""]"
+Equus asinus asinus,1,ERR10048365,PRJEB52849,15,other,101215,,
+bovine metagenome,1,SRR24963330,PRJNA984925,8,other,12032,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053162,PRJNA292471,9,other,4775,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275114,PRJEB31266,13,other,42320,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371469,PRJNA356291,15,other,52682,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR25119225,PRJNA348350,16,other,140688,"[""Mus musculus""]",
+Equus asinus asinus,1,ERR10048393,PRJEB52849,16,other,132952,,
+bovine gut metagenome,1,SRR7971120,PRJNA469174,8,other,63756,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR17023459,PRJNA779163,12,other,19226,"[""cattle""]",
+bovine gut metagenome,1,SRR31127835,PRJNA1153624,9,other,66822,"[""bovine""]",
+Equus asinus asinus,1,ERR10048384,PRJEB52849,14,other,104535,,
+bovine gut metagenome,1,ERR3224599,PRJEB31266,14,other,37515,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801460,PRJEB33080,12,other,19177,,
+bovine gut metagenome,1,ERR3801491,PRJEB33080,11,other,20947,,
+bovine gut metagenome,1,SRR9008757,PRJNA539662,12,other,68571,"[""Bos taurus""]",
+bovine metagenome,1,ERR2200664,PRJEB23561,12,other,39853,,"[""Rumen metagenome""]"
+bovine gut metagenome,1,SRR5371389,PRJNA356291,15,other,19015,"[""Bos taurus""]",
+Bos taurus,1,ERR2019414,PRJEB21508,8,other,17286,,"[""Ruminomics EU FP7""]"
+goat gut metagenome,1,SRR17418336,PRJNA792486,8,other,30653,"[""Black goat""]",
+Bos taurus,1,ERR2019401,PRJEB21508,12,other,18634,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR17714296,PRJNA799789,8,other,11979,"[""Bos taurus""]",
+Equus asinus,1,SRR28806308,PRJNA1103961,12,other,14074,,
+bovine gut metagenome,1,SRR5371453,PRJNA356291,16,other,38867,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR4435573,PRJNA214227,8,other,10392,"[""Bison bison""]",
+mouse gut metagenome,0,SRR12358619,PRJNA649861,10,other,51375,"[""BALB/c""]",
+bovine gut metagenome,1,SRR13343631,PRJNA686811,10,other,12499,"[""cow""]",
+bovine gut metagenome,1,ERR3801466,PRJEB33080,11,other,19235,,
+bovine gut metagenome,1,SRR13343629,PRJNA686811,10,other,12142,"[""cow""]",
+mouse gut metagenome,0,SRR13741612,PRJNA600179,12,other,11277,"[""Mus musculus""]",
+bovine gut metagenome,1,ERR3801488,PRJEB33080,11,other,18783,,
+bovine gut metagenome,1,SRR26824596,PRJNA1040231,14,other,23365,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181135,PRJNA309291,11,other,13738,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181110,PRJNA309291,9,other,12773,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220187,PRJEB31266,10,other,24623,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR22518914,PRJNA903516,8,other,7020,"[""Vertebrates:bos_taurus""]",
+bovine gut metagenome,1,SRR5371467,PRJNA356291,15,other,23921,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220225,PRJEB31266,9,other,18355,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801464,PRJEB33080,12,other,21309,,
+bovine gut metagenome,1,SRR9036418,PRJNA539170,13,other,49267,"[""Bos taurus""]",
+Bos taurus,1,ERR2019415,PRJEB21508,8,other,15560,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR13343632,PRJNA686811,11,other,10846,"[""cow""]",
+bovine gut metagenome,1,ERR3224597,PRJEB31266,9,other,40380,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR9036306,PRJNA539168,13,other,46225,"[""Bos taurus""]",
+bovine metagenome,1,ERR2200665,PRJEB23561,9,other,28769,,"[""Rumen metagenome""]"
+Equus asinus asinus,1,ERR10048371,PRJEB52849,13,other,75391,,
+Bos taurus,1,ERR2019411,PRJEB21508,11,other,20921,,"[""Ruminomics EU FP7""]"
+bovine metagenome,1,ERR2200668,PRJEB23561,8,other,31886,,"[""Rumen metagenome""]"
+bovine gut metagenome,1,SRR3457760,PRJNA319009,13,other,20188,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220214,PRJEB31266,10,other,19956,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3201407,PRJEB31266,10,other,27739,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR10098328,PRJNA563872,12,other,11507,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR17023460,PRJNA779163,12,other,21500,"[""cattle""]",
+mouse gut metagenome,0,SRR12358626,PRJNA649861,15,other,41556,"[""BALB/c""]",
+Bos taurus,1,SRR24891251,PRJNA981443,8,other,12564,,
+bovine gut metagenome,1,ERR3220200,PRJEB31266,11,other,21954,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR9052928,PRJNA541820,16,other,42867,"[""C57BL/6""]",
+Equus asinus asinus,1,ERR10048391,PRJEB52849,15,other,116253,,
+Bos taurus,1,SRR24882555,PRJNA980404,10,other,15102,,
+bovine metagenome,1,SRR6512900,PRJNA420682,15,other,17565,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220193,PRJEB31266,10,other,20438,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Bos taurus,1,SRR24891236,PRJNA981443,9,other,12652,,
+bovine gut metagenome,1,ERR3801452,PRJEB33080,9,other,16285,,
+bovine gut metagenome,1,SRR24260327,PRJNA956982,9,other,11139,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275121,PRJEB31266,8,other,37893,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+invertebrate metagenome,0,SRR13325279,PRJNA687334,13,other,99371,"[""sugar apple""]",
+bovine metagenome,1,SRR3053141,PRJNA292471,9,other,4370,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR9036511,PRJNA539169,14,other,53445,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR9052923,PRJNA541820,13,other,44526,"[""C57BL/6""]",
+mouse gut metagenome,0,SRR12358627,PRJNA649861,13,other,38816,"[""BALB/c""]",
+bovine metagenome,1,SRR24963225,PRJNA984925,8,other,13125,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201379,PRJEB31266,10,other,20507,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR094926,PRJNA60251,16,other,100274,,
+mouse gut metagenome,0,SRR13741618,PRJNA600179,12,other,10907,"[""Mus musculus""]",
+bovine metagenome,1,SRR22560184,PRJNA909573,9,other,12831,"[""bovine""]",
+bovine gut metagenome,1,ERR3224596,PRJEB31266,10,other,36611,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3224600,PRJEB31266,12,other,35815,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Bos taurus,1,SRR24891224,PRJNA981443,10,other,17905,,
+Equus asinus asinus,1,ERR10048397,PRJEB52849,15,other,117745,,
+bovine metagenome,1,SRR3053177,PRJNA292471,12,other,7712,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275128,PRJEB31266,14,other,40222,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371479,PRJNA356291,16,other,101198,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220213,PRJEB31266,10,other,18060,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801477,PRJEB33080,8,other,11923,,
+Bos taurus,1,SRR24891237,PRJNA981443,8,other,13119,,
+Equus asinus asinus,1,ERR10048372,PRJEB52849,16,other,107762,,
+bovine metagenome,1,SRR10098305,PRJNA563872,8,other,11884,"[""Bos taurus""]",
+Bos taurus,1,ERR2019359,PRJEB21508,13,other,29383,,"[""Ruminomics EU FP7""]"
+bovine metagenome,1,SRR6512899,PRJNA420682,15,other,15493,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053171,PRJNA292471,14,other,5422,"[""Bos taurus""]",
+termite gut metagenome,0,SRR5215144,PRJNA365051,11,other,53647,"[""not applicable""]",
+bovine gut metagenome,1,ERR3275103,PRJEB31266,13,other,42543,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3224594,PRJEB31266,13,other,36818,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR12358613,PRJNA649861,14,other,43471,"[""BALB/c""]",
+mouse gut metagenome,0,SRR10858970,PRJNA600179,13,other,12866,"[""Mus musculus""]",
+Equus asinus asinus,1,ERR10048387,PRJEB52849,15,other,104931,,
+invertebrate metagenome,0,SRR13325282,PRJNA687334,8,other,37162,"[""guava""]",
+Bos taurus,1,ERR2019365,PRJEB21508,8,other,21153,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3224573,PRJEB31266,10,other,32914,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR6220664,PRJNA366256,14,other,42249,"[""not applicable""]",
+mouse gut metagenome,0,SRR9052926,PRJNA541820,16,other,40827,"[""C57BL/6""]",
+bovine gut metagenome,1,SRR26824592,PRJNA1040231,13,other,32673,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR17023477,PRJNA779163,11,other,20032,"[""cattle""]",
+mouse gut metagenome,0,SRR29267457,PRJNA1119043,8,other,15488,"[""Donkey""]",
+bovine gut metagenome,1,SRR17023469,PRJNA779163,9,other,28935,"[""cattle""]",
+bovine gut metagenome,1,ERR3801462,PRJEB33080,12,other,18978,,
+bovine gut metagenome,1,SRR5371473,PRJNA356291,16,other,42402,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR21118914,PRJNA869873,10,other,16288,"[""dairy cattle""]",
+bovine gut metagenome,1,ERR3224598,PRJEB31266,13,other,38519,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR28378877,PRJNA1088235,8,other,14223,"[""Cattle""]",
+bovine gut metagenome,1,SRR8543131,PRJNA518429,16,other,58017,"[""Bos taurus""]",
+termite gut metagenome,0,SRR6206236,PRJNA405783,8,other,45583,"[""Cubitermes""]",
+Bos taurus,1,ERR2019360,PRJEB21508,12,other,30796,,"[""Ruminomics EU FP7""]"
+sheep gut metagenome,1,SRR8436538,PRJNA502469,16,other,70664,"[""Ovis aries""]",
+bovine gut metagenome,1,ERR3211449,PRJEB31266,8,other,25869,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR14710888,PRJNA732531,14,other,41428,"[""Zootermopsis nevadensis""]",
+goat gut metagenome,1,SRR17418333,PRJNA792486,8,other,27967,"[""Black goat""]",
+bovine metagenome,1,ERR2200659,PRJEB23561,9,other,38491,,"[""Rumen metagenome""]"
+bovine metagenome,1,SRR3053180,PRJNA292471,12,other,5723,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12398545,PRJNA655594,16,other,57952,"[""C57BL/6J""]",
+goat gut metagenome,1,SRR17418319,PRJNA792486,12,other,35787,"[""Black goat""]",
+bovine gut metagenome,1,SRR13343634,PRJNA686811,10,other,12671,"[""cow""]",
+bovine metagenome,1,SRR6512890,PRJNA420682,13,other,6584,"[""Bos taurus""]",
+bovine metagenome,1,SRR6512903,PRJNA420682,14,other,8761,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR29517095,PRJNA1125719,9,other,13314,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12358623,PRJNA649861,15,other,42934,"[""BALB/c""]",
+bovine gut metagenome,1,ERR3201386,PRJEB31266,9,other,20439,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR6512905,PRJNA420682,15,other,13725,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220204,PRJEB31266,10,other,17431,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR29517081,PRJNA1125719,9,other,15744,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR22213141,PRJNA898608,8,other,8391,"[""Bos taurus indicus""]",
+bovine gut metagenome,1,ERR3220223,PRJEB31266,9,other,18706,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3053173,PRJNA292471,13,other,6950,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275098,PRJEB31266,10,other,40144,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371475,PRJNA356291,16,other,20189,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098312,PRJNA563872,11,other,14036,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201405,PRJEB31266,11,other,24434,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR10098309,PRJNA563872,8,other,11658,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181143,PRJNA309291,13,other,11706,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053209,PRJNA292471,8,other,1799,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275122,PRJEB31266,14,other,39745,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,ERR2200669,PRJEB23561,8,other,35004,,"[""Rumen metagenome""]"
+Equus asinus asinus,1,ERR10048386,PRJEB52849,14,other,86366,,
+bovine gut metagenome,1,SRR3181124,PRJNA309291,12,other,13160,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3224579,PRJEB31266,9,other,35810,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3053147,PRJNA292471,13,other,3847,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR26824593,PRJNA1040231,14,other,28936,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR26824603,PRJNA1040231,12,other,26847,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053212,PRJNA292471,8,other,1866,"[""Bos taurus""]",
+Bos taurus,1,ERR2019372,PRJEB21508,10,other,16727,,"[""Ruminomics EU FP7""]"
+Bos taurus,1,ERR2019370,PRJEB21508,11,other,19260,,"[""Ruminomics EU FP7""]"
+Bos taurus,1,ERR2019375,PRJEB21508,12,other,21773,,"[""Ruminomics EU FP7""]"
+Bos taurus,1,ERR2019395,PRJEB21508,9,other,17577,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3801487,PRJEB33080,12,other,22161,,
+sheep gut metagenome,1,SRR9006729,PRJNA539639,16,other,69345,"[""Ovis aries""]",
+sheep gut metagenome,1,SRR17274337,PRJNA783381,8,other,10563,"[""sheep104""]",
+bovine gut metagenome,1,SRR17023461,PRJNA779163,12,other,21271,"[""cattle""]",
+bovine metagenome,1,SRR3053167,PRJNA292471,8,other,3863,"[""Bos taurus""]",
+Equus asinus,1,SRR28806316,PRJNA1103961,12,other,14255,,
+termite gut metagenome,0,SRR6219231,PRJNA405702,11,other,58067,"[""not applicable""]",
+bovine gut metagenome,1,SRR17023465,PRJNA779163,8,other,28879,"[""cattle""]",
+Equus asinus,1,SRR28806305,PRJNA1103961,8,other,13264,,
+Equus asinus asinus,1,ERR10048375,PRJEB52849,15,other,107608,,
+Equus asinus asinus,1,ERR10048385,PRJEB52849,15,other,125372,,
+bovine gut metagenome,1,ERR3211443,PRJEB31266,10,other,26725,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3220192,PRJEB31266,10,other,20238,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR10098325,PRJNA563872,11,other,12486,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053145,PRJNA292471,8,other,2327,"[""Bos taurus""]",
+bovine metagenome,1,SRR6512898,PRJNA420682,14,other,11903,"[""Bos taurus""]",
+Bos taurus,1,ERR2019369,PRJEB21508,12,other,17873,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR5371399,PRJNA356291,14,other,14070,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3588546,PRJNA322715,8,other,8304,"[""Calves""]",
+Equus asinus,1,SRR28806311,PRJNA1103961,13,other,12582,,
+bovine metagenome,1,SRR6512907,PRJNA420682,15,other,15518,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181112,PRJNA309291,13,other,12796,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR17023456,PRJNA779163,13,other,22382,"[""cattle""]",
+bovine metagenome,1,SRR24963471,PRJNA984925,8,other,10472,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR9052925,PRJNA541820,16,other,40429,"[""C57BL/6""]",
+bovine gut metagenome,1,SRR21118915,PRJNA869873,10,other,17138,"[""dairy cattle""]",
+bovine gut metagenome,1,SRR2329878,PRJNA293646,9,other,7048,"[""cattle""]",
+bovine metagenome,1,SRR13059284,PRJNA678365,13,other,6886,"[""Capra aegagrus hircus""]",
+bovine gut metagenome,1,ERR3275130,PRJEB31266,10,other,38643,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR5215140,PRJNA365049,10,other,61103,"[""not applicable""]",
+bovine metagenome,1,SRR10098317,PRJNA563872,14,other,12162,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220218,PRJEB31266,8,other,17722,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3201410,PRJEB31266,11,other,23162,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR14710898,PRJNA732531,8,other,33641,"[""Porotermes adamsoni""]",
+bovine gut metagenome,1,ERR3224589,PRJEB31266,10,other,34016,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048370,PRJEB52849,15,other,105030,,
+mouse gut metagenome,0,SRR12358612,PRJNA649861,14,other,56429,"[""BALB/c""]",
+bovine gut metagenome,1,ERR3275100,PRJEB31266,13,other,42149,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR5683765,PRJEB43305,9,other,12366,,"[""PRJEB43305""]"
+bovine metagenome,1,SRR3053149,PRJNA292471,14,other,6587,"[""Bos taurus""]",
+bovine metagenome,1,SRR24963451,PRJNA984925,8,other,6225,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053166,PRJNA292471,13,other,6169,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275106,PRJEB31266,15,other,47835,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR13433999,PRJNA691977,12,other,24984,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275093,PRJEB31266,13,other,36335,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR13433994,PRJNA691977,11,other,20447,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR17023476,PRJNA779163,11,other,19368,"[""cattle""]",
+goat gut metagenome,1,SRR17418350,PRJNA792486,14,other,35124,"[""Black goat""]",
+bovine metagenome,1,SRR3067147,PRJNA298260,9,other,2996,"[""Bos taurus""]",
+Equus asinus,1,SRR28806297,PRJNA1103961,12,other,14975,,
+termite gut metagenome,0,SRR5247064,PRJNA366374,15,other,52066,"[""not applicable""]",
+bovine gut metagenome,1,SRR5371393,PRJNA356291,15,other,25987,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR4435568,PRJNA214227,8,other,10036,"[""Bison bison""]",
+bovine gut metagenome,1,ERR3224591,PRJEB31266,10,other,32607,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus,1,SRR20707904,PRJNA860652,10,other,13789,,
+bovine gut metagenome,1,ERR3275119,PRJEB31266,8,other,38536,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+goat gut metagenome,1,SRR17418328,PRJNA792486,10,other,27449,"[""Black goat""]",
+bovine gut metagenome,1,SRR13343637,PRJNA686811,10,other,13840,"[""cow""]",
+bovine metagenome,1,SRR3053139,PRJNA292471,8,other,2727,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR22213167,PRJNA898608,10,other,7650,"[""Bos taurus indicus""]",
+mouse gut metagenome,0,SRR10857081,PRJNA600179,13,other,12123,"[""Mus musculus""]",
+mouse gut metagenome,0,SRR12358609,PRJNA649861,15,other,49527,"[""BALB/c""]",
+bovine gut metagenome,1,ERR3220206,PRJEB31266,9,other,19882,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR9037494,PRJNA420682,13,other,9733,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220180,PRJEB31266,12,other,20989,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3275135,PRJEB31266,10,other,42773,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR13059286,PRJNA678365,11,other,6697,"[""Capra aegagrus hircus""]",
+termite gut metagenome,0,SRR10512951,PRJNA590611,16,other,56176,"[""Labiotermes labralis""]",
+bovine metagenome,1,SRR3053216,PRJNA292471,9,other,1876,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR22213172,PRJNA898608,8,other,9613,"[""Bos taurus indicus""]",
+Bos taurus,1,SRR24891242,PRJNA981443,9,other,12931,,
+Bos taurus,1,ERR2019387,PRJEB21508,13,other,27609,,"[""Ruminomics EU FP7""]"
+mouse gut metagenome,0,SRR13741607,PRJNA600179,15,other,14435,"[""Mus musculus""]",
+bovine gut metagenome,1,SRR13433990,PRJNA691977,14,other,28936,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275104,PRJEB31266,13,other,45798,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Bos taurus,1,ERR2019399,PRJEB21508,10,other,22373,,"[""Ruminomics EU FP7""]"
+termite gut metagenome,0,SRR10512955,PRJNA590611,13,other,54830,"[""Embiratermes neotenicus""]",
+bovine gut metagenome,1,SRR3181159,PRJNA309291,8,other,10736,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181154,PRJNA309291,10,other,13330,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418334,PRJNA792486,8,other,30259,"[""Black goat""]",
+Bos taurus,1,ERR2019371,PRJEB21508,11,other,19866,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3801456,PRJEB33080,11,other,19233,,
+bovine gut metagenome,1,SRR18394692,PRJNA815894,9,other,22714,"[""buffalo""]",
+bovine gut metagenome,1,ERR3801493,PRJEB33080,10,other,17431,,
+Equus asinus,1,SRR20707900,PRJNA860652,10,other,13488,,
+invertebrate metagenome,0,SRR13325288,PRJNA687334,16,other,105725,"[""fruit trees""]",
+Bos taurus,1,SRR24891239,PRJNA981443,9,other,13338,,
+bovine gut metagenome,1,ERR3275099,PRJEB31266,10,other,40308,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3067128,PRJNA298260,12,other,3405,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801494,PRJEB33080,13,other,23967,,
+bovine gut metagenome,1,ERR3801453,PRJEB33080,11,other,16113,,
+bovine gut metagenome,1,SRR5371407,PRJNA356291,14,other,14285,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181146,PRJNA309291,9,other,14930,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR26824594,PRJNA1040231,15,other,33401,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098302,PRJNA563872,11,other,11717,,
+sheep gut metagenome,1,SRR9006805,PRJNA539638,16,other,69363,"[""Ovis aries""]",
+bovine metagenome,1,SRR10098326,PRJNA563872,14,other,16787,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR26824600,PRJNA1040231,13,other,39756,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098327,PRJNA563872,13,other,12261,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12358625,PRJNA649861,14,other,39012,"[""BALB/c""]",
+mouse gut metagenome,0,SRR6216943,PRJNA415307,12,other,99252,"[""Mus musculus""]",
+bovine gut metagenome,1,ERR3275112,PRJEB31266,9,other,41060,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3053169,PRJNA292471,11,other,5592,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201416,PRJEB31266,11,other,25357,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3275133,PRJEB31266,13,other,38445,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371483,PRJNA356291,16,other,19262,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801476,PRJEB33080,8,other,9990,,
+bovine gut metagenome,1,SRR28378874,PRJNA1088235,8,other,14483,"[""Cattle""]",
+sheep gut metagenome,1,SRR17274345,PRJNA783381,10,other,11351,"[""sheep123""]",
+bovine gut metagenome,1,SRR17023478,PRJNA779163,13,other,21183,"[""cattle""]",
+bovine gut metagenome,1,SRR13433993,PRJNA691977,14,other,26894,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220202,PRJEB31266,11,other,23549,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR13741616,PRJNA600179,9,other,8857,"[""Mus musculus""]",
+bovine metagenome,1,SRR6512912,PRJNA420682,13,other,9198,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3211444,PRJEB31266,11,other,25268,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371373,PRJNA356291,15,other,14495,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220196,PRJEB31266,12,other,26864,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+goat gut metagenome,1,SRR17418353,PRJNA792486,14,other,29935,"[""Black goat""]",
+bovine metagenome,1,SRR3067135,PRJNA298260,9,other,4756,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418321,PRJNA792486,9,other,27778,"[""Black goat""]",
+bovine metagenome,1,SRR10098314,PRJNA563872,13,other,16631,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371489,PRJNA356291,15,other,17403,"[""Bos taurus""]",
+sheep gut metagenome,1,SRR9006654,PRJNA539637,15,other,65301,"[""Ovis aries""]",
+termite gut metagenome,0,SRR10512950,PRJNA590611,11,other,52714,"[""Labiotermes labralis""]",
+sheep gut metagenome,1,SRR17274334,PRJNA783381,10,other,9683,"[""sheep105""]",
+bovine gut metagenome,1,ERR3220181,PRJEB31266,10,other,20357,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR14710908,PRJNA732531,8,other,15819,"[""Neocapritermes taracua""]",
+bovine gut metagenome,1,SRR22213147,PRJNA898608,8,other,8714,"[""Bos taurus indicus""]",
+bovine gut metagenome,1,SRR9008933,PRJNA539663,15,other,63829,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181137,PRJNA309291,12,other,12406,"[""Bos taurus""]",
+sheep gut metagenome,1,SRR17274346,PRJNA783381,10,other,10553,"[""sheep122""]",
+bovine gut metagenome,1,ERR3275097,PRJEB31266,9,other,35019,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3275123,PRJEB31266,11,other,40685,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3220217,PRJEB31266,9,other,20110,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR3588552,PRJNA322715,9,other,8914,"[""Calves""]",
+bovine gut metagenome,1,SRR5371463,PRJNA356291,15,other,31155,"[""Bos taurus""]",
+Bos taurus,1,SRR24882567,PRJNA980404,8,other,16004,,
+bovine metagenome,1,SRR3067129,PRJNA298260,13,other,3951,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR12150676,PRJNA620482,13,other,33507,"[""Bos taurus""]",
+bovine metagenome,1,SRR6512906,PRJNA420682,14,other,9617,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371379,PRJNA356291,15,other,26097,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275102,PRJEB31266,10,other,41133,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3275107,PRJEB31266,11,other,41719,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+invertebrate metagenome,0,SRR13325280,PRJNA687334,14,other,117015,"[""avocado""]",
+bovine gut metagenome,1,SRR4435569,PRJNA214227,8,other,8955,"[""Bison bison""]",
+invertebrate metagenome,0,SRR12731286,PRJNA658576,10,other,54597,"[""Crassostrea virginica""]",
+bovine metagenome,1,SRR3053183,PRJNA292471,9,other,5012,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201387,PRJEB31266,11,other,15107,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR10098320,PRJNA563872,9,other,13066,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181122,PRJNA309291,11,other,16708,"[""Bos taurus""]",
+Equus asinus,1,SRR28806315,PRJNA1103961,14,other,12446,,
+bovine metagenome,1,SRR3053172,PRJNA292471,12,other,5648,"[""Bos taurus""]",
+sheep gut metagenome,1,SRR17274349,PRJNA783381,10,other,10460,"[""sheep120""]",
+Equus asinus,1,SRR28806312,PRJNA1103961,14,other,18987,,
+bovine gut metagenome,1,SRR3181114,PRJNA309291,9,other,13282,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181106,PRJNA309291,13,other,17111,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418345,PRJNA792486,14,other,31477,"[""Black goat""]",
+goat gut metagenome,1,SRR17418342,PRJNA792486,13,other,27528,"[""Black goat""]",
+bovine gut metagenome,1,SRR10393136,PRJNA571625,16,other,74412,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048373,PRJEB52849,15,other,97299,,
+bovine gut metagenome,1,ERR3801486,PRJEB33080,9,other,16726,,
+Bos taurus,1,ERR2019381,PRJEB21508,13,other,22553,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR5371411,PRJNA356291,15,other,12002,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098323,PRJNA563872,10,other,11218,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12398543,PRJNA655594,9,other,30249,"[""C57BL/6J""]",
+goat gut metagenome,1,SRR17418338,PRJNA792486,8,other,15068,"[""Black goat""]",
+bovine gut metagenome,1,ERR3275129,PRJEB31266,11,other,37601,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR24963275,PRJNA984925,11,other,10500,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275118,PRJEB31266,8,other,39276,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR22213182,PRJNA898608,9,other,6938,"[""Bos taurus indicus""]",
+bovine gut metagenome,1,SRR3181150,PRJNA309291,8,other,6325,"[""Bos taurus""]",
+termite gut metagenome,0,SRR14710883,PRJNA732531,10,other,17600,"[""Polyspathotermes sulcifrons""]",
+mouse gut metagenome,0,SRR13741610,PRJNA600179,12,other,11755,"[""Mus musculus""]",
+bovine gut metagenome,1,SRR17023455,PRJNA779163,13,other,21190,"[""cattle""]",
+bovine metagenome,1,SRR24955711,PRJNA984925,9,other,11066,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418354,PRJNA792486,14,other,33368,"[""Black goat""]",
+bovine gut metagenome,1,SRR5371487,PRJNA356291,16,other,34774,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201376,PRJEB31266,10,other,16871,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR26824598,PRJNA1040231,11,other,24867,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181131,PRJNA309291,10,other,11696,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220183,PRJEB31266,11,other,19840,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3224580,PRJEB31266,11,other,38600,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR3181141,PRJNA309291,8,other,8042,"[""Bos taurus""]",
+bovine metagenome,1,SRR3067144,PRJNA298260,8,other,3528,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR22221979,PRJNA843354,12,other,13793,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220219,PRJEB31266,10,other,18492,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3220222,PRJEB31266,10,other,19635,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR21118916,PRJNA869873,8,other,17027,"[""dairy cattle""]",
+Equus asinus,1,SRR28806298,PRJNA1103961,12,other,12392,,
+termite gut metagenome,0,SRR5248872,PRJNA366254,13,other,51696,"[""not applicable""]",
+bovine metagenome,1,SRR6512909,PRJNA420682,15,other,7664,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418339,PRJNA792486,16,other,31364,"[""Black goat""]",
+bovine gut metagenome,1,SRR094424,PRJNA60251,8,other,27174,,
+bovine gut metagenome,1,ERR3224575,PRJEB31266,10,other,32116,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048368,PRJEB52849,15,other,119131,,
+bovine gut metagenome,1,SRR5371421,PRJNA356291,16,other,28209,"[""Bos taurus""]",
+bovine metagenome,1,SRR3067140,PRJNA298260,9,other,3442,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12358632,PRJNA649861,10,other,56795,"[""BALB/c""]",
+Equus asinus,1,SRR28806296,PRJNA1103961,11,other,14989,,
+bovine gut metagenome,1,SRR18394694,PRJNA815894,13,other,22756,"[""buffalo""]",
+mouse gut metagenome,0,SRR12358628,PRJNA649861,8,other,48141,"[""BALB/c""]",
+bovine metagenome,1,SRR24956053,PRJNA984925,8,other,8850,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR22213156,PRJNA898608,9,other,6810,"[""Bos taurus indicus""]",
+Bos taurus,1,SRR24891250,PRJNA981443,8,other,13051,,
+bovine gut metagenome,1,ERR3275116,PRJEB31266,12,other,36194,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3220188,PRJEB31266,12,other,25718,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR5248970,PRJNA366257,13,other,52608,"[""not applicable""]",
+bovine gut metagenome,1,ERR3211446,PRJEB31266,12,other,27533,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR14710889,PRJNA732531,8,other,15628,"[""Dicuspiditermes spinitibialis""]",
+Equus asinus,1,SRR20707905,PRJNA860652,12,other,13047,,
+sheep gut metagenome,1,SRR17274339,PRJNA783381,13,other,12955,"[""sheep129""]",
+bovine gut metagenome,1,SRR12681659,PRJNA654317,16,other,51550,"[""Bos taurus""]",
+Bos taurus,1,SRR24882566,PRJNA980404,8,other,13587,,
+Bos taurus,1,SRR24891218,PRJNA981443,8,other,12466,,
+bovine metagenome,1,SRR3053142,PRJNA292471,14,other,6406,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048407,PRJEB52849,13,other,105147,,
+bovine metagenome,1,SRR10098315,PRJNA563872,9,other,10780,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275127,PRJEB31266,14,other,39968,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus,1,SRR20707897,PRJNA860652,10,other,12946,,
+bovine gut metagenome,1,SRR3181151,PRJNA309291,10,other,14860,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR17714295,PRJNA799789,14,other,15046,"[""Bos taurus""]",
+Equus asinus,1,SRR28806306,PRJNA1103961,10,other,13817,,
+bovine metagenome,1,SRR6512896,PRJNA420682,12,other,4033,"[""Bos taurus""]",
+bovine metagenome,1,SRR22560190,PRJNA909573,8,other,12781,"[""bovine""]",
+bovine gut metagenome,1,ERR3201415,PRJEB31266,11,other,22747,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3053143,PRJNA292471,10,other,3496,"[""Bos taurus""]",
+termite gut metagenome,0,SRR6220208,PRJNA405704,12,other,48617,"[""not applicable""]",
+Equus asinus,1,SRR20707902,PRJNA860652,11,other,12743,,
+Equus asinus asinus,1,ERR10048383,PRJEB52849,14,other,92344,,
+bovine metagenome,1,SRR3053159,PRJNA292471,12,other,5973,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR13741620,PRJNA600179,13,other,10525,"[""Mus musculus""]",
+bovine gut metagenome,1,ERR3224602,PRJEB31266,13,other,37278,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048402,PRJEB52849,15,other,104690,,
+Equus asinus asinus,1,ERR10048394,PRJEB52849,15,other,88142,,
+mouse gut metagenome,0,SRR12358624,PRJNA649861,12,other,46569,"[""BALB/c""]",
+bovine gut metagenome,1,SRR28378884,PRJNA1088235,8,other,14131,"[""Cattle""]",
+bovine gut metagenome,1,ERR3220208,PRJEB31266,9,other,18133,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR6512889,PRJNA420682,13,other,7612,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR13741613,PRJNA600179,11,other,9457,"[""Mus musculus""]",
+bovine gut metagenome,1,ERR3275138,PRJEB31266,10,other,40863,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3211455,PRJEB31266,8,other,36678,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371461,PRJNA356291,15,other,29331,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048403,PRJEB52849,16,other,116006,,
+Bos taurus,1,ERR2019376,PRJEB21508,10,other,16978,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3201389,PRJEB31266,12,other,20570,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3053163,PRJNA292471,13,other,6029,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3224577,PRJEB31266,9,other,31431,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3224568,PRJEB31266,8,other,33210,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048388,PRJEB52849,15,other,102689,,
+bovine gut metagenome,1,ERR3211451,PRJEB31266,10,other,18506,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3275136,PRJEB31266,10,other,41927,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3053211,PRJNA292471,8,other,2019,"[""Bos taurus""]",
+Bos taurus,1,ERR2019368,PRJEB21508,13,other,19824,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3275110,PRJEB31266,11,other,43428,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR12358610,PRJNA649861,16,other,40213,"[""BALB/c""]",
+bovine gut metagenome,1,SRR21118922,PRJNA869873,8,other,17390,"[""dairy cattle""]",
+bovine gut metagenome,1,SRR22213192,PRJNA898608,8,other,6717,"[""Bos taurus indicus""]",
+bovine gut metagenome,1,ERR3275134,PRJEB31266,14,other,44565,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3211447,PRJEB31266,12,other,36423,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+sheep gut metagenome,1,SRR17274351,PRJNA783381,10,other,9598,"[""sheep118""]",
+bovine metagenome,1,SRR3053140,PRJNA292471,11,other,3334,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR28378873,PRJNA1088235,8,other,14646,"[""Cattle""]",
+bovine gut metagenome,1,SRR29517086,PRJNA1125719,9,other,14917,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220211,PRJEB31266,10,other,17718,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3275094,PRJEB31266,13,other,40909,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048408,PRJEB52849,15,other,150807,,
+bovine gut metagenome,1,SRR2145287,PRJNA291523,8,other,21766,,
+mouse gut metagenome,0,SRR12358630,PRJNA649861,11,other,61039,"[""BALB/c""]",
+bovine gut metagenome,1,SRR13433997,PRJNA691977,13,other,39756,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801467,PRJEB33080,11,other,18843,,
+Equus asinus,1,SRR28806314,PRJNA1103961,13,other,13531,,
+bovine gut metagenome,1,ERR3220189,PRJEB31266,12,other,30205,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR10857080,PRJNA600179,13,other,12866,"[""Mus musculus""]",
+goat gut metagenome,1,SRR17418358,PRJNA792486,9,other,29260,"[""Black goat""]",
+bovine gut metagenome,1,SRR12681650,PRJNA654315,16,other,40390,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371427,PRJNA356291,15,other,19927,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371397,PRJNA356291,16,other,13485,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275092,PRJEB31266,13,other,37371,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+sheep gut metagenome,1,SRR9006804,PRJNA539638,15,other,58981,"[""Ovis aries""]",
+bovine gut metagenome,1,ERR3801480,PRJEB33080,9,other,14320,,
+bovine gut metagenome,1,SRR22213181,PRJNA898608,8,other,6065,"[""Bos taurus indicus""]",
+bovine gut metagenome,1,ERR3275113,PRJEB31266,11,other,39600,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+invertebrate metagenome,0,SRR13325281,PRJNA687334,9,other,36491,"[""plantain""]",
+bovine gut metagenome,1,SRR3181161,PRJNA309291,12,other,16582,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR28378880,PRJNA1088235,9,other,14875,"[""Cattle""]",
+mouse gut metagenome,0,SRR6216947,PRJNA415307,9,other,44792,"[""Mus musculus""]",
+bovine gut metagenome,1,SRR5371443,PRJNA356291,12,other,7549,"[""Bos taurus""]",
+Bos taurus,1,ERR2019373,PRJEB21508,10,other,18528,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3211459,PRJEB31266,13,other,18202,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+sheep gut metagenome,1,SRR17274332,PRJNA783381,9,other,11082,"[""sheep107""]",
+bovine gut metagenome,1,SRR17023475,PRJNA779163,12,other,20568,"[""cattle""]",
+bovine gut metagenome,1,ERR3275131,PRJEB31266,10,other,38366,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048400,PRJEB52849,14,other,115687,,
+bovine gut metagenome,1,SRR3181155,PRJNA309291,10,other,13288,"[""Bos taurus""]",
+Bos taurus,1,SRR14879662,PRJNA737584,9,other,128097,,
+bovine gut metagenome,1,SRR24260328,PRJNA956982,12,other,20420,"[""Bos taurus""]",
+Bos taurus,1,ERR2019392,PRJEB21508,9,other,24287,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3224614,PRJEB31266,12,other,34081,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3067150,PRJNA298260,13,other,3843,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418348,PRJNA792486,12,other,26194,"[""Black goat""]",
+Equus asinus asinus,1,ERR10048376,PRJEB52849,14,other,107612,,
+termite gut metagenome,0,SRR5247065,PRJNA366374,15,other,55762,"[""not applicable""]",
+bovine metagenome,1,SRR6512910,PRJNA420682,15,other,11999,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR29517097,PRJNA1125719,11,other,17519,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR4435575,PRJNA214227,8,other,7930,"[""Bison bison""]",
+bovine gut metagenome,1,ERR3220190,PRJEB31266,11,other,24322,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+goat gut metagenome,1,SRR17418320,PRJNA792486,8,other,28067,"[""Black goat""]",
+bovine metagenome,1,SRR3053181,PRJNA292471,12,other,4180,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801479,PRJEB33080,9,other,13573,,
+bovine metagenome,1,SRR24955696,PRJNA984925,9,other,9984,"[""Bos taurus""]",
+Bos taurus,1,ERR2019367,PRJEB21508,14,other,22653,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR3181111,PRJNA309291,10,other,11778,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR29517011,PRJNA1126025,9,other,14768,"[""Bos taurus""]",
+bovine metagenome,1,SRR3067145,PRJNA298260,9,other,2755,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371447,PRJNA356291,16,other,33583,"[""Bos taurus""]",
+bovine metagenome,1,ERR2200663,PRJEB23561,13,other,40037,,"[""Rumen metagenome""]"
+bovine gut metagenome,1,ERR3801458,PRJEB33080,11,other,18238,,
+bovine gut metagenome,1,SRR3181107,PRJNA309291,11,other,10676,"[""Bos taurus""]",
+Equus asinus,1,SRR28806300,PRJNA1103961,11,other,12885,,
+bovine gut metagenome,1,ERR3211454,PRJEB31266,12,other,18337,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR3181117,PRJNA309291,15,other,17922,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371439,PRJNA356291,16,other,31264,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371507,PRJNA356291,16,other,36432,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12398544,PRJNA655594,15,other,54448,"[""C57BL/6J""]",
+bovine gut metagenome,1,SRR3181136,PRJNA309291,8,other,7032,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12358614,PRJNA649861,8,other,46476,"[""BALB/c""]",
+bovine gut metagenome,1,ERR3211445,PRJEB31266,10,other,27775,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR9036512,PRJNA539167,13,other,64526,"[""Bos taurus""]",
+termite gut metagenome,0,SRR14710920,PRJNA732531,9,other,33819,"[""Hodotermes mossambicus""]",
+bovine gut metagenome,1,ERR3224587,PRJEB31266,12,other,31102,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR14710919,PRJNA732531,11,other,40441,"[""Hodotermopsis sjostedti""]",
+bovine metagenome,1,SRR9037495,PRJNA420682,13,other,10428,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3211439,PRJEB31266,12,other,25608,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR13343636,PRJNA686811,9,other,14100,"[""cow""]",
+mouse gut metagenome,0,SRR25119235,PRJNA348350,14,other,136840,"[""Mus musculus""]",
+bovine gut metagenome,1,ERR3801451,PRJEB33080,11,other,14645,,
+bovine gut metagenome,1,ERR3211457,PRJEB31266,9,other,15602,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR6206332,PRJNA405782,13,other,40284,"[""not applicable""]",
+bovine gut metagenome,1,SRR5371387,PRJNA356291,16,other,36412,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201390,PRJEB31266,10,other,20523,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR3181126,PRJNA309291,9,other,8006,"[""Bos taurus""]",
+Bos taurus,1,SRR24891249,PRJNA981443,9,other,14798,,
+bovine gut metagenome,1,ERR3220212,PRJEB31266,8,other,17148,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048411,PRJEB52849,13,other,103124,,
+goat gut metagenome,1,SRR17418337,PRJNA792486,13,other,25652,"[""Black goat""]",
+goat gut metagenome,1,SRR17418349,PRJNA792486,14,other,30854,"[""Black goat""]",
+sheep gut metagenome,1,SRR24639049,PRJNA972992,9,other,30622,"[""Ovis aries""]",
+sheep gut metagenome,1,SRR17274360,PRJNA783381,9,other,10577,"[""sheep101""]",
+bovine metagenome,1,SRR9037497,PRJNA420682,12,other,10111,"[""Bos taurus""]",
+sheep gut metagenome,1,SRR17274352,PRJNA783381,8,other,9216,"[""sheep117""]",
+bovine gut metagenome,1,SRR5371375,PRJNA356291,15,other,21526,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275120,PRJEB31266,8,other,37744,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048396,PRJEB52849,16,other,119249,,
+bovine gut metagenome,1,SRR3181152,PRJNA309291,8,other,10274,"[""Bos taurus""]",
+Bos taurus,1,ERR2019404,PRJEB21508,9,other,17545,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3224588,PRJEB31266,14,other,38413,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+goat gut metagenome,1,SRR17418322,PRJNA792486,11,other,28837,"[""Black goat""]",
+bovine gut metagenome,1,SRR17996669,PRJNA806344,8,other,11979,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR13433996,PRJNA691977,13,other,26683,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR13433998,PRJNA691977,13,other,28211,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181156,PRJNA309291,10,other,13033,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR26824595,PRJNA1040231,13,other,28030,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098300,PRJNA563872,11,other,9445,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220210,PRJEB31266,9,other,19499,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR24260329,PRJNA956982,10,other,10870,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR10393135,PRJNA571625,16,other,45514,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418341,PRJNA792486,10,other,30332,"[""Black goat""]",
+bovine gut metagenome,1,SRR22213155,PRJNA898608,9,other,8349,"[""Bos taurus indicus""]",
+bovine metagenome,1,SRR3053176,PRJNA292471,13,other,5894,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181163,PRJNA309291,10,other,14032,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220185,PRJEB31266,10,other,21117,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR9052927,PRJNA541820,15,other,44567,"[""C57BL/6""]",
+sheep gut metagenome,1,SRR17274353,PRJNA783381,9,other,9785,"[""sheep116""]",
+bovine gut metagenome,1,SRR22213175,PRJNA898608,8,other,9047,"[""Bos taurus indicus""]",
+Bos taurus,1,ERR2019405,PRJEB21508,10,other,15978,,"[""Ruminomics EU FP7""]"
+sheep gut metagenome,1,SRR17274343,PRJNA783381,10,other,12385,"[""sheep125""]",
+bovine gut metagenome,1,ERR3801459,PRJEB33080,12,other,18908,,
+bovine gut metagenome,1,SRR28378878,PRJNA1088235,12,other,13899,"[""Cattle""]",
+bovine gut metagenome,1,SRR13433989,PRJNA691977,13,other,32673,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR25119187,PRJNA348350,10,other,79713,"[""Mus musculus""]",
+mouse gut metagenome,0,SRR9052924,PRJNA541820,15,other,46038,"[""C57BL/6""]",
+bovine gut metagenome,1,ERR3275096,PRJEB31266,14,other,39292,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+sheep gut metagenome,1,SRR17274344,PRJNA783381,11,other,11919,"[""sheep124""]",
+Bos taurus,1,ERR2019357,PRJEB21508,9,other,29105,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR18394693,PRJNA815894,9,other,21361,"[""buffalo""]",
+bovine gut metagenome,1,SRR5371485,PRJNA356291,16,other,27096,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418340,PRJNA792486,11,other,20587,"[""Black goat""]",
+Equus asinus,1,SRR28806303,PRJNA1103961,12,other,13079,,
+bovine metagenome,1,SRR6512911,PRJNA420682,13,other,8795,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR094428,PRJNA60251,8,other,22847,,
+Bos taurus,1,ERR2019398,PRJEB21508,13,other,29763,,"[""Ruminomics EU FP7""]"
+Equus asinus,1,SRR20707906,PRJNA860652,9,other,14771,,
+bovine gut metagenome,1,SRR1706031,PRJNA269993,16,other,82272,"[""Cow""]",
+bovine gut metagenome,1,SRR22213186,PRJNA898608,9,other,7527,"[""Bos taurus indicus""]",
+bovine gut metagenome,1,SRR11060108,PRJNA518429,12,other,34215,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR13741609,PRJNA600179,11,other,10294,"[""Mus musculus""]",
+goat gut metagenome,1,SRR17418347,PRJNA792486,13,other,27926,"[""Black goat""]",
+bovine gut metagenome,1,SRR18394696,PRJNA815894,12,other,22570,"[""buffalo""]",
+bovine metagenome,1,SRR3053214,PRJNA292471,12,other,5475,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201381,PRJEB31266,11,other,19094,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR9008756,PRJNA539662,13,other,66696,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181132,PRJNA309291,10,other,12858,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181149,PRJNA309291,13,other,18969,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098310,PRJNA563872,10,other,12608,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801465,PRJEB33080,11,other,18788,,
+Equus asinus asinus,1,ERR10048410,PRJEB52849,14,other,97991,,
+bovine gut metagenome,1,SRR5371419,PRJNA356291,16,other,26820,"[""Bos taurus""]",
+sheep gut metagenome,1,SRR17274355,PRJNA783381,10,other,10601,"[""sheep114""]",
+bovine gut metagenome,1,SRR18056065,PRJNA806696,8,other,11965,"[""Bos grunniens""]",
+Equus asinus asinus,1,ERR10048381,PRJEB52849,15,other,102718,,
+bovine gut metagenome,1,ERR3201421,PRJEB31266,11,other,14142,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR17996667,PRJNA806344,12,other,11802,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371455,PRJNA356291,15,other,21791,"[""Bos taurus""]",
+sheep gut metagenome,1,SRR17274359,PRJNA783381,10,other,10708,"[""sheep102""]",
+termite gut metagenome,0,SRR5215143,PRJNA365050,16,other,57505,"[""not applicable""]",
+Bos taurus,1,ERR2019363,PRJEB21508,13,other,22916,,"[""Ruminomics EU FP7""]"
+bovine metagenome,1,SRR10098307,PRJNA563872,10,other,19845,"[""Bos taurus""]",
+Bos taurus,1,ERR2019374,PRJEB21508,12,other,20937,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3211448,PRJEB31266,10,other,15288,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3053150,PRJNA292471,12,other,8783,"[""Bos taurus""]",
+Bos taurus,1,ERR2019364,PRJEB21508,11,other,22084,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3801489,PRJEB33080,12,other,19134,,
+bovine gut metagenome,1,ERR3201384,PRJEB31266,8,other,16014,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801457,PRJEB33080,11,other,19102,,
+bovine gut metagenome,1,ERR3220215,PRJEB31266,11,other,20185,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR19053353,PRJNA834564,8,other,12386,"[""Holstein cows""]",
+mouse gut metagenome,0,SRR12358629,PRJNA649861,13,other,61936,"[""BALB/c""]",
+bovine gut metagenome,1,SRR9008936,PRJNA539664,15,other,68651,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275095,PRJEB31266,13,other,39912,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048399,PRJEB52849,16,other,116294,,
+bovine gut metagenome,1,ERR3275124,PRJEB31266,12,other,35715,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR12358631,PRJNA649861,12,other,63786,"[""BALB/c""]",
+Equus asinus asinus,1,ERR10048398,PRJEB52849,16,other,119600,,
+termite gut metagenome,0,SRR5215206,PRJNA365052,13,other,56609,"[""not applicable""]",
+mouse gut metagenome,0,SRR13741619,PRJNA600179,10,other,8845,"[""Mus musculus""]",
+bovine metagenome,1,SRR10098299,PRJNA563872,12,other,10247,"[""Bos taurus""]",
+bovine metagenome,1,SRR17335709,PRJNA785940,9,other,7426,"[""not applicable""]",
+bovine gut metagenome,1,ERR3801470,PRJEB33080,12,other,22443,,
+bovine metagenome,1,SRR3067149,PRJNA298260,12,other,2647,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371369,PRJNA356291,16,other,21520,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR9052921,PRJNA541820,9,other,34262,"[""C57BL/6""]",
+Bos taurus,1,SRR24882552,PRJNA980404,9,other,14436,,
+bovine gut metagenome,1,ERR3220201,PRJEB31266,10,other,22906,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+sheep gut metagenome,1,SRR17274340,PRJNA783381,9,other,10530,"[""sheep128""]",
+Equus asinus asinus,1,ERR10048412,PRJEB52849,13,other,85115,,
+bovine gut metagenome,1,SRR26824599,PRJNA1040231,13,other,26683,"[""Bos taurus""]",
+Bos taurus,1,SRR24891225,PRJNA981443,10,other,15312,,
+bovine gut metagenome,1,SRR29517084,PRJNA1125719,9,other,13595,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371423,PRJNA356291,15,other,20820,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR31127845,PRJNA1153624,9,other,42188,"[""bovine""]",
+Bos taurus,1,SRR24882557,PRJNA980404,9,other,15056,,
+bovine gut metagenome,1,SRR21118930,PRJNA869873,10,other,18382,"[""dairy cattle""]",
+bovine gut metagenome,1,SRR17714294,PRJNA799789,12,other,11802,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053204,PRJNA292471,11,other,5696,"[""Bos taurus""]",
+Bos taurus,1,ERR2019384,PRJEB21508,9,other,14835,,"[""Ruminomics EU FP7""]"
+mouse gut metagenome,0,SRR12398547,PRJNA655594,15,other,54668,"[""C57BL/6J""]",
+Bos taurus,1,SRR24891232,PRJNA981443,9,other,14559,,
+sheep gut metagenome,1,SRR17274329,PRJNA783381,8,other,10791,"[""sheep110""]",
+bovine gut metagenome,1,SRR4435570,PRJNA214227,8,other,10114,"[""Bison bison""]",
+bovine gut metagenome,1,SRR22213140,PRJNA898608,10,other,8067,"[""Bos taurus indicus""]",
+Equus asinus,1,SRR28806299,PRJNA1103961,11,other,13106,,
+bovine metagenome,1,SRR6512894,PRJNA420682,14,other,9613,"[""Bos taurus""]",
+bovine metagenome,1,SRR24963292,PRJNA984925,10,other,10179,"[""Bos taurus""]",
+goat gut metagenome,1,SRR17418355,PRJNA792486,8,other,27228,"[""Black goat""]",
+bovine gut metagenome,1,SRR5371413,PRJNA356291,13,other,7742,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220216,PRJEB31266,10,other,18826,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR13343635,PRJNA686811,11,other,13854,"[""cow""]",
+bovine gut metagenome,1,SRR5371415,PRJNA356291,15,other,14755,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3181142,PRJNA309291,13,other,15699,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048379,PRJEB52849,14,other,99073,,
+bovine gut metagenome,1,SRR9008937,PRJNA539664,16,other,47418,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3211461,PRJEB31266,13,other,31652,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR3181157,PRJNA309291,11,other,11452,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR5684053,PRJEB43305,9,other,10757,,"[""PRJEB43305""]"
+bovine gut metagenome,1,SRR2329910,PRJNA293646,11,other,6372,"[""cattle""]",
+bovine metagenome,1,SRR10098301,PRJNA563872,14,other,15139,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR13741617,PRJNA600179,12,other,12012,"[""Mus musculus""]",
+bovine gut metagenome,1,SRR5371401,PRJNA356291,16,other,14779,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR3185498,PRJNA309291,13,other,17111,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098329,PRJNA563872,14,other,12299,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048390,PRJEB52849,15,other,117519,,
+bovine gut metagenome,1,ERR3801450,PRJEB33080,12,other,15627,,
+bovine gut metagenome,1,SRR3181120,PRJNA309291,8,other,9721,"[""Bos taurus""]",
+Equus asinus,1,SRR28806310,PRJNA1103961,13,other,13781,,
+bovine gut metagenome,1,SRR5371425,PRJNA356291,15,other,27641,"[""Bos taurus""]",
+bovine metagenome,1,SRR6512902,PRJNA420682,12,other,4355,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR13343630,PRJNA686811,12,other,12336,"[""cow""]",
+bovine gut metagenome,1,SRR5371495,PRJNA356291,16,other,18425,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR8442993,PRJNA502607,13,other,72673,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR13433995,PRJNA691977,11,other,24867,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220191,PRJEB31266,12,other,27396,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048366,PRJEB52849,15,other,132222,,
+bovine gut metagenome,1,SRR29517085,PRJNA1125719,10,other,14860,"[""Bos taurus""]",
+sheep gut metagenome,1,SRR17274336,PRJNA783381,8,other,10103,"[""sheep131""]",
+bovine metagenome,1,SRR6512891,PRJNA420682,12,other,4261,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR17023458,PRJNA779163,10,other,19215,"[""cattle""]",
+Bos taurus,1,SRR24882551,PRJNA980404,9,other,14463,,
+bovine gut metagenome,1,SRR3181115,PRJNA309291,10,other,12750,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3224571,PRJEB31266,9,other,26750,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR6512908,PRJNA420682,15,other,17584,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048378,PRJEB52849,13,other,89157,,
+mouse gut metagenome,0,SRR13741621,PRJNA600179,15,other,13202,"[""Mus musculus""]",
+bovine gut metagenome,1,ERR3224610,PRJEB31266,10,other,37190,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+sheep gut metagenome,1,SRR17274354,PRJNA783381,12,other,10272,"[""sheep115""]",
+bovine gut metagenome,1,SRR5371451,PRJNA356291,16,other,33623,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR22213191,PRJNA898608,8,other,7411,"[""Bos taurus indicus""]",
+bovine gut metagenome,1,SRR9008934,PRJNA539663,15,other,54641,"[""Bos taurus""]",
+termite gut metagenome,0,SRR14710892,PRJNA732531,11,other,16839,"[""Spinitermes trispinosus""]",
+Bos taurus,1,ERR2019385,PRJEB21508,9,other,15120,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3801447,PRJEB33080,11,other,13661,,
+bovine gut metagenome,1,SRR3181108,PRJNA309291,14,other,17635,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371405,PRJNA356291,15,other,14666,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371371,PRJNA356291,16,other,45437,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275125,PRJEB31266,13,other,38557,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801484,PRJEB33080,10,other,14054,,
+bovine gut metagenome,1,ERR3211479,PRJEB31266,8,other,11216,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371503,PRJNA356291,16,other,46529,"[""Bos taurus""]",
+Bos taurus,1,ERR2019393,PRJEB21508,8,other,19686,,"[""Ruminomics EU FP7""]"
+Equus asinus,1,SRR20707895,PRJNA860652,11,other,14988,,
+bovine metagenome,1,SRR3053153,PRJNA292471,8,other,6238,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275137,PRJEB31266,8,other,41531,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801469,PRJEB33080,12,other,19949,,
+Bos taurus,1,ERR2019390,PRJEB21508,11,other,22254,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3220220,PRJEB31266,10,other,18128,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Bos taurus,1,ERR2019380,PRJEB21508,11,other,22609,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3211452,PRJEB31266,13,other,25256,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+mouse gut metagenome,0,SRR13741614,PRJNA600179,13,other,10715,"[""Mus musculus""]",
+sheep gut metagenome,1,SRR17274356,PRJNA783381,10,other,10452,"[""sheep113""]",
+bovine gut metagenome,1,SRR5371505,PRJNA356291,16,other,56999,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371445,PRJNA356291,16,other,34367,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048392,PRJEB52849,14,other,123691,,
+bovine gut metagenome,1,SRR3181162,PRJNA309291,10,other,11968,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371391,PRJNA356291,15,other,20590,"[""Bos taurus""]",
+Bos taurus,1,ERR2019402,PRJEB21508,10,other,18587,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3201378,PRJEB31266,10,other,20836,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR13434000,PRJNA691977,12,other,26847,"[""Bos taurus""]",
+Bos taurus,1,ERR2019408,PRJEB21508,8,other,13024,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR12681651,PRJNA654316,15,other,31167,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801482,PRJEB33080,9,other,12606,,
+Equus asinus,1,SRR28806302,PRJNA1103961,11,other,12969,,
+Equus asinus,1,SRR20707903,PRJNA860652,12,other,13467,,
+Equus asinus asinus,1,ERR10048369,PRJEB52849,13,other,128481,,
+bovine gut metagenome,1,ERR3220186,PRJEB31266,10,other,23214,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+sheep gut metagenome,1,SRR17274338,PRJNA783381,8,other,11531,"[""sheep130""]",
+bovine gut metagenome,1,SRR18394697,PRJNA815894,13,other,22631,"[""buffalo""]",
+bovine gut metagenome,1,ERR3224612,PRJEB31266,10,other,27146,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR2329984,PRJNA293646,8,other,5032,"[""cattle""]",
+bovine gut metagenome,1,SRR18394695,PRJNA815894,13,other,22770,"[""buffalo""]",
+bovine gut metagenome,1,SRR13433991,PRJNA691977,15,other,33401,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048404,PRJEB52849,16,other,131060,,
+Bos taurus,1,SRR24891243,PRJNA981443,9,other,12680,,
+bovine gut metagenome,1,SRR5371417,PRJNA356291,15,other,15241,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12398548,PRJNA655594,16,other,60461,"[""C57BL/6J""]",
+bovine gut metagenome,1,ERR3220224,PRJEB31266,9,other,18524,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3224611,PRJEB31266,9,other,38982,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR21118932,PRJNA869873,8,other,16776,"[""dairy cattle""]",
+bovine gut metagenome,1,ERR3224578,PRJEB31266,8,other,31757,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus,1,SRR28806313,PRJNA1103961,14,other,12938,,
+Equus asinus,1,SRR28806304,PRJNA1103961,9,other,13935,,
+bovine gut metagenome,1,ERR3801449,PRJEB33080,10,other,14195,,
+bovine metagenome,1,SRR22560182,PRJNA909573,10,other,12494,"[""bovine""]",
+mouse gut metagenome,0,SRR13741608,PRJNA600179,12,other,14043,"[""Mus musculus""]",
+sheep gut metagenome,1,SRR9006655,PRJNA539637,15,other,71015,"[""Ovis aries""]",
+bovine gut metagenome,1,ERR3201400,PRJEB31266,13,other,27818,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3220209,PRJEB31266,9,other,19466,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3275101,PRJEB31266,12,other,40003,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371383,PRJNA356291,15,other,11587,"[""Bos taurus""]",
+Equus asinus,1,SRR20707901,PRJNA860652,10,other,13488,,
+mouse gut metagenome,0,SRR12398546,PRJNA655594,15,other,55754,"[""C57BL/6J""]",
+bovine gut metagenome,1,SRR31127810,PRJNA1153624,8,other,25815,"[""bovine""]",
+bovine gut metagenome,1,ERR3224604,PRJEB31266,12,other,29162,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+Equus asinus asinus,1,ERR10048380,PRJEB52849,15,other,105251,,
+bovine gut metagenome,1,ERR3201417,PRJEB31266,13,other,30827,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR3053208,PRJNA292471,9,other,2206,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801490,PRJEB33080,9,other,19954,,
+bovine metagenome,1,SRR24963407,PRJNA984925,8,other,10596,"[""Bos taurus""]",
+bovine metagenome,1,SRR22560191,PRJNA909573,8,other,12538,"[""bovine""]",
+bovine gut metagenome,1,SRR5371441,PRJNA356291,15,other,39540,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371437,PRJNA356291,15,other,20161,"[""Bos taurus""]",
+Equus asinus asinus,1,ERR10048409,PRJEB52849,13,other,113060,,
+bovine gut metagenome,1,SRR5371457,PRJNA356291,15,other,26531,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371477,PRJNA356291,16,other,52421,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220205,PRJEB31266,11,other,19606,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3224592,PRJEB31266,8,other,39663,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3224570,PRJEB31266,11,other,29208,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR3181109,PRJNA309291,12,other,12535,"[""Bos taurus""]",
+Bos taurus,1,ERR2019377,PRJEB21508,12,other,27673,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR3457761,PRJNA319009,14,other,25699,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR21118913,PRJNA869873,8,other,16858,"[""dairy cattle""]",
+bovine gut metagenome,1,SRR17996668,PRJNA806344,14,other,15046,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3220203,PRJEB31266,8,other,18426,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR13343633,PRJNA686811,10,other,13278,"[""cow""]",
+goat gut metagenome,1,SRR17418352,PRJNA792486,15,other,32192,"[""Black goat""]",
+bovine metagenome,1,SRR10098298,PRJNA563872,12,other,10804,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR19053354,PRJNA834564,8,other,10566,"[""Holstein cows""]",
+Equus asinus,1,SRR28806317,PRJNA1103961,13,other,12376,,
+bovine metagenome,1,SRR3067136,PRJNA298260,9,other,3115,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371491,PRJNA356291,15,other,14340,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801472,PRJEB33080,9,other,13160,,
+bovine gut metagenome,1,ERR3275109,PRJEB31266,10,other,39560,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371429,PRJNA356291,15,other,44588,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR9052922,PRJNA541820,13,other,42449,"[""C57BL/6""]",
+Bos taurus,1,ERR2019394,PRJEB21508,10,other,27664,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR3181113,PRJNA309291,11,other,13482,"[""Bos taurus""]",
+Bos taurus,1,ERR2019409,PRJEB21508,8,other,13916,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,ERR3220197,PRJEB31266,9,other,24498,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801475,PRJEB33080,10,other,12273,,
+Bos taurus,1,SRR24882558,PRJNA980404,9,other,14393,,
+termite gut metagenome,0,SRR14710897,PRJNA732531,8,other,35168,"[""Porotermes quadricollis""]",
+Equus asinus asinus,1,ERR10048401,PRJEB52849,16,other,113898,,
+bovine metagenome,1,SRR17335708,PRJNA785940,10,other,8146,"[""not applicable""]",
+bovine gut metagenome,1,SRR5371509,PRJNA356291,15,other,13049,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3224585,PRJEB31266,13,other,41318,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3801461,PRJEB33080,12,other,19520,,
+sheep gut metagenome,1,SRR17274341,PRJNA783381,10,other,10665,"[""sheep127""]",
+goat gut metagenome,1,SRR17418360,PRJNA792486,9,other,30110,"[""Black goat""]",
+Equus asinus asinus,1,ERR10048364,PRJEB52849,15,other,94205,,
+bovine gut metagenome,1,ERR3224574,PRJEB31266,10,other,34503,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371459,PRJNA356291,16,other,33777,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201392,PRJEB31266,11,other,16336,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR10098297,PRJNA563872,14,other,14402,"[""Bos taurus""]",
+invertebrate metagenome,0,SRR13325286,PRJNA687334,13,other,37357,"[""wild grass soils""]",
+Bos taurus,1,ERR2019383,PRJEB21508,12,other,21839,,"[""Ruminomics EU FP7""]"
+bovine gut metagenome,1,SRR29517013,PRJNA1126025,8,other,14983,"[""Bos taurus""]",
+bovine metagenome,1,SRR6512895,PRJNA420682,13,other,3866,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3275132,PRJEB31266,11,other,38180,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine metagenome,1,SRR22560183,PRJNA909573,10,other,13540,"[""bovine""]",
+bovine gut metagenome,1,SRR5371481,PRJNA356291,15,other,12566,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201413,PRJEB31266,10,other,16182,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,SRR5371449,PRJNA356291,16,other,24894,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3201419,PRJEB31266,12,other,22057,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+bovine gut metagenome,1,ERR3201403,PRJEB31266,9,other,20365,,"[""Metagenomic sequencing of the rumen of 240 cattle from Scotland""]"
+termite gut metagenome,0,SRR5215205,PRJNA365053,16,other,53137,"[""not applicable""]",
+Bos taurus,1,ERR2019358,PRJEB21508,13,other,20710,,"[""Ruminomics EU FP7""]"
+mouse gut metagenome,0,SRR12358616,PRJNA649861,13,other,33404,"[""BALB/c""]",
+bovine metagenome,1,SRR3053146,PRJNA292471,8,other,2581,"[""Bos taurus""]",
+bovine metagenome,1,SRR3067146,PRJNA298260,9,other,4125,"[""Bos taurus""]",
+bovine metagenome,1,SRR3053206,PRJNA292471,10,other,4928,"[""Bos taurus""]",
+bovine metagenome,1,SRR10098313,PRJNA563872,13,other,16602,"[""Bos taurus""]",
+bovine gut metagenome,1,ERR3801463,PRJEB33080,11,other,19887,,
+Equus asinus asinus,1,ERR10048367,PRJEB52849,14,other,109662,,
+bovine gut metagenome,1,SRR5371493,PRJNA356291,16,other,49150,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR13741611,PRJNA600179,13,other,14459,"[""Mus musculus""]",
+bovine gut metagenome,1,SRR3181119,PRJNA309291,10,other,12490,"[""Bos taurus""]",
+invertebrate metagenome,0,SRR13325278,PRJNA687334,8,other,35723,"[""wild plants""]",
+bovine metagenome,1,SRR3053215,PRJNA292471,8,other,1736,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371431,PRJNA356291,15,other,22004,"[""Bos taurus""]",
+mouse gut metagenome,0,SRR12398549,PRJNA655594,16,other,60705,"[""C57BL/6J""]",
+bovine metagenome,1,SRR6512892,PRJNA420682,13,other,5873,"[""Bos taurus""]",
+bovine gut metagenome,1,SRR5371497,PRJNA356291,16,other,56257,"[""Bos taurus""]",
